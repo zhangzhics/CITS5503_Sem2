@@ -76,7 +76,7 @@ Cloud Computing and AWS: Introduction to AWS platform and services, awscli comma
 
 #### Assignments (MidSem Exam)
 
-- Week 2: [2 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-2)
+- Week 2: [2 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-2)
 
 ---
 
@@ -95,7 +95,7 @@ Computer virtualisation. Background and different approaches. Containers and Doc
 
 #### Assignments (MidSem Exam)
 
-- Week 3: [2 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-3)
+- Week 3: [2 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-3)
 
 
 ---
@@ -115,7 +115,7 @@ AWS storage EBS, S3, DynamoDB
 
 #### Assignments (MidSem Exam)
 
-- Week 4: [4 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-4)
+- Week 4: [4 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-4)
 
 ---
 
@@ -134,7 +134,7 @@ AWS security and identity management
 
 #### Assignments (MidSem Exam)
 
-- Week 5: [3 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-5)
+- Week 5: [3 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-5)
 
 ---
 
@@ -154,7 +154,7 @@ Networking, IP addressing, subnets, routing virtual private clouds
 
 #### Assignments (MidSem Exam)
 
-- Week 6: [2 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-6)
+- Week 6: [2 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-6)
 
 ---
 
@@ -182,7 +182,7 @@ Web architectures using python as a model with RDBMS
 
 #### Assignments (MidSem Exam)
 
-- Week 8: [2 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-8)
+- Week 8: [2 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-8)
 
 ---
 
@@ -203,7 +203,7 @@ Software controlled deployment of services and software using Chef
 
 #### Assignments (MidSem Exam)
 
-- Week 9: [2 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-9)
+- Week 9: [2 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-9)
 
 ---
 
@@ -223,7 +223,7 @@ Machine learning using classification and categorisation services
 
 #### Assignments (MidSem Exam)
 
-- Week 10 (final): [1 Question](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-10)
+- Week 10 (final): [1 Question](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md#week-10)
 
 ---
 
