@@ -58,7 +58,7 @@ Motivation for cloud computing, introduction to cloud computing
 
 #### Assignments (MidSem Exam)
 
-- Week 1: [4 Questions](https://github.com/uwacsp/cits5503/blob/master/assignments.md#week-1)
+- Week 1: [4 Questions](https://github.com/uwa-computer-science/cits5503/blob/master/assignments.md)
 
 ---
 
