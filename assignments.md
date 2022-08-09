@@ -1,6 +1,6 @@
 ## Weekly Questions CITS5503 2022
 
-##Week 1:
+## Week 1:
 
 [1.0] [5 points] The evolution of Cloud Computing has been compared to the evolution of electricity supply as a utility. Describe specific problems that Cloud Computing solves as compared to businesses running their own data centres.
 
@@ -12,7 +12,7 @@
 
 [5.0] [20 points] How could a mobile device benefit from cloud computing? Explain the reasons or provide your arguments supporting the contrary. Discuss several cloud applications for mobile devices; explain which one of the three cloud computing delivery models, SaaS, PaaS, or IaaS, would be used by each one of the applications and why.
 
-##Week 2: 
+## Week 2: 
 
 [5.0] [20 points] Describe the steps which you would take on AWS and the decisions that would need to be made to create, configure and run a Virtual Machine Instance.
 
