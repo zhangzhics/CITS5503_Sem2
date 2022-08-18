@@ -34,6 +34,7 @@
 [12.0] [5 points] What are the core components of DynamoDB
 
 [13.0] [5 points] When a Bucket is created, AWS allows the specification of a number of features that can be managed. What are the key properties and features?
+
 [14.0] [5 points] We can leave S3 buckets open to public. Is this suitable for a specific application? Why and why not? Justify your answer. 
 
 
