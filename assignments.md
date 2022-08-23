@@ -37,4 +37,22 @@
 
 [14.0] [5 points] We can leave S3 buckets open to public. Is this suitable for a specific application? Why and why not? Justify your answer. 
 
+## Week 5:
+
+[14] [10 points] An organisation has 5 departments and has separated out each of the IAM users into separate groups using paths following the pattern companybucket/department1/*, companybucket /department2/*, companybucket /department3/* etc.
+
+Their IAM account names follow the pattern user@department1.company.com, user@department2.company.com etc.
+
+You are tasked with securing a bucket that contains a folder for each of 5 departments in an organisation. Only people within a department can write to their own folder. Everyone can read from all folders.  
+
+Discuss the principles that you would use to create a policy that would achieve this objective.
+
+Write the policy as a JSON file that you would use.
+
+Note: you can have individual statements for each department.
+
+[15] [5 points]  What aspects of security does the OSI Security Architecture X.800 standard cover? Which particular components of this standard does AWS Identity and Access Management deal with?
+
+[16] [5 points] Name 3 of the keys that you would find in a Policy. Explain their role. An example of a key is “Version” that specifies the version of the policy syntax and is normally “Version”: “2012-10-17”
+
 
