@@ -30,17 +30,17 @@
 ## Week 4: 
 [11.0] [5 points] You are asked to store data about music albums in a DynamoDB table. For each album, you need to record the title of the album and the artist name. Describe the commands you would use to create a table to store such information and write an entry to that table in DynamoDB.
 
-[11.0] [5 points] Describe how S3 handles consistency of objects and how this approach affects the state of objects when they are read using a GET.
+[12.0] [5 points] Describe how S3 handles consistency of objects and how this approach affects the state of objects when they are read using a GET.
 
-[12.0] [5 points] What are the core components of DynamoDB
+[13.0] [5 points] What are the core components of DynamoDB
 
-[13.0] [5 points] When a Bucket is created, AWS allows the specification of a number of features that can be managed. What are the key properties and features?
+[14.0] [5 points] When a Bucket is created, AWS allows the specification of a number of features that can be managed. What are the key properties and features?
 
-[14.0] [5 points] We can leave S3 buckets open to public. Is this suitable for a specific application? Why and why not? Justify your answer. 
+[15.0] [5 points] We can leave S3 buckets open to public. Is this suitable for a specific application? Why and why not? Justify your answer. 
 
 ## Week 5:
 
-[14] [10 points] An organisation has 5 departments and has separated out each of the IAM users into separate groups using paths following the pattern companybucket/department1/*, companybucket /department2/*, companybucket /department3/* etc.
+[15] [10 points] An organisation has 5 departments and has separated out each of the IAM users into separate groups using paths following the pattern companybucket/department1/*, companybucket /department2/*, companybucket /department3/* etc.
 
 Their IAM account names follow the pattern user@department1.company.com, user@department2.company.com etc.
 
@@ -52,8 +52,8 @@ Write the policy as a JSON file that you would use.
 
 Note: you can have individual statements for each department.
 
-[15] [5 points]  What aspects of security does the OSI Security Architecture X.800 standard cover? Which particular components of this standard does AWS Identity and Access Management deal with?
+[16] [5 points]  What aspects of security does the OSI Security Architecture X.800 standard cover? Which particular components of this standard does AWS Identity and Access Management deal with?
 
-[16] [5 points] Name 3 of the keys that you would find in a Policy. Explain their role. An example of a key is “Version” that specifies the version of the policy syntax and is normally “Version”: “2012-10-17”
+[17] [5 points] Name 3 of the keys that you would find in a Policy. Explain their role. An example of a key is “Version” that specifies the version of the policy syntax and is normally “Version”: “2012-10-17”
 
 
