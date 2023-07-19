@@ -24,7 +24,7 @@ Students are able to
 
 ## Contents and Assessments
 
-The course consists of 12 weeks of lectures and 10 weeks of practical lab classes (2 points each). Assessment is through a midsem exam and a final exam.
+The course consists of 12 weeks of lectures and 9 weeks of practical lab classes. Assessments are listed below.
 
 - 20% Labs
 - 30% MidSem Exam
