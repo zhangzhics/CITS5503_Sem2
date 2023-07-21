@@ -2,11 +2,13 @@
 
 Version: 1.0 Date: 12/04/2018 Author: David Glance
 
+Date: 21/07/2023 Updated by Zhi Zhang
+
 ## Learning Objectives
 
-1.	Learn how to create and configure S3 buckets and read and write objects to them
-2.	Learn how to use operations on DynamoDB: Create table, put items, get items
-3.	Start an application is your own personal Cloud Storage
+1. Learn how to create and configure S3 buckets and read and write objects to them
+2. Learn how to use operations on DynamoDB: Create table, put items, get items
+3. Start an application is your own personal Cloud Storage
 
 ## Technologies Covered
 
@@ -17,7 +19,7 @@ Version: 1.0 Date: 12/04/2018 Author: David Glance
 * Python/Boto scripts
 * VirtualBox
 
-Note: Do this from your VirtualBox VM – if you do it from any other platform (Windows, Mac – you will need to resolve any potential issues yourself)
+Note: please use your Ubuntu VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 

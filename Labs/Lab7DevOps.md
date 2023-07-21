@@ -4,16 +4,18 @@ Version: 1.2 Date: 15/9/2018 Author: David Glance
 
 ## Learning Objectives
 
-1.	Install and configure Fabric
-2.	Deploy a server with nginx installed and configured by Fabric
-3. 	Deploy Django code using Fabric
+1. Install and configure Fabric
+2. Deploy a server with nginx installed and configured by Fabric
+3. Deploy Django code using Fabric
 
 ## Technologies Covered
 
-Ubuntu
-AWS
-Python
-Fabric
+* Ubuntu
+* AWS
+* Python
+* Fabric
+
+Note: please use your Ubuntu VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 

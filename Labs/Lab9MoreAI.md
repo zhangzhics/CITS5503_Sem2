@@ -2,17 +2,22 @@
 
 Version: 1.0 Date: 4/10/2021 Author: Camilo Pestana
 
+Date: 21/07/2023 Updated by Zhi Zhang
+
 ## Learning Objectives
 
 1. Learn more about AI and Machine Learning services available on AWS.
 2. Use boto3 to get hands-on experience on using useful AI services in AWS for Natural Language Processing (NLP)/ Natural Language Understanding (NLU) and Computer Vision.
 
 ## Technologies Covered
-- Ubuntu
-- AWS Comprehend
-- AWS Rekognition
-- boto3
-- Python
+
+* Ubuntu
+* AWS Comprehend
+* AWS Rekognition
+* boto3
+* Python
+
+Note: please use your Ubuntu VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 

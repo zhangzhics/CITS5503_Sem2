@@ -2,22 +2,24 @@
 
 Version: 1.2 Date: 23/08/2018 Author: David Glance
 
+Date: 21/07/2023 Updated by Zhi Zhang
+
 ## Learning Objectives
 
 1. IAM policies applied to S3
-2.	KMS Key Management System – creating keys and using the key for symmetric encryption
-3.	Using AES Encryption for client and server side encryption
+2. KMS Key Management System – creating keys and using the key for symmetric encryption
+3. Using AES Encryption for client and server side encryption
 
 ## Technologies Covered
 
-Ubuntu
-AWS
-AWS KMS
-AES Encryption
-Python/Boto scripts
-VirtualBox
+* Ubuntu
+* AWS
+* AWS KMS
+* AES Encryption
+* Python/Boto scripts
+* VirtualBox
 
-Note: Do this from your VirtualBox VM – if you do it from any other platform (Windows, Mac – you will need to resolve any potential issues yourself)
+Note: please use your Ubuntu VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 

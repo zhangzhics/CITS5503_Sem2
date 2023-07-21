@@ -2,26 +2,28 @@
 
 Date: 30/07/2020 Author: David Glance
 
+Date: 21/07/2023 Updated by Zhi Zhang
+
 ## Learning Objectives
 
 1. Register for an AWS account and explore the user interface
-1. Obtain API keys and secret
-1. Install VirtualBox and an Ubuntu 20.04 LTS VM
-1. On the Ubuntu 20.04 LTS instance
-1. Install AWS CLI on VM
-1. Install a virtual environment with Python 3.6
-1. Configure the AWSCLI environment with API details and default region
-1. Verify awscli is working and write a python boto script to emulate a awscli command
+2. Obtain API keys and secret
+3. Install VirtualBox and an Ubuntu 20.04 LTS VM
+4. On the Ubuntu 20.04 LTS instance
+5. Install AWS CLI on VM
+6. Install a virtual environment with Python 3.6
+7. Configure the AWSCLI environment with API details and default region
+8. Verify awscli is working and write a python boto script to emulate a awscli command
 
 ## Technologies Covered
 
-Ubuntu
+* Ubuntu
 
-AWS
+* AWS
 
-VirtualBox Python/Boto/awscli/bash scripts
+* VirtualBox Python/Boto/awscli/bash scripts
 
-NOTE: Whilst some of the work that has been outlined in the labs can be done on lab machines, it is strongly recommended that you use your own laptop for this work. Likewise, you can create virtualenvs on your laptop but it is recommended that you do this on the VM using VirtualBox. Instructions are only provided for this configuration.
+NOTE: please use your own laptop for our labs with an Ubuntu VM installed inside your VirtualBox, as our lab guide is specific to this setup.
 
 ## AWS Accounts and Log In
 ### [1] You will have an account created for you on AWS.
