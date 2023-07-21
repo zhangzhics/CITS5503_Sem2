@@ -1,7 +1,7 @@
 # Practical Worksheet 1 Version: 1.2
 
 Date: 30/07/2020 Author: David Glance
-Date: 29/07/2022 Updated by Anwarul Patwary
+Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -22,7 +22,7 @@ AWS
 
 VirtualBox Python/Boto/awscli/bash scripts
 
-NOTE: Whilst some of the work that has been outlined in the labs can be done on lab machines, it is strongly recommended that you use your own laptop for this work. Likewise, you can create virtualenvs on your laptop but it is recommended that you do this on the VM using VirtualBox. Instructions are only provided for this configuration.
+NOTE: please use your own laptop for our labs with an Ubuntu VM installed inside your VirtualBox, as our lab guide is specific to this setup.
 
 ## AWS Accounts and Log In
 ### [1] You will have an account created for you on AWS.

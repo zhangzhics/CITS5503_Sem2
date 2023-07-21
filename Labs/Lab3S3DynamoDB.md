@@ -1,8 +1,7 @@
 # Practical Worksheet 3
 
 Version: 1.0 Date: 12/04/2018 Author: David Glance
-
-Updated Date: 14/08/2022 Author: Anwarul Patwary
+Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -19,7 +18,7 @@ Updated Date: 14/08/2022 Author: Anwarul Patwary
 * Python/Boto scripts
 * VirtualBox
 
-Note: Do this from your VirtualBox VM – if you do it from any other platform (Windows, Mac – you will need to resolve any potential issues yourself)
+Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
 
 ## Background
 

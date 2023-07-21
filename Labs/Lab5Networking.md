@@ -1,12 +1,11 @@
 # Practical Worksheet 5
 Version: 1.1 Date: 28/08/2018 Author: David Glance
-
-Date: 10/09/2022 Author: Anwarul Patwary 
+Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 
-1.	Networking and NAT
-2.	Setting up an Application Load Balancer
+1. Networking and NAT
+2. Setting up an Application Load Balancer
 
 Technologies Covered
 
@@ -18,7 +17,7 @@ NAT
 Python/Boto scripts
 VirtualBox
 
-Note: Do this from your VirtualBox VM – if you do it from any other platform (Windows, Mac – you will need to resolve any potential issues yourself)
+Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
 
 ## Background
 

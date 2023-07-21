@@ -1,6 +1,7 @@
 # Practical Worksheet 8
 
 Version: 1.0 Date: 27/9/2021 Author: Camilo Pestana
+Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -9,12 +10,14 @@ Version: 1.0 Date: 27/9/2021 Author: Camilo Pestana
 
 ## Technologies Covered
 
-Ubuntu
-AWS
-Amazon SageMaker
-S3
-boto3
-Python
+* Ubuntu
+* AWS
+* Amazon SageMaker
+* S3
+* boto3
+* Python
+
+Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
 
 ## Background
 

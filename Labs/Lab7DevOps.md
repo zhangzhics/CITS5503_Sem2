@@ -1,7 +1,8 @@
 # Practical Worksheet 7
 
 Version: 1.2 Date: 15/9/2018 Author: David Glance
-Update: 25/9/2022 Author: Anwarul Patwary
+Date: 21/07/2023 Updated by Zhi Zhang
+
 ## Learning Objectives
 
 1.	Install and configure Fabric
@@ -10,10 +11,12 @@ Update: 25/9/2022 Author: Anwarul Patwary
 
 ## Technologies Covered
 
-Ubuntu
-AWS
-Python
-Fabric
+* Ubuntu
+* AWS
+* Python
+* Fabric
+
+Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
 
 ## Background
 

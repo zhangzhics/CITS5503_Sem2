@@ -1,7 +1,6 @@
 # Practical Worksheet 2
 Version: 1.0 Date: 10/04/2018 Author: David Glance
-
-Updated: 07/08/2022 Author: Dr Anwarul Patwary
+Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 1. Create an EC2 instance, security group and ssh keys using awscli and python/boto
@@ -15,7 +14,7 @@ Updated: 07/08/2022 Author: Dr Anwarul Patwary
 * AWS EC2 Python/Boto/awscli/bash scripts VirtualBox
 * Docker
 
-Note: Do this from your VirtualBox VM – if you do it from any other platform (Windows, Mac – you will need to resolve any potential issues yourself)
+Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
 
 ## Create an EC2 instance using awscli
 ### [1] Create a security group
