@@ -1,7 +1,6 @@
 # Practical Worksheet 8
 
 Version: 1.0 Date: 27/9/2021 Author: Camilo Pestana
-Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -10,14 +9,12 @@ Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Technologies Covered
 
-* Ubuntu
-* AWS
-* Amazon SageMaker
-* S3
-* boto3
-* Python
-
-Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
+Ubuntu
+AWS
+Amazon SageMaker
+S3
+boto3
+Python
 
 ## Background
 
@@ -61,7 +58,6 @@ The tuning will normally take between 2-4 minutes, review the output and the bes
 Lab Assessment:
 This semester all labs will be assessed as "Lab notes". You should follow all steps in each lab and include your own comments. In addition, include screenshots showing the output for every commandline instruction that you execute in the terminal and any other relevant screenshots that demonstrate you followed the steps from the corresponding lab. Please also include any linux or python script that you create and the corresponding output you get when executed.
 Please submit a single PDF file. The formatting is up to you but a well organised structure of your notes is appreciated.
-
 
 
 

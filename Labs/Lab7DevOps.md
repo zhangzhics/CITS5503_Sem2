@@ -1,7 +1,6 @@
 # Practical Worksheet 7
 
 Version: 1.2 Date: 15/9/2018 Author: David Glance
-Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -11,12 +10,10 @@ Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Technologies Covered
 
-* Ubuntu
-* AWS
-* Python
-* Fabric
-
-Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
+Ubuntu
+AWS
+Python
+Fabric
 
 ## Background
 
@@ -95,17 +92,9 @@ we are keeping it simple.
 
 The documentation for Fabric is here: http://docs.fabfile.org/en/2.0/
 
-## [Step 5] Terminate the instance you created. Otherwise, you might lose the mark. 
-
 Lab Assessment:
 	
 This semester all labs will be assessed as "Lab notes". You should follow all steps in each lab and include your own comments. In addition, include screenshots showing the output for every commandline instruction that you execute in the terminal and any other relevant screenshots that demonstrate you followed the steps from the corresponding lab. Please also include any linux or python script that you create and the corresponding output you get when executed.
 Please submit a single PDF file. The formatting is up to you but a well organised structure of your notes is appreciated.
-
-
-
-
-
-
 
 

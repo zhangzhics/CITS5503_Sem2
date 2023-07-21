@@ -1,6 +1,6 @@
-## Weekly Questions CITS5503 2022
+## Assignments CITS5503 2021
 
-## Week 1:
+## Week 1
 
 [1.0] The evolution of Cloud Computing has been compared to the evolution of electricity supply as a utility. Describe specific problems that Cloud Computing solves as compared to businesses running their own data centres.
 
@@ -10,41 +10,35 @@
 
 [4.0] Describe the concepts of vertical and horizontal scale. Describe 2 different ways in which you could scale a web application horizontally. Describe a potential architecture to scale the database to handle the scaling out of the web servers.
 
-[5.0] How could a mobile device benefit from cloud computing? Explain the reasons or provide your arguments supporting the contrary. Discuss several cloud applications for mobile devices; explain which one of the three cloud computing delivery models, SaaS, PaaS, or IaaS, would be used by each one of the applications and why.
-
-## Week 2: 
+## Week 2
 
 [5.0] Describe the steps which you would take on AWS and the decisions that would need to be made to create, configure and run a Virtual Machine Instance.
 
-[6.0] Describe EBS and what features it offers. 
+[6.0] Describe EBS and what features it offers
 
-[7.0] What is CLI and Boto? What are advantages of using CLI? How does Boto function helps in AWS operation? 
+## Week 3
 
-## Week 3: 
-[8.0] Describe what virtualisation is and describe the characteristic attributes of the different types of virtualisation (Language, Operating System and Hardware).
+[7.0] Describe what virtualisation is and describe the characteristic attributes of the different types of virtualisation (Language, Operating System and Hardware).
 
-[9.0] Describe what containers are with reference to Docker and discuss their similarities and differences from operating system virtualisation perspective as provided by VirtualBox.
+[8.0] Describe what containers are with reference to Docker and discuss their similarities and differences from operating system virtualisation perspective as provided by VirtualBox.
 
-[10.0] There was an evolution of operating system during the half century from 1960 to 2010. Identify the virtualisation milestones in this above evolution and explain them briefly. 
+## Week 4
 
-## Week 4: 
-[11.0] You are asked to store data about music albums in a DynamoDB table. For each album, you need to record the title of the album and the artist name. Describe the commands you would use to create a table to store such information and write an entry to that table in DynamoDB.
+[9.0] You are asked to store data about music albums in a DynamoDB table. For each album, you need to record the title of the album and the artist name. Describe the commands you would use to create a table to store such information and write an entry to that table in DynamoDB.
 
-[12.0] Describe how S3 handles consistency of objects and how this approach affects the state of objects when they are read using a GET.
+[10.0] Describe how S3 handles consistency of objects and how this approach affects the state of objects when they are read using a GET.
 
-[13.0] What are the core components of DynamoDB
+[11.0] What are the core components of DynamoDB
 
-[14.0] When a Bucket is created, AWS allows the specification of a number of features that can be managed. What are the key properties and features?
+[12.0] When a Bucket is created, AWS allows the specification of a number of features that can be managed. What are the key properties and features?
 
-[15.0] We can leave S3 buckets open to public. Is this suitable for a specific application? Why and why not? Justify your answer. 
+## Week 5
 
-## Week 5:
-
-[15] An organisation has 5 departments and has separated out each of the IAM users into separate groups using paths following the pattern companybucket/department1/*, companybucket /department2/*, companybucket /department3/* etc.
+[13] An organisation has 5 departments and has separated out each of the IAM users into separate groups using paths following the pattern companybucket/department1/*, companybucket /department2/*, companybucket /department3/* etc.
 
 Their IAM account names follow the pattern user@department1.company.com, user@department2.company.com etc.
 
-You are tasked with securing a bucket that contains a folder for each of 5 departments in an organisation. Only people within a department can write to their own folder. Everyone can read from all folders.  
+You are tasked with securing a bucket that contains a folder for each of 5 departments in an organisation. Only people within a department can write to their own folder. Everyone can read from all folders.  
 
 Discuss the principles that you would use to create a policy that would achieve this objective.
 
@@ -52,8 +46,28 @@ Write the policy as a JSON file that you would use.
 
 Note: you can have individual statements for each department.
 
-[16] What aspects of security does the OSI Security Architecture X.800 standard cover? Which particular components of this standard does AWS Identity and Access Management deal with?
+[14] What aspects of security does the OSI Security Architecture X.800 standard cover? Which particular components of this standard does AWS Identity and Access Management deal with?
 
-[17] Name 3 of the keys that you would find in a Policy. Explain their role. An example of a key is “Version” that specifies the version of the policy syntax and is normally “Version”: “2012-10-17”
+[15] Name 3 of the keys that you would find in a Policy. Explain their role. An example of a key is “Version” that specifies the version of the policy syntax and is normally “Version”: “2012-10-17”
 
+## Week 6
 
+[16] Discuss the reasons why you would use Application Load Balancing and how this would be set up to load balance a Python Django application. Specifically, describe the configuration of the Listener and Target Group running the Python Django application.
+
+[17] Describe 2 ways in which security is implemented in AWS networks at the network level. What are the similarities and differences between these 2 security implementations?
+
+## Week 8
+
+[18] When an EC2 instance is created in AWS, it is assigned to a region and a Virtual Private Cloud (VPC). Describe how network addresses are allocated to a VPC and sub-networked when an EC2 instance is created. How is the EC2 connected to other machines and to the Internet?
+
+[19] What is DevOps and describe how you would implement the automation of creation of machines, configuration of software and deployment of application programs using AWS.
+
+## Week 9
+
+[20] Describe the 3 different types of Machine Learning Models that AWS Machine Learning allows you to use and describe examples of the types of questions you could answer with each one.
+
+[21] Describe the different ways in which a Microservice Architecture can be implemented on AWS and what the benefits of this approach might be. How could authentication and authorisation be handled in this approach?
+
+## Week 10
+
+[22] You have been asked to create a project plan for the new machine learning model your company has asked you to build. List the main tasks and sub-tasks you would need to complete to create the model on AWS. [b] [5 points] How would you measure the accuracy of the model you created?

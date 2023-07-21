@@ -1,7 +1,6 @@
 # Practical Worksheet 3
 
 Version: 1.0 Date: 12/04/2018 Author: David Glance
-Date: 21/07/2023 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -18,7 +17,7 @@ Date: 21/07/2023 Updated by Zhi Zhang
 * Python/Boto scripts
 * VirtualBox
 
-Note: Please use your Linux-based VM – if you do the lab from any other OS (e.g., Windows, Mac – some unknown issues might occur)
+Note: Do this from your VirtualBox VM – if you do it from any other platform (Windows, Mac – you will need to resolve any potential issues yourself)
 
 ## Background
 
@@ -102,5 +101,3 @@ Check timestamps on files and only upload if the file has been updated.
 Lab Assessment:
 This semester all labs will be assessed as "Lab notes". You should follow all steps in each lab and include your own comments. In addition, include screenshots showing the output for every commandline instruction that you execute in the terminal and any other relevant screenshots that demonstrate you followed the steps from the corresponding lab. Please also include any linux or python script that you create and the corresponding output you get when executed.
 Please submit a single PDF file. The formatting is up to you but a well organised structure of your notes is appreciated.
-
-
