@@ -2,15 +2,15 @@
 
 ## Week 1
 
-[1.0] The evolution of Cloud Computing has been compared to the evolution of electricity supply as a utility. Describe specific problems that Cloud Computing solves as compared to businesses running their own data centres.
+[1.0] The evolution of Cloud Computing has been compared to the evolution of electricity supply as a utility. Describe 3 specific problems that Cloud Computing solves as compared to businesses running their own data centres.
 
-[2.0] Describe the different categories of services (XaaS) cloud computing can provide with specific examples of each service.
+[2.0] An established financial company is about to launch their new banking application. Give 3 reasons why the company should use their own data centre rather than cloud computing.
 
-[3.0] An established financial company is about to launch their new banking application. Give 5 reasons why the company should use their own data centre rather than cloud computing.
-
-[4.0] Describe the concepts of vertical and horizontal scale. Describe 2 different ways in which you could scale a web application horizontally. Describe a potential architecture to scale the database to handle the scaling out of the web servers.
+[3.0] Describe the concepts of vertical and horizontal scale. Describe 2 different ways in which you could scale a web application horizontally. Describe a potential architecture to scale the database to handle the scaling out of the web servers.
 
 ## Week 2
+
+[4.0] Describe the different categories of services (XaaS) cloud computing can provide with specific examples of each service.
 
 [5.0] Describe the steps which you would take on AWS and the decisions that would need to be made to create, configure and run a Virtual Machine Instance.
 
