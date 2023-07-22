@@ -10,7 +10,7 @@ Docker Deep Dive: Zero to Docker in a single book (Nigel Poulton)
 
 Online Tutorials
 
-[Overview of Amazon Web Services] (https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html) 
+[Overview of Amazon Web Services](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html) 
 
-[docker for beginners] (https://docker-curriculum.com)
+[docker for beginners](https://docker-curriculum.com)
 
