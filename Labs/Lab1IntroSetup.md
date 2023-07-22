@@ -166,4 +166,5 @@ This will create an un-tabulated response.
 
 Lab Assessment:
 
-This semester all labs will be assessed as "Lab notes". You should follow all steps in each lab and include your own comments for each step. Also, include screenshots for every commandline instruction that you execute in your the terminal and any other relevant screenshots showing the results you get after executing any scripts. Please submit a single PDF file. The formatting is up to you but a well organised structure of your notes is appreciated.
+A structured description (15%). A clear step-by-step with detailed descriptions (85%). 
+

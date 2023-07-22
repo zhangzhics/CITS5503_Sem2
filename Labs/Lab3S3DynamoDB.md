@@ -33,7 +33,7 @@ The aim of this lab is to write a program that will:
 
 ### [Step 1] Preparation
 
-Download the python code cloudstorage.py from https://github.com/dglance/cits5503/blob/master/Labs/src/cloudstorage.py \
+Download the python code cloudstorage.py from the directory of src \
 Create a directory rootdir \
 Create a file in rootdir called rootfile.txt and put some content in it “1\n2\n3\n4\n5\n”
 
@@ -101,5 +101,5 @@ Add the functionality to apply changes to permissions and ownership when the dir
 Check timestamps on files and only upload if the file has been updated.
 
 Lab Assessment:
-This semester all labs will be assessed as "Lab notes". You should follow all steps in each lab and include your own comments. In addition, include screenshots showing the output for every commandline instruction that you execute in the terminal and any other relevant screenshots that demonstrate you followed the steps from the corresponding lab. Please also include any linux or python script that you create and the corresponding output you get when executed.
-Please submit a single PDF file. The formatting is up to you but a well organised structure of your notes is appreciated.
+
+A structured description (15%). A clear step-by-step with detailed descriptions (85%). 
