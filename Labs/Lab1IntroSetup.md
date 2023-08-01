@@ -8,7 +8,7 @@ Date: 21/07/2023 Updated by Zhi Zhang
 
 1. Register for an AWS account and explore the user interface
 2. Obtain API keys and secret
-3. Install VirtualBox and an Ubuntu 20.04 LTS VM
+3. Install a recent VM-based Linux OS, e.g., Ubuntu 20.04 LTS
 4. On the Ubuntu 20.04 LTS instance
 5. Install AWS CLI on VM
 6. Install a virtual environment with Python 3.6
@@ -36,7 +36,7 @@ You will need to change your password on login – you are encouraged to do that
 
 Remember that resources cost money and you should only leave things running as long as you need to complete the practical work. Machines or other resources found running for any significant period of time will be terminated. Persistent offenders will be locked out of the system.
 
-You are able to create your own account using a credit card and utilise free resource tiers on AWS.
+Alternatively, you can create your own owner account using your own credit card and utilise free resource tiers on AWS.
 
 ### [2] Make sure you can log into your account
 ### [3] Search and open Identity Access Management
@@ -47,15 +47,19 @@ Click on your user account. Click Security Credentials tab: Create access key an
 <b>NOTE:</b> Treat the Access key ID and secret very carefully. If stolen, these details allow someone to create large numbers of resources and do other things with the account
 </div>
 
-## Virtual Box and Ubuntu VM
+## Installing VM software (e.g., VirtualBox or UTM Virtual Machines), and OS image (e.g., Ubuntu 20.04 LTS)
 
-### [1] Download and install the appropriate version of VirtualBox
+### [1] Download and install the appropriate version of VM software 
 
-https://www.virtualbox.org/wiki/Downloads
+https://uwacyber.gitbook.io/cits1003/cits1003-labs/setting-up-your-laptop
+
+For Windows/MacOS (non-M1) users, please refer to 1.1 in the above link.
+
+For M1/M2 etc. MacBook users, please refer to 1.2 in the above link.
 
 ### [2] Download Ubuntu 20.04 LTS iso
 
-https://www.ubuntu.com/download/desktop (approximately 1.86GB)
+https://www.ubuntu.com/download/desktop (approximately 1.86 GB)
 
 ### [3] Setup VM
 
@@ -68,7 +72,7 @@ OPTIONAL If want to run the virtualbox machine in full screen:
 https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting
 
 
-## AWSCLI, Boto and Python 3.8.x
+## AWSCLI, Boto and Python 3.8.x (Note that your python version must be greater than 3.x)
 
 ### [1] Install Python 3.8.x
 
