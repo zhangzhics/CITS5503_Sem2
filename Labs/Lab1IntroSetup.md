@@ -30,7 +30,7 @@ NOTE: please use your own laptop for our labs with an Ubuntu VM installed inside
 
 Your username is <student number>@student.uwa.edu.au Password details will be provided separately.
 
-The login is here: https://622578507161.signin.aws.amazon.com/console
+The login is here: https://489389878001.signin.aws.amazon.com/console
 
 You will need to change your password on login – you are encouraged to do that as quickly as possible.
 
