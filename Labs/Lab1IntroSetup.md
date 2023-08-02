@@ -57,7 +57,7 @@ For Windows/MacOS (non-M1) users, please refer to 1.1 in the above link.
 
 For M1/M2 etc. MacBook users, please refer to 1.2 in the above link.
 
-### [2] Download Ubuntu 20.04 LTS iso
+### [2] Download Ubuntu 20.04 LTS iso (For M1/M2 etc. MacBook users, recent Kali Linux is a good choice)
 
 https://www.ubuntu.com/download/desktop (approximately 1.86 GB)
 
@@ -72,7 +72,7 @@ OPTIONAL If want to run the virtualbox machine in full screen:
 https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting
 
 
-## AWSCLI, Boto and Python 3.8.x (Note that your python version must be greater than 3.x)
+## AWSCLI, Boto and Python 3.8.x (Note that your python version must be no less than 3.6.x)
 
 ### [1] Install Python 3.8.x
 
