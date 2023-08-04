@@ -19,7 +19,7 @@ Technologies Covered
 * Python/Boto scripts
 * VirtualBox
 
-Note: please use your Ubuntu VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
+Note: please use your Linux VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 
