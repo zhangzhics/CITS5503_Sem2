@@ -26,7 +26,9 @@ Note: please use your Linux VM – if you do it from any other OS (e.g., Windows
 The aim of this lab is to write a program that will:
 
 [1] Scan a directory and upload all of the files found in the directory to an S3 bucket, preserving the path information
+
 [2] Store information about each file uploaded to S3 in a DynamoDB
+
 [3] Restore the directory on a local drive using the files in S3 and the information in DynamoDB
 
 ## Program
