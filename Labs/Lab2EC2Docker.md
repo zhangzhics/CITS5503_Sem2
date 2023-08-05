@@ -90,7 +90,7 @@ You can visit this [page](https://boto3.amazonaws.com/v1/documentation/api/lates
 Optional(unmarked): Create an EC2 instance using the console interface. Are there any differences from doing through the command line?
 
 ## Using Docker
-
+For some Mac users, you may want to use a Mac terminal to use Docker (using VM still is your best option, using a terminal is an alternative option), please visit this [page](https://docs.docker.com/desktop/install/mac-install/).
 ### [1] Install Docker
 ```
 sudo apt install docker.io -y
