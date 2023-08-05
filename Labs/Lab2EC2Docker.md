@@ -85,6 +85,7 @@ aws ec2 terminate-instances --instance-ids i-<your instance id>
 
 ### [1] Repeat the steps above using the equivalent Boto commands in a python script. The script should output the IP address to connect to.
 
+You can visit this [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) to get help.
 
 Optional: Create an EC2 instance using the console interface. Are there any differences from doing through the command line?
 
