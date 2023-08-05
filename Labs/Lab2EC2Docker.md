@@ -87,7 +87,7 @@ aws ec2 terminate-instances --instance-ids i-<your instance id>
 
 You can visit this [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) to get help.
 
-Optional: Create an EC2 instance using the console interface. Are there any differences from doing through the command line?
+Optional(unmarked): Create an EC2 instance using the console interface. Are there any differences from doing through the command line?
 
 ## Using Docker
 
