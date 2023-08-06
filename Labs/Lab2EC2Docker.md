@@ -157,7 +157,7 @@ docker run -p 80:80 -dit --name my-app my-apache2
 ```
 Include the code and output with descriptions  in your report.
 ### [7] Open a browser and access address http://localhost or http://127.0.0.1 Confirm you get Hello World!
-
+Include a screenshot for your browser with descriptions in your report.
 ### [8] Other commands
 
 To check what is running
