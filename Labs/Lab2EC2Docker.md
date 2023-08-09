@@ -56,7 +56,7 @@ Include the code and the contents in the .pem file with descriptions in your rep
 
  ```
 Include the code and output with descriptions in your report.
- Optional (unmarked): Add a tag to your Instance
+### Optional (unmarked): Add a tag to your Instance
  ```
   aws ec2 create-tags --resources i-??????? --tags Key=Name,Value=<student number>
  ```
