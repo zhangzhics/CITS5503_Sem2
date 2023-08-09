@@ -8,7 +8,7 @@ Date: 21/07/2023 Updated by Zhi Zhang
 
 1. Learn how to create and configure S3 buckets and read and write objects to them
 2. Learn how to use operations on DynamoDB: Create table, put items, get items
-3. Start an application is your own personal Cloud Storage
+3. Start an application as your own personal Cloud Storage
 
 ## Technologies Covered
 
@@ -81,7 +81,7 @@ Or you can use docker as we discussed in Week 2:
 docker run -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -inMemory -sharedDb
 ```
 
-Create a table on your local DynamoDB with the key userId
+Create a table on your local DynamoDB with the key userId \
 The attributes for the table will be:
 
 ```
