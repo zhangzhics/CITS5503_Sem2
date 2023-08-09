@@ -77,22 +77,23 @@ ssh -i <student number>-key.pem ubuntu@<IP Address>
 Include the code and output with descriptions  in your report.
 ### [7] Look at the instance using the AWS console
 Include a screenshot with descriptions in your report.
-### [8] ****NOTE*****
-
-Once you have finished, log onto the console and terminate the instance
-or
-```
-aws ec2 terminate-instances --instance-ids i-<your instance id>
-```
 
 ## Create an EC2 instance with Python Boto script
 Include the codes and outputs with descriptions  in your report.
 
-### [1] Repeat the steps (steps 1-8) above using the equivalent Boto commands in a python script.
+### [1] Repeat the steps (steps 1-7) above using the equivalent Boto commands in a python script.
 
 You can visit this [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) to get help.
 
 Optional(unmarked): Create an EC2 instance using the console interface. Are there any differences from doing through the command line?
+
+### [2] ****NOTE*****
+
+Once you have finished, log onto the console and terminate the 2 instances you created.
+or
+```
+aws ec2 terminate-instances --instance-ids i-<your instance id>
+```
 
 ## Using Docker
 For some Mac users, you may want to use a Mac terminal to use Docker (using VM still is your best option, using a terminal is an alternative option), please visit this [page](https://docs.docker.com/desktop/install/mac-install/).
