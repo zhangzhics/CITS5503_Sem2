@@ -81,7 +81,7 @@ Include a screenshot with descriptions in your report.
 ## Create an EC2 instance with Python Boto script
 Include the codes and outputs with descriptions  in your report.
 
-### [1] Repeat the steps (steps 1-7) above using the equivalent Boto commands in a python script.
+### [1] Repeat the steps (steps 1-5, and 7, you can skip step 6) above using the equivalent Boto commands in a python script.
 
 You can visit this [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) to get help.
 
