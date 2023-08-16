@@ -157,7 +157,11 @@ Create another version of your CloudStorage program that uses the python library
 
 You can use the example code for doing this from https://github.com/dglance/cits5503/blob/master/Labs/src/fileencrypt.py
 
+## Answer the following question
+
+```
 What is the performance difference between using KMS and using the custom solution?
+```
 
 Lab Assessment:
 
