@@ -147,7 +147,7 @@ attaching it to the key.
 
 In your CloudStorage application add the ability to encrypt and decrypt the files you find using the KMS Client apis of boto3.
 
-**Optional**
+**Optional (Unmarked)**
 
 Encrypt only operates on 4 KB of data and so if you were to use this as a means of encrypting larger files, you would have to encrypt the file in chunks and reverse the process for decryption.
 
@@ -157,7 +157,7 @@ Create another version of your CloudStorage program that uses the python library
 
 You can use the example code for doing this from https://github.com/dglance/cits5503/blob/master/Labs/src/fileencrypt.py
 
-## Answer the following question
+## Answer the following question (Marked)
 
 ```
 What is the performance difference between using KMS and using the custom solution?
