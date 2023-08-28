@@ -26,6 +26,7 @@ Note: please use your Linux VM – if you do it from any other OS (e.g., Windows
 The aim of this lab is to write a program that will:
 
 [1] Understand how to configure different network arrangements to gain and control access to computers and other networked resources
+
 [2] Understand IP addressing and CIDR and the meaning of TCP and UDP ports
 
 ## Networking
