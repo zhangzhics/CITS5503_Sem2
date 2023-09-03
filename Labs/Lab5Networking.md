@@ -31,17 +31,16 @@ The aim of this lab is to write a program that will:
 
 ## Networking
 
-### [Step 1] Configure inbound IP on VirtualBox VM
+### [Step 1] Configure inbound IP on your VM (Optional)
 
-This can be done in a number of ways, but we are going to use NAT port mapping. When a VM is created in VirtualBox, it defaults to creating a single NAT interface
+This can be done in a number of ways, but we are going to use NAT port mapping. When a VM is created, it defaults to creating a single NAT interface. Here, VirtualBox is used as an example.
 
-[1] The VM does not have to be stopped for this but it isn’t a bad idea to make changes when it is stopped.
-[2] In the VirtualBox Manager, select the VM you want to configure, then click Settings (Golden Gear Cog) and Network. Adapter 1 should be configured as NAT. Click on Advanced and then Port Forwarding. Set up 2 rules:
-   [a] Use the localhost host IP 127.0.0.1 and host port 2222 and map that to Guest Port 22
-   [b] Add a similar rule mapping Host Port 8080 to Guest Port 80
+[1] Turn off a specific VM you want to configure.
 
-[3] Testing! You can test the NAT’d ports by running your docker app and seeing if you can access it from your computer – the url will be http://127.0.0.1:8080
-Enable ssh to the VM by installing **sshd** as follows:
+[2] In the VirtualBox Manager, select the VM, click Settings and then Network. Choose Adapter 1 that should have been configured as NAT. Click on Advanced and then Port Forwarding. Set up 1 rule:
+   Use the host IP 127.0.0.1 and host port 2222 and map that to Guest Port 22
+
+[3] You can test the NAT'd port by seeing if you can access it from your hostOS. Enable ssh to the VM by installing **sshd** as follows:
 
 ```
 sudo apt install tasksel
@@ -60,7 +59,7 @@ you can stop it using:
  sudo service ssh stop
  ```
 
-To ssh to the VM, open a terminal on your PC (or use Putty) and ssh as
+To ssh to the VM, open a terminal on your hostOS (or use Putty) and ssh as
 
 ```
 ssh -p 2222 <usermame>@127.0.0.1
@@ -80,18 +79,14 @@ Before running the application to create a load balancer and
 instances, check how many are running in a particular region. Select a
 region that has capacity.
 
-**Remember** Delete the load balancer immediately after completing the
-lab.
+Note that you can use either AWS console or AWS Python Boto3 to complete [Step 2]. 
 
 ### USE YOUR STUDENT NUMBER TO IDENTIFY ALL RESOURCES
 
-Objective: Write an application to create 2 EC2 instances in two availability zones, create an application load balancer and load balance HTTP requests to the 2 instances.
+Objective: Create 2 EC2 instances in two availability zones (name the instances following the format: <student number>-<availability zone name>), create an application load balancer and load balance HTTP requests to the 2 instances. Inside the two instances, you will need to get Apache 2 installed and a file of index.html edited. Do this after you have created the instances and ALB. In a future lab you will learn how this could be done through a program as well.
 
-You will need to do some manual intervention to get Apache 2 installed and the index.html file edited. Do this after you have created the instances and ALB. In a future lab you will learn how this could be done through a program as well.
-
-[1] Write a Boto3 application to create 2 EC2 instances in two
-different availability zones of a specific region. Name the instances
-<student number>_zone
+[1] If you set up from the programming perspective, then write a Boto3 application to create 2 EC2 instances in two
+different availability zones of a specific region. 
 
 Note: You will need to use v2 of the ELB interface:
 
@@ -107,16 +102,14 @@ The steps involved in this are:
 security group
 
 [b] Create a target group using the same VPC that you used to create
-the instances - note the ARN that is output
+the instances
 
 [c] Register targets in the target group
 
 [d] Create a listener with a default rule Protocol: HTTP and Port 80
 forwarding on to the target group
 
-Try and access the EC2 instance using the public IP address of the load balancer in a browser. The load balancer will not be working at this point because Apache 2 is not installed. Check this and then:
-
-On each instance, install apache2
+Try and access the EC2 instance using the public IP address of the load balancer in a browser. The load balancer will not be working at this point because Apache 2 is not installed. Then, on each instance, install apache2:
 
 ```
 sudo apt install apache2
@@ -124,7 +117,7 @@ sudo apt install apache2
 
 Edit the /var/www/html/index.html file to report the instance name
 
-Now Verify that the load balancer is working. You should be able to
+Now verify that the load balancer is working. You should be able to
 access both of the EC2 instances by refreshing the page.
 
 
