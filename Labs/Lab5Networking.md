@@ -82,9 +82,9 @@ region that has capacity.
 
 ### USE YOUR STUDENT NUMBER TO IDENTIFY ALL RESOURCES
 
-Objective: Create 2 EC2 instances in two availability zones (name the instances following the format: \<student number\>-\<availability zone name\>), create an application load balancer and load balance HTTP requests to the 2 instances. Inside the two instances, you will need to get Apache 2 installed and a file of index.html edited. Do this after you have created the instances and ALB. In a future lab you will learn how this could be done through a program as well.
+Objective: Write a Boto3 application to create 2 EC2 instances in two availability zones (name the instances following the format: \<student number\>-\<availability zone name\>), create an application load balancer and load balance HTTP requests to the 2 instances. Inside the two instances, you will need to get Apache 2 installed and a file of index.html edited. Do this after you have created the instances and ALB. In a future lab you will learn how this could be done through a program as well.
 
-[1] Write a Boto3 application to create 2 EC2 instances in two
+[1] Create 2 EC2 instances in two
 different availability zones of a specific region. 
 
 Note: You will need to use v2 of the ELB interface:
@@ -98,7 +98,7 @@ client = boto3.client('elbv2')
 The steps involved in this are:
 
 [a] Create the load balancer and specify the two region subnets and a
-security group
+security group (note that the security group should authorise inbound traffic for HTTP, which is used by the following step [d])
 
 [b] Create a target group using the same VPC that you used to create
 the instances
