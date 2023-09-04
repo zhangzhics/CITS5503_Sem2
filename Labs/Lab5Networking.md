@@ -116,8 +116,7 @@ sudo apt install apache2
 
 Edit the /var/www/html/index.html file to report the instance name
 
-Now verify that the load balancer is working. You should be able to
-access both of the EC2 instances by refreshing the page.
+Now verify that the load balancer is working: use a browser from your hostOS to access both of the EC2 instances by refreshing the web page. Note that if you are using the Uni's network, it is likely that you cannot access the installed apache2. To address this issue, you have to switch to a non-uni network, e.g., using your mobile data as a personal hotspot.
 
 
 *IMPORTANT* When finished. Delete the Load balancer, target group,
