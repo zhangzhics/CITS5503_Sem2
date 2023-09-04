@@ -64,7 +64,7 @@ import os
 ```
 
 Remember to add your student ID to the session preparation cell as well as creating a bucket for the data to be loaded in to. This bucket cannot be restricted to only accessible for yourself as per a previous lab.
-After you apload training and validation files to your bucket, you could follow the [like here] (https://docs.aws.amazon.com/en_kr/sagemaker/latest/dg/automatic-model-tuning-ex-tuning-job.html)to create Hyperparameter tuning jobs. 
+After you apload training and validation files to your bucket, you could follow the [like here](https://docs.aws.amazon.com/en_kr/sagemaker/latest/dg/automatic-model-tuning-ex-tuning-job.html) to create Hyperparameter tuning jobs. 
 The notebook contains all of the instructions required. Please do not edit any of the machine learning code as it has been specifically designed to work on the resources available whilst minimising costs. You should only have to edit resource names to complete this lab.
 
 The tuning will normally take between 2-4 minutes, review the output and the best hyperparameters to ensure that the job was completed successfully.
