@@ -50,11 +50,15 @@ Host <ec2instance>
 	PasswordAuthentication no
 	IdentityFile <path to your private key>
 ```
-	
-You can test fabric from the command line:
+
+Use ssh <file name>  to connect to you instance
+
 
 Remember to rplace <ec2instance> with your EC2 name you used in the
 configuration - use your student number to identify resources.
+
+
+You can test fabric from the command line:
 
 ```
 python
