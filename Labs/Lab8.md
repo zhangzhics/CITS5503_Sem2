@@ -27,6 +27,11 @@ The aim of this lab is to write a program that will:
 1. Use jupyter notebooks and pandas to explore a dataset.
 2. Use boto3 and sagemaker to create training and hyperparameter optimization jobs, two important steps in every machine learning project.
 3. After a job is learned SageMaker allows to deploy models in EC2 instances. However, this is out of the scope for this lab.
+## Install and run jupyter notebooks
+```
+pip install notebook
+jupyter notebook
+```
 
 ## Set Up Python Environment
 
@@ -50,10 +55,16 @@ depending on your Python installation.
 ## Run Hyperparameter Tuning Jobs
 
 The steps for this lab are stored in the notebook [here](https://github.com/uwacsp/cits5503/blob/master/Labs/src/LabAI.ipynb)
-If you have installed the required packages as above you can skip the first installation step in the notebook.
+If you have installed the required packages as above you can skip the first installation step in the notebook. Then the following packegaes are required 
+```
+import pandas as pd
+import numpy as np
+import boto3
+import os
+```
 
 Remember to add your student ID to the session preparation cell as well as creating a bucket for the data to be loaded in to. This bucket cannot be restricted to only accessible for yourself as per a previous lab.
-
+After you apload training and validation files to your bucket, you could follow the [like here] (https://docs.aws.amazon.com/en_kr/sagemaker/latest/dg/automatic-model-tuning-ex-tuning-job.html)to create Hyperparameter tuning jobs. 
 The notebook contains all of the instructions required. Please do not edit any of the machine learning code as it has been specifically designed to work on the resources available whilst minimising costs. You should only have to edit resource names to complete this lab.
 
 The tuning will normally take between 2-4 minutes, review the output and the best hyperparameters to ensure that the job was completed successfully.
