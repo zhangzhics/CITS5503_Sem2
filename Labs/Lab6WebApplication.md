@@ -152,7 +152,7 @@ python3 manage.py runserver 8000
 
 NOTE remember to put the /polls/ on the end and you may need to restart nginx if it does not work.
 
-### [Step 4] Adding the load balancer
+### [Step 4] Add an application load balancer (customize your ALB from the last lab)
 
 [1] Create an application load balancer, specify the region subnet where your EC2 instance resides, create a listener with a default rule Protocol: HTTP and Port 80 forwarding.
 
@@ -162,18 +162,18 @@ NOTE remember to put the /polls/ on the end and you may need to restart nginx if
 
 [4] Add your instance as a registered target.
 
-Once you have created the ELB, you should see the health check fetch the /polls/ page every 30 seconds
+Once you have created the ALB, you should see the health check fetch the /polls/ page every 30 seconds
 
 You can now access the site using the url http://\<load balancer dns name>/polls/
 
 
 ### [Optional] Web interface for CloudStorage application
 
-You will need to create a table and update the data in it as you did in the DynamoDB lab3. You will need to create a local version of DynamoDB as in the previous lab3 as well as copy across your AWS credentials and previous scripts (the scp command can be helpful).
+You need a local version of DynamoDB from the previous lab3 as well as a copy of your AWS credentials.
 
 In views.py, add boto3 code to scan the DynamoDB table you created in lab3. Display the results in the calling page.
 
-In Django, you can use templates to properly format a web page using supplied variables – you can do that to make the table look nice. To use a template, you need to create a templates directory under polls and then add to the TEMPLATES section of lab/settings.py
+In Django, you can use a template to properly format a web page using supplied variables – you can do that to make the table look nice. To use a template, you need to create a folder called templates under polls and add to the TEMPLATES section of lab/settings.py
 
 ```
 TEMPLATES = [
