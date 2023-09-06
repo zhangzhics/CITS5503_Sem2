@@ -50,13 +50,17 @@ sudo bash
 python3 -m venv venv
 ```
 
-Activate your virtual environment and then:
+[3] Activate your virtual environment and then:
 
 ```
+env/bin/activate
+
 pip install django
 
 django-admin startproject lab
+
 cd lab
+
 python3 manage.py startapp polls
 ```
 
@@ -87,22 +91,22 @@ server {
 }
 ```
 
-Once you have done this you can restart nginx
+[2] Once you have done this you can restart nginx
 
 ```
 service nginx restart
 ```
 
-in your app directory: /opt/wwc/mysites/lab you can run
+[3] in your app directory: /opt/wwc/mysites/lab you can run
 
 ```
 python3 manage.py runserver 8000
 ```
 
-If you go to a browser now and use the ip address of your ec2 instance, you should see:
+[4] Open a browser and enter the ip address of your ec2 instance, take a screenshot of what you see:
 
 
-### [Step 3] Changing the code
+### [Step 3] Change the code
 
 [1] Following the steps outlined in the lecture, edit the following files
 
@@ -138,36 +142,36 @@ urlpatterns = [
 ]
 ```
 
-now run
+[2] now run
 
 ```
 python3 manage.py runserver 8000
 ```
 
-and check that you get Hello, world. when you type the url http://\<ip address>/polls/
+[3] Type the url http://\<ip address of your EC2 instance>/polls/, check that you get "Hello, world." 
 
-NOTE remember to put the /polls/ on the end and you may need to restart nginx if it didn't work earlier.
+NOTE remember to put the /polls/ on the end and you may need to restart nginx if it does not work.
 
 ### [Step 4] Adding the load balancer
 
-[1] Create an application load balancer as you did last week
+[1] Create an application load balancer, specify the region subnet where your EC2 instance resides, create a listener with a default rule Protocol: HTTP and Port 80 forwarding.
 
-[2] Choose the security group – it must allow HTTP
+[2] Choose the security group, allowing HTTP traffic.
 
-[3] For the target group, in the health check, specify /polls/ for the path
+[3] For the target group, in the health check, specify /polls/ for the path.
 
-[4] Add your instance as a registered target
+[4] Add your instance as a registered target.
 
 Once you have created the ELB, you should see the health check fetch the /polls/ page every 30 seconds
 
 You can now access the site using the url http://\<load balancer dns name>/polls/
 
 
-### [Extension] Web interface for CloudStorage application
+### [Optional] Web interface for CloudStorage application
 
-You will need to create a table and update the data in it as you did in the DynamoDB lab. You will need to create a local version of DynamoDB as in the previous lab as well as copy across your AWS credentials and previous scripts (hint. check out the scp command here).
+You will need to create a table and update the data in it as you did in the DynamoDB lab3. You will need to create a local version of DynamoDB as in the previous lab3 as well as copy across your AWS credentials and previous scripts (the scp command can be helpful).
 
-In views.py, add boto3 (remember to pip install) code to scan the DynamoDB table you created for your CloudStorage command line application. Display the results in the calling page.
+In views.py, add boto3 code to scan the DynamoDB table you created in lab3. Display the results in the calling page.
 
 In Django, you can use templates to properly format a web page using supplied variables – you can do that to make the table look nice. To use a template, you need to create a templates directory under polls and then add to the TEMPLATES section of lab/settings.py
 

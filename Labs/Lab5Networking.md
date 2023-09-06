@@ -98,15 +98,15 @@ client = boto3.client('elbv2')
 The steps involved in this are:
 
 [a] Create the load balancer and specify the two region subnets and a
-security group (note that the security group should authorise inbound traffic for HTTP, which is used by the following step [d])
+security group (note that the security group should authorise inbound traffic for HTTP, which is used by the following step [b])
 
-[b] Create a target group using the same VPC that you used to create
+[b] Create a listener with a default rule Protocol: HTTP and Port 80
+forwarding on to the target group
+
+[c] Create a target group using the same VPC that you used to create
 the instances
 
-[c] Register targets in the target group
-
-[d] Create a listener with a default rule Protocol: HTTP and Port 80
-forwarding on to the target group
+[d] Register targets in the target group
 
 Try and access the EC2 instance using the public IP address of the load balancer in a browser. The load balancer will not be working at this point because Apache 2 is not installed. Then, on each instance, install apache2:
 
