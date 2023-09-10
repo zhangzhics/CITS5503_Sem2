@@ -31,7 +31,7 @@ The aim of this lab is to write a program that will:
 
 ### [Step 1] Create an EC2 instance
 
-[1] Create an EC2 micro instance using Ubuntu and SSH into it.
+[1] Create an EC2 micro instance using Ubuntu and SSH into it. Install the Python 3 virtual environment package. 
 
 ```
 sudo apt-get update
@@ -44,16 +44,16 @@ It is easier now if you change the bash to operate as sudo
 sudo bash
 ```
 
-[2] Create a directory with a path /opt/wwc/mysites and cd into that.  Set up a virtual environment as you did in the first lab:
+[2] Create a directory with a path /opt/wwc/mysites and cd into that.  Set up a virtual environment:
 
 ```
-python3 -m venv venv
+python3 -m venv myvenv
 ```
 
 [3] Activate your virtual environment and then:
 
 ```
-env/bin/activate
+source myvenv/bin/activate
 
 pip install django
 
@@ -103,12 +103,12 @@ service nginx restart
 python3 manage.py runserver 8000
 ```
 
-[4] Open a browser and enter the ip address of your ec2 instance, take a screenshot of what you see:
+[4] Open a browser and enter the ip address of your ec2 instance, take a screenshot of what you see and stop your server with CONTROL-C
 
 
 ### [Step 3] Change the code
 
-[1] Following the steps outlined in the lecture, edit the following files
+[1] Following the steps outlined in the lecture, edit the following files (create the file if it does not exist)
 
 edit polls/views.py
 
@@ -119,7 +119,7 @@ def index(request):
     return HttpResponse("Hello, world.")
 ```
 
-edit polls/urls.py
+edit polls/urls.py 
 
 ```
 from django.urls import path

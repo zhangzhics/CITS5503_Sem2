@@ -79,7 +79,7 @@ attaching it to the key.
       "Sid": "Enable IAM User Permissions",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::032418238795:root"
+        "AWS": "arn:aws:iam::<account_root_user_id>:root"
       },
       "Action": "kms:*",
       "Resource": "*"
@@ -88,7 +88,7 @@ attaching it to the key.
       "Sid": "Allow access for Key Administrators",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::032418238795:user/<your_username>"
+        "AWS": "arn:aws:iam::<account_root_user_id>:user/<your_username>"
       },
       "Action": [
         "kms:Create*",
