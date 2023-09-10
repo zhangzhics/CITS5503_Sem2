@@ -53,7 +53,8 @@ python3 -m venv myvenv
 [3] Activate your virtual environment and then:
 
 ```
-source myvenv/bin/activate
+source venv/bin/activate
+
 
 pip install django
 
