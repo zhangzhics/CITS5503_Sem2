@@ -112,7 +112,7 @@ attaching it to the key.
       "Sid": "Allow use of the key",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::032418238795:user/<your_username>"
+        "AWS": "arn:aws:iam::<account_root_user_id>:user/<your_username>"
       },
       "Action": [
         "kms:Encrypt",
@@ -127,7 +127,7 @@ attaching it to the key.
       "Sid": "Allow attachment of persistent resources",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::032418238795:user/<your_username>"
+        "AWS": "arn:aws:iam::<account_root_user_id>:user/<your_username>"
       },
       "Action": [
         "kms:CreateGrant",
@@ -147,7 +147,7 @@ attaching it to the key.
 
 In your CloudStorage application add the ability to encrypt and decrypt the files you find using the KMS Client apis of boto3.
 
-**Optional (Unmarked)**
+**Optional**
 
 Encrypt only operates on 4 KB of data and so if you were to use this as a means of encrypting larger files, you would have to encrypt the file in chunks and reverse the process for decryption.
 
