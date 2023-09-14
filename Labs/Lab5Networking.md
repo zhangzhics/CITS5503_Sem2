@@ -110,7 +110,7 @@ the instances
 
 Try and access the EC2 instance using the public IP address of the load balancer in a browser. The load balancer will not be working at this point because Apache 2 is not installed. 
 
-First, connect to your instances.
+First, connect to your instances. If you can't SSH to your instances. Look at [here](link:https://bobbyhadz.com/blog/aws-ssh-permission-denied-publickey)
 
 Before installing Apache 2 on your instances, you have to update your instances
 
