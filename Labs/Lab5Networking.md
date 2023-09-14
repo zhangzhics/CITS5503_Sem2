@@ -108,7 +108,17 @@ the instances
 
 [d] Register targets in the target group
 
-Try and access the EC2 instance using the public IP address of the load balancer in a browser. The load balancer will not be working at this point because Apache 2 is not installed. Then, on each instance, install apache2:
+Try and access the EC2 instance using the public IP address of the load balancer in a browser. The load balancer will not be working at this point because Apache 2 is not installed. 
+
+First, connect to your instances. If you can't SSH to your instances. Look at [here](https://bobbyhadz.com/blog/aws-ssh-permission-denied-publickey).
+
+Before installing Apache 2 on your instances, you have to update your instances
+
+```
+sudo apt-get update
+```
+
+Then, on each instance, install apache2:
 
 ```
 sudo apt install apache2
