@@ -54,7 +54,7 @@ depending on your Python installation.
 
 ## Run Hyperparameter Tuning Jobs
 
-The steps for this lab are stored in the notebook [here](https://github.com/uwacsp/cits5503/blob/master/Labs/src/LabAI.ipynb)
+The steps for this lab are stored in the notebook [here](https://github.com/zhangzhics/CITS5503_Sem2_2023/tree/master/Labs/src/LabAI.ipynb).
 If you have installed the required packages as above you can skip the first installation step in the notebook. Then the following packegaes are required 
 ```
 import pandas as pd
