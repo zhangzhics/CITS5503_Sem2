@@ -55,6 +55,9 @@ depending on your Python installation.
 ## Run Hyperparameter Tuning Jobs
 
 The steps for this lab are stored in the notebook [here](https://github.com/zhangzhics/CITS5503_Sem2_2023/tree/master/Labs/src/LabAI.ipynb).
+
+Note: If you meet this error, ClientError: Non-numeric value 'F' found in the header line 'False,54,3,999,0,1,0,False,False,False,False,False...' of file 'train.csv', you can use Python to convert True/False to 1/0.
+
 If you have installed the required packages as above you can skip the first installation step in the notebook. Then the following packegaes are required 
 ```
 import pandas as pd
