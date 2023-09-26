@@ -108,7 +108,7 @@ the instances
 
 [d] Register targets in the target group
 
-Try and access the EC2 instance using the public IP address of the load balancer in a browser. The load balancer will not be working at this point because Apache 2 is not installed. 
+Try and access the EC2 instance using its public IP address in a browser. The load balancer will not be working at this point because Apache 2 is not installed. 
 
 First, connect to your instances. If you can't SSH to your instances. Look at [here](https://bobbyhadz.com/blog/aws-ssh-permission-denied-publickey).
 
@@ -126,7 +126,7 @@ sudo apt install apache2
 
 Edit the /var/www/html/index.html file to report the instance name
 
-Now verify that the load balancer is working: use a browser from your hostOS to access both of the EC2 instances by refreshing the web page. Note that if you are using the Uni's network, it is likely that you cannot access the installed apache2. To address this issue, you have to switch to a non-uni network, e.g., using your mobile data as a personal hotspot.
+Now verify that the load balancer is working: use a browser from your hostOS to access both of the EC2 instances by their respective IP address. Note that if you are using the Uni's network, it is likely that you cannot access the installed apache2. To address this issue, you have to switch to a non-uni network, e.g., using your mobile data as a personal hotspot.
 
 
 *IMPORTANT* When finished. Delete the Load balancer, target group,
