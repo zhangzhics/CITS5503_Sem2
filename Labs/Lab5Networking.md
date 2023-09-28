@@ -100,13 +100,13 @@ The steps involved in this are:
 [a] Create the load balancer and specify the two region subnets and a
 security group (note that the security group should authorise inbound traffic for HTTP, which is used by the following step [b])
 
-[b] Create a listener with a default rule Protocol: HTTP and Port 80
-forwarding on to the target group
-
-[c] Create a target group using the same VPC that you used to create
+[b] Create a target group using the same VPC that you used to create
 the instances
 
-[d] Register targets in the target group
+[c] Register targets in the target group
+
+[d] Create a listener with a default rule Protocol: HTTP and Port 80
+forwarding on to the target group
 
 Try and access the EC2 instance using its public IP address in a browser. The load balancer will not be working at this point because Apache 2 is not installed. 
 
