@@ -54,7 +54,7 @@ Host <ec2instance>
 Use ssh <file name>  to connect to you instance
 
 
-Remember to rplace <ec2instance> with your EC2 name you used in the
+Remember to replace <ec2instance> with your EC2 name you used in the
 configuration - use your student number to identify resources.
 
 
@@ -74,7 +74,7 @@ Linux
 Write a python script using fabric to set up and configure nginx as
 you did for the Django app last week
 
-This will consiste of doing the same commands you would do manually to
+This will consist of doing the same commands you would do manually to
 configure nginx but using the commands:
 
 sudo("commands go here separated by ;")
