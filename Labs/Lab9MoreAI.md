@@ -88,7 +88,7 @@ Question 1: In your words describe what entities are.
 Question 1: In your words describe what keyphrases are.
 
 #### [Step 5] Repeat steps from [Step 2] for detecting syntax.
-Question 1: In your words describe what keyphrases are.
+Question 1: In your words describe what syntaxes are.
 
 ## AWS Rekognition
 
