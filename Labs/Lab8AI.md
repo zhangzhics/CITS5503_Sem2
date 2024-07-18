@@ -77,7 +77,7 @@ The tuning will normally take between 2-4 minutes, review the output and the bes
 
 Lab Assessment:
 
-A structured description (15%). A clear step-by-step with detailed descriptions (85%). 
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
 
 
 

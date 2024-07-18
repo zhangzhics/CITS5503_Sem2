@@ -244,4 +244,4 @@ You can add variables to the template and more formatting to display the informa
 
 Lab Assessment:
 
-A structured description (15%). A clear step-by-step with detailed descriptions (85%). 
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 

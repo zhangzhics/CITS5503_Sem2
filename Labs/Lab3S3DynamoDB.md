@@ -110,4 +110,4 @@ Check timestamps on files and only upload if the file has been updated.
 
 Lab Assessment:
 
-A structured description (15%). A clear step-by-step with detailed descriptions (85%). 
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 

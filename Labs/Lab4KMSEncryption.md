@@ -165,4 +165,4 @@ What is the performance difference between using KMS and using the custom soluti
 
 Lab Assessment:
 
-A structured description (15%). A clear step-by-step with detailed descriptions (85%). 
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 

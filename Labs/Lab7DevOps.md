@@ -100,6 +100,6 @@ The documentation for Fabric is here: http://docs.fabfile.org/en/2.0/
 
 Lab Assessment:
 	
-A structured description (15%). A clear step-by-step with detailed descriptions (85%). 
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
 
 
