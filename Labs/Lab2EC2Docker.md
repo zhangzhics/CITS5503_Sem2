@@ -174,6 +174,7 @@ docker stop my-app
 docker rm my-app
 ```
 Include the code and output with descriptions  in your report.
+
 Lab Assessment:
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
