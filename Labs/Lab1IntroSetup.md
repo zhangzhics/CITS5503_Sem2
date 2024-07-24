@@ -53,7 +53,9 @@ Click on your user account. Click Security Credentials tab: Create access key an
 
 [https://uwacyber.gitbook.io/cits1003/cits1003-labs/setting-up-your-laptop](https://uwacyber.gitbook.io/cits1003/cits1003-labs/lab-1-setting-up-your-laptop)
 
-For Windows/MacOS (non-M1) users, please refer to 1.1 in the above link. Windows WSL is also a good choice for completing this and the following labs.
+For Windows/MacOS (non-M1) users, please refer to 1.1 in the above link. 
+
+Windows WSL is also a good choice for completing this and the following labs.
 
 In order to install and setup Windows WSL, please refer to https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2/
 
