@@ -41,13 +41,15 @@ Alternatively, you can create your own owner account using your own credit card 
 ### [2] Make sure you can log into your account
 ### [3] Search and open Identity Access Management
 
-Click on your user account. Click Security Credentials tab: Create access key and make a note of the Access key ID and the secret access key – you will need these for programmatic access to resources.
+Click on your user account. Click the Security Credentials tab: Create access key and make a note of the Access key ID and the secret access key – you will need these for programmatic access to resources.
 
 <div class="alert alert-info" style="font-size:100%">
 <b>NOTE:</b> Treat the Access key ID and secret very carefully. If stolen, these details allow someone to create large numbers of resources and do other things with the account
 </div>
 
 ## Installing VM software (e.g., VirtualBox or UTM Virtual Machines), and OS image (e.g., Ubuntu 20.04 LTS)
+
+**Note:** If you have already installed the necessary environment, you don't need to repeat this step. You need to attach the evidence that you have installed the environment.
 
 ### [1] Download and install the appropriate version of VM software 
 
@@ -71,12 +73,14 @@ Follow the instructions here to set up the VM using the Ubuntu image – remembe
 
 https://linuxhint.com/install_ubuntu_virtualbox_2004/
 
-OPTIONAL If want to run the virtualbox machine in full screen:
+OPTIONAL If want to run the VirtualBox machine in full screen:
 
 https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting
 
 
-## AWSCLI, Boto and Python 3.8.x (Note that your python version must be no less than 3.6.x)
+## AWSCLI, Boto and Python 3.8.x (Note that your Python version must be no less than 3.6.x)
+
+**Note:** If you have already installed the AWS CLI, Python 3.8.x (or the latest version), or Python Boto3 library, you don't need to repeat this step. You need to attach the evidence that you have them.
 
 ### [1] Install Python 3.8.x
 
