@@ -53,9 +53,11 @@ Click on your user account. Click Security Credentials tab: Create access key an
 
 https://uwacyber.gitbook.io/cits1003/cits1003-labs/setting-up-your-laptop
 
-For Windows/MacOS (non-M1) users, please refer to 1.1 in the above link.
+For Windows/MacOS (non-M1) users, please refer to 1.1 in the above link. Windows WSL is also a good choice for completing this and the following labs.
 
-For M1/M2 etc. MacBook users, please refer to 1.2 in the above link.
+In order to install and setup Windows WSL, please refer to https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2/
+
+For M1/M2 etc. MacBook users, please refer to 1.2 in the above link. You can also use a Mac terminal to complete this lab and the following labs.
 
 ### [2] Download Ubuntu 20.04 LTS iso (For M1/M2 etc. MacBook users, recent Kali Linux is a good choice)
 
