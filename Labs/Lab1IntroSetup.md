@@ -2,7 +2,7 @@
 
 Date: 30/07/2020 Author: David Glance
 
-Date: 21/07/2023 Updated by Zhi Zhang
+Date: 24/07/2024 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -23,68 +23,53 @@ Date: 21/07/2023 Updated by Zhi Zhang
 
 * VirtualBox Python/Boto/awscli/bash scripts
 
-NOTE: please use your own laptop for our labs with an Ubuntu VM installed inside your VirtualBox, as our lab guide is specific to this setup.
+Note: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## AWS Accounts and Log In
-### [1] You will have an account created for you on AWS.
+### [1] Log into an IAM user account created for you on AWS.
 
-Your username is <student number>@student.uwa.edu.au Password details will be provided separately.
+Your username is <student number>@student.uwa.edu.au. Password details will be provided separately.
 
-The login is here: https://489389878001.signin.aws.amazon.com/console
+The login is here: https://489389878001.signin.aws.amazon.com/console, where 489389878001 is the account root user id.
 
-You will need to change your password on login – you are encouraged to do that as quickly as possible.
-
-Remember that resources cost money and you should only leave things running as long as you need to complete the practical work. Machines or other resources found running for any significant period of time will be terminated. Persistent offenders will be locked out of the system.
+You must change your password after login.
 
 Alternatively, you can create your own owner account using your own credit card and utilise free resource tiers on AWS.
 
-### [2] Make sure you can log into your account
-### [3] Search and open Identity Access Management
+### [2] Search and open Identity Access Management
 
-Click on your user account. Click the Security Credentials tab: Create access key and make a note of the Access key ID and the secret access key – you will need these for programmatic access to resources.
+Click on your user account and click the Security Credentials tab: create access key and make a note of the Access key ID and the secret access key – you will need these for programmatic access to resources.
 
 <div class="alert alert-info" style="font-size:100%">
-<b>NOTE:</b> Treat the Access key ID and secret very carefully. If stolen, these details allow someone to create large numbers of resources and do other things with the account
+<b>NOTE:</b> You should treat the Access key ID and secret carefully. If stolen, these details allow someone to create large numbers of resources and do bad things with the user account. You should bear the incurred costs.
 </div>
 
-## Installing VM software (e.g., VirtualBox or UTM Virtual Machines), and OS image (e.g., Ubuntu 20.04 LTS)
+## Set up recent Linux OSes
 
-**Note:** If you have already installed the necessary environment, you don't need to repeat this step. You need to attach the evidence that you have installed the environment.
+**Note:** You have multiple options for the setup, for example, Windows WSL with recommended Ubuntu OS 20.04 LTS, and Virtual Machine Manager (e.g., VirtualBox, UTM and VMWare) with recommended Ubuntu OS 20.04 LTS. If you have already installed a recent Linux OS, you don't need to re-install it and instead attach appropriate screenshots and description for your write-up (other Linux distributions such as recent Kali Linux should be fine). 
 
-### [1] Download and install the appropriate version of VM software 
+For Windows/MacOS (non-M1) users, please refer to 1.1 in the link below. For M1/M2 etc. MacBook users, please refer to 1.2 in the link.
 
 [https://uwacyber.gitbook.io/cits1003/cits1003-labs/setting-up-your-laptop](https://uwacyber.gitbook.io/cits1003/cits1003-labs/lab-1-setting-up-your-laptop)
 
-For Windows/MacOS (non-M1) users, please refer to 1.1 in the above link. 
+For Windows users, WSL is also good and detailed below:
 
-Windows WSL is also a good choice for completing this and the following labs.
-
-In order to install and setup Windows WSL, please refer to https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2/
-
-For M1/M2 etc. MacBook users, please refer to 1.2 in the above link. You can also use a Mac terminal to complete this lab and the following labs.
-
-### [2] Download Ubuntu 20.04 LTS iso (For M1/M2 etc. MacBook users, recent Kali Linux is a good choice)
-
-https://www.ubuntu.com/download/desktop (approximately 1.86 GB)
-
-### [3] Setup VM
-
-Follow the instructions here to set up the VM using the Ubuntu image – remember that when you create the virtual disk, you can put it on an external USB drive
-
-https://linuxhint.com/install_ubuntu_virtualbox_2004/
-
-OPTIONAL If want to run the VirtualBox machine in full screen:
-
-https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting
+[https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2)
 
 
-## AWSCLI, Boto and Python 3.8.x (Note that your Python version must be no less than 3.6.x)
+**Optional:** If you want to run the VirtualBox environment in full screen:
 
-**Note:** If you have already installed the AWS CLI, Python 3.8.x (or the latest version), or Python Boto3 library, you don't need to repeat this step. You need to attach the evidence that you have them.
+[https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting](https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting)
+
+**Optional:** If you are using VirtualBox and have any issues with copy-paste from your host machine to your VM, you should enable clipboard copying from the Devices menu of VirtualBox (Settings > General > Advance > Shared Clipboard > Bidirectional). You will need to run and install the VirtualBox Guest Additions first from the same menu (On Ubuntu 20.04, you should install build tools first `sudo apt install linux-headers-$(uname -r) build-essential dkms -y`
+
+## Install Linux packages
+
+**Note:** If you have already installed AWS CLI, Python 3.8.x, and Python Boto3 library, you don't need to re-install it and instead attach relevant evidence for your write-up.
 
 ### [1] Install Python 3.8.x
 
-Ubuntu 20.04 already comes with Python 3.8.x but it is important to update the packages
+The recent Ubuntu versions such as 20.04 LTS have Python 3.8.x installed. You should update the packages
 to obtain the latest version:
 
 ```
@@ -102,61 +87,56 @@ Now we need to install `pip3`, which is a tool that will allow us to install and
 sudo apt install -y python3-pip
 ```
 
-Python packages can be installed by typing: `pip3 install package_name`
+Python packages can be installed by: `pip3 install package_name`
 
 
 ### [2] Install awscli
 
-Instructions are here:
+```
+sudo apt install awscli
+```
 
-https://docs.aws.amazon.com/cli/latest/userguide/installing.html
+Then, 
 
 ```
 pip3 install awscli --upgrade
 ```
 
-Alternatively instally with the command:
+Alternatively:
 
 ```
 sudo snap install aws-cli --classic
 ```
 
-[4] Configure aws using aws configure
-<div class="alert alert-info" style="font-size:100%">
-<b>NOTE:</b> use your own credentials!
-</div>
+### [3] Configure AWS
 
-https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+After typing the command below:
 
-
-Change the placeholder values by your AWS Access Key and AWS Secret Access Key.
 ```
 aws configure
+```
+
+You should see an output like this:
+
+```
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 Default region name [None]: ap-southeast-2
 Default output format [None]: json
 ```
 
-<div class="alert alert-info">
-<b>NOTE:</b> if you have any issues with clipboard copy paste from your machine to the VM, you have to enable clipboard copying from the Devices menu of VirtualBox (Settings > General > Advance > Shared Clipboard > Bidirectional). You will need to run and install the VirtualBox Guest Additions first from the same menu (On 20.04 you need to install build tools first `sudo apt install linux-headers-$(uname -r) build-essential dkms -y`
-)
-</div>
+Replace the placeholder values above with your own AWS Access Key and AWS Secret Access Key.
 
-### [3] Install boto3
+
+### [4] Install boto3
 
 ```
 pip3 install boto3
 ```
 
-You are now set!!
+## Test the installed environment
 
-<div class="alert alert-info">
-<b>NOTE:</b> Choice of editor on Ubuntu. My favourite editor is Emacs – Vi is already installed – you have to install Vim or Emacs if you need it. You can also install other editors – just be careful of memory.
-</div>
-
-## Exploring and testing the environment
-### [1] Test the aws environment by running:
+### [1] Test the AWS environment
 
 ```
 aws ec2 describe-regions --output table
@@ -174,7 +154,9 @@ python3
 
 This will create an un-tabulated response.
 
-### [3] Put this code into a python file and tabulate the print to have 2 columns with Endpoint and RegionName
+### [3] Write a Python script
+
+Tabulate the un-tabulated response above to have 2 columns with Endpoint and RegionName.
 
 Lab Assessment:
 
