@@ -46,6 +46,22 @@ chmod 400 <student number>-key.pem
 ```
 ### [4] Create the instance 
 
+| Region Name | Region Code | ami id |
+| ------------- | ------------- | ------------- |
+|US East (N. Virginia) |	us-east-1 |	ami-0a0e5d9c7acc336f1 |
+| Asia Pacific (Tokyo)	| ap-northeast-1	| ami-0162fe8bfebb6ea16 |
+| Asia Pacific (Seoul)	| ap-northeast-2	| ami-056a29f2eddc40520 |
+| Asia Pacific (Osaka)	| ap-northeast-3	| ami-0a70c5266db4a6202 |
+| Asia Pacific (Mumbai)	| ap-south-1	| ami-0c2af51e265bd5e0e |
+| Asia Pacific (Singapore)	| ap-southeast-1	| ami-0497a974f8d5dcef8 |
+| Asia Pacific (Sydney)	| ap-southeast-2	| ami-0375ab65ee943a2a6 |
+| Canada (Central)	| ca-central-1	| ami-048ddca51ab3229ab |
+| Europe (Frankfurt)	| eu-central-1	| ami-07652eda1fbad7432 |
+| Europe (Stockholm)	| eu-north-1	| ami-07a0715df72e58928 |
+
+
+Using the specific ami id in the table above in the command below.
+
 ```
  aws ec2 run-instances --image-id ami-0497a974f8d5dcef8 --security-group-ids <student number>-sg --count 1 --instance-type t2.micro --key-name <student number>-key --query 'Instances[0].InstanceId'
 
