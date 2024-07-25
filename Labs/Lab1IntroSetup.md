@@ -125,7 +125,7 @@ Default region name [None]: ap-southeast-2
 Default output format [None]: json
 ```
 
-Replace the placeholder values above with your own AWS Access Key and AWS Secret Access Key.
+Replace the placeholder values above with your own AWS Access Key, AWS Secret Access Key and default region name.
 
 
 ### [4] Install boto3

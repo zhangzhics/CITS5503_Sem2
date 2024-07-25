@@ -44,7 +44,7 @@ To use this key on Linux, copy the file to a directory ~/.ssh and change the per
 ```
 chmod 400 <student number>-key.pem
 ```
-### [4] Create the instance and note the instance id
+### [4] Create the instance 
 
 ```
  aws ec2 run-instances --image-id ami-d38a4ab1 --security-group-ids <student number>-sg --count 1 --instance-type t2.micro --key-name <student number>-key --query 'Instances[0].InstanceId'
@@ -52,17 +52,16 @@ chmod 400 <student number>-key.pem
  ```
 
 ### [5] Add a tag to your Instance
- ```
-  aws ec2 create-tags --resources i-??????? --tags Key=Name,Value=<student number>
- ```
 
-// 18.04 ami-176aa375
+ ```
+  aws ec2 create-tags --resources <Instance Id from above> --tags Key=Name,Value=<student number>
+ ```
 
 
 ### [6] Get the public IP address
 
 ```
-aws ec2 describe-instances --instance-ids i-<instance id from above> --query 'Reservations[0].Instances[0].PublicIpAddress'
+aws ec2 describe-instances --instance-ids <Instance Id from above> --query 'Reservations[0].Instances[0].PublicIpAddress'
 ```
 
 ### [7] Connect to the instance via ssh
@@ -75,7 +74,7 @@ ssh -i <student number>-key.pem ubuntu@<IP Address>
 
 ## Create an EC2 instance with Python Boto3
 
-Use a Python script to implement the steps above. Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details.
+Use a Python script to implement the steps above (steps 1-6 and 8 are required, step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details.
 
 **NOTE**: When you are done, log into the EC2 console and terminate the instances you created.
 
