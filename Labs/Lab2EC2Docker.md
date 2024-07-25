@@ -47,7 +47,7 @@ chmod 400 <student number>-key.pem
 ### [4] Create the instance 
 
 ```
- aws ec2 run-instances --image-id ami-d38a4ab1 --security-group-ids <student number>-sg --count 1 --instance-type t2.micro --key-name <student number>-key --query 'Instances[0].InstanceId'
+ aws ec2 run-instances --image-id ami-0497a974f8d5dcef8 --security-group-ids <student number>-sg --count 1 --instance-type t2.micro --key-name <student number>-key --query 'Instances[0].InstanceId'
 
  ```
 
@@ -56,7 +56,7 @@ chmod 400 <student number>-key.pem
  ```
   aws ec2 create-tags --resources <Instance Id from above> --tags Key=Name,Value=<student number>
  ```
-
+ 
 
 ### [6] Get the public IP address
 
@@ -66,7 +66,7 @@ aws ec2 describe-instances --instance-ids <Instance Id from above> --query 'Rese
 
 ### [7] Connect to the instance via ssh
 ```
-ssh -i <student number>-key.pem ubuntu@<IP Address>
+ssh -i <student number>-key.pem ubuntu@<IP Address from above>
 ```
 
 ### [8] List the created instance using the AWS console
