@@ -43,14 +43,6 @@ Create a second directory in rootdir called subdir and create another file subfi
 
 ### [2] Save to S3
 
-Edit cloudstorage.py to take one argument: 
-
-```
--i, --initialise=True
-```
-
-this will use boto to create a bucket on S3 that is identified by \<student number>-cloudstorage
-
 Insert boto commands to save each file that is found as the program traverses the directory starting at the root directory rootdir.
 
 NOTE the easiest way to upload files is to use the command:
