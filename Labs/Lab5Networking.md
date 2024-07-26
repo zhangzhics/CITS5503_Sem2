@@ -31,7 +31,7 @@ The aim of this lab is to write a program that will:
 
 ## Networking
 
-### [Step 1] Configure inbound IP on your VM (Optional)
+### [1] Configure inbound IP on your VM (Optional)
 
 This can be done in a number of ways, but we are going to use NAT port mapping. When a VM is created, it defaults to creating a single NAT interface. Here, VirtualBox is used as an example.
 
@@ -67,7 +67,7 @@ ssh -p 2222 <usermame>@127.0.0.1
 
 You should be prompted for your password
 
-### [Step 2] Setting up an Application Load Balancer
+### [2] Setting up an Application Load Balancer
 
 The aim of this part of the lab is to create an application load
 balancer and load balance requests to 2 EC2 instances. As there is a
@@ -84,7 +84,7 @@ region that has capacity.
 
 Objective: Write a Boto3 application to create 2 EC2 instances in two availability zones (name the instances following the format: \<student number\>-\<availability zone name\>), create an application load balancer and load balance HTTP requests to the 2 instances. Inside the two instances, you will need to get Apache 2 installed and a file of index.html edited. Do this after you have created the instances and ALB. In a future lab you will learn how this could be done through a program as well.
 
-[1] Create 2 EC2 instances in two
+[2.1] Create 2 EC2 instances in two
 different availability zones of a specific region. 
 
 Note: You will need to use v2 of the ELB interface:
@@ -93,19 +93,19 @@ Note: You will need to use v2 of the ELB interface:
 client = boto3.client('elbv2')
 ```
 
-[2] Create the Application Load Balancer.
+[2.2] Create the Application Load Balancer.
 
 The steps involved in this are:
 
-[a] Create the load balancer and specify the two region subnets and a
+[2.2.a] Create the load balancer and specify the two region subnets and a
 security group (note that the security group should authorise inbound traffic for HTTP, which is used by the following step [b])
 
-[b] Create a target group using the same VPC that you used to create
+[2.2.b] Create a target group using the same VPC that you used to create
 the instances
 
-[c] Register targets in the target group
+[2.2.c] Register targets in the target group
 
-[d] Create a listener with a default rule Protocol: HTTP and Port 80
+[2.2.d] Create a listener with a default rule Protocol: HTTP and Port 80
 forwarding on to the target group
 
 Try and access the EC2 instance using its public IP address in a browser. The load balancer will not be working at this point because Apache 2 is not installed. 
