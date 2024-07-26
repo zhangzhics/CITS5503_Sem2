@@ -46,7 +46,7 @@ sudo bash
 
 ### [3] Access a directory  
 
-Create a directory with a path `/opt/wwc/mysites' and `cd' into the directory.
+Create a directory with a path `/opt/wwc/mysites` and `cd` into the directory.
 
 ### [4] Set up a virtual environment
 
@@ -79,7 +79,7 @@ apt install nginx
 
 ### [7] Configure nginx
 
-edit /etc/nginx/sites-enabled/default and replace the contents of the file with
+edit `/etc/nginx/sites-enabled/default` and replace the contents of the file with
 
 ```
 server {
@@ -104,7 +104,7 @@ service nginx restart
 
 ### [9] Access your EC2 instance
 
-In your app directory: `/opt/wwc/mysites/lab', run:
+In your app directory: `/opt/wwc/mysites/lab`, run:
 
 ```
 python3 manage.py runserver 8000
