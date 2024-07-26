@@ -115,6 +115,10 @@ After typing the command below:
 ```
 aws configure
 ```
+| Student Number | Region Name | Region Code | ami id |
+| --- | --- | --- | --- |
+
+
 
 You should see an output like this:
 
