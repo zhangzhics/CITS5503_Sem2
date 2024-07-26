@@ -29,7 +29,7 @@ The aim of this lab is to write a program that will:
 2. Create a key in KMS and use it to encrypt files on the client before uploading to S3 and decrypt them after downloading from S3
 3. Implement AES using python and test the difference in performance between the KMS solution and the local one.
 
-## [Step 1] Apply policy to restrict permissions on bucket
+## [1] Apply policy to restrict permissions on bucket
 
 Write an application to apply the following policy to the bucket you created in the last lab
 to allow only your username to access the bucket. Make the appropriate
@@ -61,7 +61,7 @@ username that is not your own. Confirm that you no longer have access
 to that folder's contents.
 
 
-## [Step 2] AES Encryption using KMS
+## [2] AES Encryption using KMS
 
 Write an application to create a KSM key. Choose an appropriate alias for the key (your student
 number).
@@ -147,17 +147,14 @@ attaching it to the key.
 
 In your CloudStorage application add the ability to encrypt and decrypt the files you find using the KMS Client apis of boto3.
 
-**Optional**
 
-Encrypt only operates on 4 KB of data and so if you were to use this as a means of encrypting larger files, you would have to encrypt the file in chunks and reverse the process for decryption.
-
-## [Step 3] AES Encryption using local python library pycryptodome
+## [3] AES Encryption using local python library pycryptodome
 
 Create another version of your CloudStorage program that uses the python library pycryptodome to encrypt and decrypt your files
 
 You can use the example code for doing this from [fileencrypt.py](https://github.com/zhangzhics/CITS5503_Sem2_2023/blob/master/Labs/src/fileencrypt.py)
 
-## Answer the following question (Marked)
+## [4] Answer the following question (Marked)
 
 ```
 What is the performance difference between using KMS and using the custom solution?
