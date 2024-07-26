@@ -93,9 +93,18 @@ Write a Python script to create a table on your local DynamoDB with the key `use
             }
         )
 ```
+The following webpage could be useful.
 
-Inside the script, retrieve the file information of every file that is stored in the S3 bucket, and write them into the table. You should find functions in Python to get the file information including  `lastUpdated`, `owner` and `permissions`. All the information can be stored as strings.
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html
 
-Lab Assessment:
+After creating the table, you need to retrieve information from S3 for each file and then write the information to the created DynamoDB table. The information includes the lastUpdated time, file owner (root user name, not your user name), and permission.
+
+To retrieve information from S3 for each file, the following webpage could be useful.
+
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/get_bucket_acl.html
+
+Take a screenshot of your created table, and attach the screenshot to your report.
+
+Finally, use the AWS CLI to scan the local DynamoDB table, and take a screenshot of the output. Attach the screenshot to your report.
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
