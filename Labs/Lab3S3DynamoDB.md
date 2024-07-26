@@ -33,7 +33,7 @@ The aim of this lab is to write a program that will:
 
 ## Program
 
-### [Step 1] Preparation
+### [1] Preparation
 
 Download the python code cloudstorage.py from the directory of [src](https://github.com/zhangzhics/CITS5503_Sem2_2023/blob/master/Labs/src/cloudstorage.py) \
 Create a directory rootdir \
@@ -41,7 +41,7 @@ Create a file in rootdir called rootfile.txt and put some content in it “1\n2\
 
 Create a second directory in rootdir called subdir and create another file subfile.txt with the same content as rootfile.txt
 
-### [Step 2] Save to S3
+### [2] Save to S3
 
 Edit cloudstorage.py to take one argument: 
 
@@ -59,11 +59,11 @@ NOTE the easiest way to upload files is to use the command:
 s3.upload_file()
 ```
 
-### [Step 3] Restore from S3
+### [3] Restore from S3
 
 Create a new program called restorefromcloud.py that reads the S3 bucket and writes the contents of the bucket within the appropriate directories. You should have a copy of the files and the directories you started with.
 
-### [Step 4] Write information about files to DynamoDB
+### [4] Write information about files to DynamoDB
 Install DynamoDB on your VM.
 
 ```
@@ -103,10 +103,6 @@ The attributes for the table will be:
 ```
 
 For every file that is stored in S3, get the information about the attributes, put the information into the DynamoDB item, and write the item to the table. You will have to find functions in Python to get details like time lastUpdated, owner and permissions. All of the information can be stored as strings.
-
-### [Step 5] Optional (Unmarked)
-Add the functionality to apply changes to permissions and ownership when the directory and files are restored.
-Check timestamps on files and only upload if the file has been updated.
 
 Lab Assessment:
 
