@@ -2,7 +2,7 @@
 
 Version: 1.0 Date: 12/04/2018 Author: David Glance
 
-Date: 21/07/2023 Updated by Zhi Zhang
+Date: 24/07/2024 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -19,13 +19,13 @@ Date: 21/07/2023 Updated by Zhi Zhang
 * Python/Boto scripts
 * VirtualBox
 
-Note: please use your Linux VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
+**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 
 The aim of this lab is to write a program that will:
 
-[1] Scan a directory and upload all of the files found in the directory to an S3 bucket, preserving the path information
+[1] Scan a directory and upload all of the files found in a directory to an S3 bucket, preserving the path information
 
 [2] Store information about each file uploaded to S3 in a DynamoDB
 
@@ -35,31 +35,35 @@ The aim of this lab is to write a program that will:
 
 ### [1] Preparation
 
-Download the python code cloudstorage.py from the directory of [src](https://github.com/zhangzhics/CITS5503_Sem2_2023/blob/master/Labs/src/cloudstorage.py) \
-Create a directory rootdir \
-Create a file in rootdir called rootfile.txt and put some content in it “1\n2\n3\n4\n5\n”
+Download the python code `cloudstorage.py` from the directory of [src](https://github.com/zhangzhics/CITS5503_Sem2_2023/blob/master/Labs/src/cloudstorage.py) \
+Create a directory `rootdir` \
+Create a file in `rootdir` called `rootfile.txt` and write some content in it `1\n2\n3\n4\n5\n` \
+Create a second directory in rootdir called `subdir` and create another file `subfile.txt` with the same content as `rootfile.txt`.
 
-Create a second directory in rootdir called subdir and create another file subfile.txt with the same content as rootfile.txt
+### [2] Save to S3 by updating `cloudstorage.py`
 
-### [2] Save to S3
+Create an S3 bucket named `<student ID>-cloudstorage`
 
-Insert boto commands to save each file that is found as the program traverses the directory starting at the root directory rootdir.
-
-NOTE the easiest way to upload files is to use the command:
+When the program traverses the directory starting at the root directory `rootdir`, upload each file onto the S3 bucket. An easy way to upload files is to use the command below:
 
 ```
 s3.upload_file()
 ```
 
+**NOTE**: Make sure your S3 bucket has the same file structure as shown in `[1] Preparation`.
+
 ### [3] Restore from S3
 
-Create a new program called restorefromcloud.py that reads the S3 bucket and writes the contents of the bucket within the appropriate directories. You should have a copy of the files and the directories you started with.
+Create a new program called `restorefromcloud.py` that reads the S3 bucket and writes the contents of the bucket within the appropriate directories. 
+
+**NOTE**: Your local Linux environment should see a copy of the files and the directories from the S3 bucket.
 
 ### [4] Write information about files to DynamoDB
-Install DynamoDB on your VM.
+
+Install DynamoDB on your Linux environment
 
 ```
-mkdir dynamodb;
+mkdir dynamodb
 cd dynamodb
 ```
 
@@ -67,20 +71,16 @@ Install jre if not done
 
 ```
 sudo apt-get install default-jre
-```
-
-```
 wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local_latest.tar.gz
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar –sharedDb
 ```
 
-Or you can use docker as we discussed in Week 2:
+Alternatively, you can use docker in Week 2:
 ```
 docker run -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -inMemory -sharedDb
 ```
 
-Create a table on your local DynamoDB with the key userId \
-The attributes for the table will be:
+Write a Python script to create a table on your local DynamoDB with the key `userId` and the attributes for the table are:
 
 ```
         CloudFiles = {
@@ -94,7 +94,7 @@ The attributes for the table will be:
         )
 ```
 
-For every file that is stored in S3, get the information about the attributes, put the information into the DynamoDB item, and write the item to the table. You will have to find functions in Python to get details like time lastUpdated, owner and permissions. All of the information can be stored as strings.
+Inside the script, retrieve the file information of every file that is stored in the S3 bucket, and write them into the table. You should find functions in Python to get the file information including  `lastUpdated`, `owner` and `permissions`. All the information can be stored as strings.
 
 Lab Assessment:
 

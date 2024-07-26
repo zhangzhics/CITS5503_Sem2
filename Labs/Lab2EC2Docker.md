@@ -16,7 +16,7 @@ Date: 24/07/2024 Updated by Zhi Zhang
 * AWS EC2 Python/Boto/awscli/bash scripts VirtualBox
 * Docker
 
-Note: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
+**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Create an EC2 instance using awscli
 ### [1] Create a security group
@@ -60,7 +60,7 @@ chmod 400 <student number>-key.pem
 | Europe (Stockholm)	| eu-north-1	| ami-07a0715df72e58928 |
 
 
-Using the specific ami id in the table above in the command below.
+Based on your region code, find the corresponding ami id in the table above and fill it in the command below:
 
 ```
  aws ec2 run-instances --image-id <ami id> --security-group-ids <student number>-sg --count 1 --instance-type t2.micro --key-name <student number>-key --query 'Instances[0].InstanceId'

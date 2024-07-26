@@ -18,7 +18,7 @@ Date: 24/07/2024 Updated by Zhi Zhang
 * RDS
 * Python/Boto scripts
 
-Note: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
+**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 
@@ -68,7 +68,7 @@ cd lab
 python3 manage.py startapp polls
 ```
 
-**Note**: Stop and look at the files that have been created – the project files are to do with the running of the application. We will deal with the files as we go through.
+**NOTE**: Stop and look at the files that have been created – the project files are to do with the running of the application. We will deal with the files as we go through.
 
 
 ### [6] Install nginx
@@ -159,7 +159,7 @@ python3 manage.py runserver 8000
 
 Access the URL: http://\<ip address of your EC2 instance>/polls/, and output what you've got. 
 
-**Note**: remember to put the /polls/ on the end and you may need to restart nginx if it does not work.
+**NOTE**: remember to put the /polls/ on the end and you may need to restart nginx if it does not work.
 
 ## Set up an ALB
 
@@ -183,7 +183,7 @@ Confirm the health check fetch the /polls/ page every 30 seconds.
 
 Access the URL: http://\<load balancer dns name>/polls/, and output what you've got.
 
-*Note*: When you are done, delete the instance and ALB you created.
+**NOTE**: When you are done, delete the instance and ALB you created.
 
 ## [Unmarked] Web interface for CloudStorage application
 

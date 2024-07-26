@@ -23,7 +23,7 @@ Date: 24/07/2024 Updated by Zhi Zhang
 
 * VirtualBox Python/Boto/awscli/bash scripts
 
-Note: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
+**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## AWS Accounts and Log In
 ### [1] Log into an IAM user account created for you on AWS.
@@ -46,7 +46,7 @@ Click on your user account and click the Security Credentials tab: create access
 
 ## Set up recent Linux OSes
 
-**Note:** You have multiple options for the setup, for example, Windows WSL with recommended Ubuntu OS 20.04 LTS, and Virtual Machine Manager (e.g., VirtualBox, UTM and VMWare) with recommended Ubuntu OS 20.04 LTS. If you have already installed a recent Linux OS, you don't need to re-install it and instead attach appropriate screenshots and description for your write-up (other Linux distributions such as recent Kali Linux should be fine). 
+**NOTE**: You have multiple options for the setup, for example, Windows WSL with recommended Ubuntu OS 20.04 LTS, and Virtual Machine Manager (e.g., VirtualBox, UTM and VMWare) with recommended Ubuntu OS 20.04 LTS. If you have already installed a recent Linux OS, you don't need to re-install it and instead attach appropriate screenshots and description for your write-up (other Linux distributions such as recent Kali Linux should be fine). 
 
 For Windows/MacOS (non-M1) users, please refer to 1.1 in the link below. For M1/M2 etc. MacBook users, please refer to 1.2 in the link.
 
@@ -65,7 +65,7 @@ For Windows users, WSL is also good and detailed below:
 
 ## Install Linux packages
 
-**Note:** If you have already installed AWS CLI, Python 3.8.x, and Python Boto3 library, you don't need to re-install it and instead attach relevant evidence for your write-up.
+**NOTE**: If you have already installed AWS CLI, Python 3.8.x, and Python Boto3 library, you don't need to re-install it and instead attach relevant evidence for your write-up.
 
 ### [1] Install Python 3.8.x
 
@@ -115,7 +115,18 @@ After typing the command below:
 ```
 aws configure
 ```
-Based on your student number, choose the specific region code in the table below, and then use the region code in the command below.
+You should see an output like this:
+
+```
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: ap-southeast-2
+Default output format [None]: json
+```
+
+Replace the placeholder values above with your own AWS Access Key, AWS Secret Access Key and region code.
+
+**NOTE**: Regarding your region code, find it in the table below based on your student number (If you cannot find your region code, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region code.).
 
 | Student Number | Region Name | Region Code | ami id |
 | --- | --- | --- | --- |
@@ -129,18 +140,6 @@ Based on your student number, choose the specific region code in the table below
 | 24030001 – 24074000 | Canada (Central)	| ca-central-1	| ami-048ddca51ab3229ab |
 | 24074001 – 24147000 | Europe (Frankfurt)	| eu-central-1	| ami-07652eda1fbad7432 |
 | 24147001 – 24700000 | Europe (Stockholm)	| eu-north-1	| ami-07a0715df72e58928 |
-
-
-You should see an output like this:
-
-```
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: ap-southeast-2
-Default output format [None]: json
-```
-
-Replace the placeholder values above with your own AWS Access Key, AWS Secret Access Key and region code.
 
 
 ### [4] Install boto3
