@@ -115,6 +115,8 @@ After typing the command below:
 ```
 aws configure
 ```
+Based on your student number, choose the specific region code in the table below, and then use the region code in the command below.
+
 | Student Number | Region Name | Region Code | ami id |
 | --- | --- | --- | --- |
 | 20666666 – 22980000 | US East (N. Virginia) |	us-east-1 |	ami-0a0e5d9c7acc336f1 |
