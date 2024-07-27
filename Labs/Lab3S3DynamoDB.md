@@ -109,4 +109,6 @@ Use AWS CLI command to delete the table.
 
 **NOTE**: Delete the created S3 bucket from AWS console after the lab is done.
 
+Lab Assessment:
+
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
