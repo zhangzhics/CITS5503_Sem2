@@ -80,7 +80,7 @@ Alternatively, you can use docker in Week 2:
 docker run -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -inMemory -sharedDb
 ```
 
-Write a Python script to create a table on your local DynamoDB with the key `userId` and the attributes for the table are:
+Write a Python script to create a table called `CloudFiles` on your local DynamoDB and the attributes for the table are:
 
 ```
         CloudFiles = {
@@ -93,18 +93,20 @@ Write a Python script to create a table on your local DynamoDB with the key `use
             }
         )
 ```
-The following webpage could be useful.
+`userId` is the partition key and `fileName` is the sort key. Regarding the creation, refer to this [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html)
 
-https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html
+Then, you need to get the attributes above for each file of the S3 bucket and then write the attributes of each file into the created DynamoDB table. Regarding how to get the attributes for a file, refer to this [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/get_bucket_acl.html)
 
-After creating the table, you need to retrieve information from S3 for each file and then write the information to the created DynamoDB table. The information includes the lastUpdated time, file owner (root user name, not your user name), and permission.
+**NOTE**: The table should have 2 items. One item corresponds to one file in the bucket and consists of the attributes above and their values. 
 
-To retrieve information from S3 for each file, the following webpage could be useful.
+### [5] Scan the table
 
-https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3/client/get_bucket_acl.html
+Use AWS CLI command to scan the created DynamoDB table, and output what you've got. 
 
-Take a screenshot of your created table, and attach the screenshot to your report.
+### [6] Delete the table
 
-Finally, use the AWS CLI to scan the local DynamoDB table, and take a screenshot of the output. Attach the screenshot to your report.
+Use AWS CLI command to delete the table.
+
+**NOTE**: Delete the created S3 bucket from AWS console after the lab is done.
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
