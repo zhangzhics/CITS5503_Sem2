@@ -35,7 +35,7 @@ The aim of this lab is to write a program that will:
 
 ### [1] Preparation
 
-Download the python code `cloudstorage.py` from the directory of [src](https://github.com/zhangzhics/CITS5503_Sem2_2023/blob/master/Labs/src/cloudstorage.py) \
+Download the python code `cloudstorage.py` from the directory of [src](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/cloudstorage.py) \
 Create a directory `rootdir` \
 Create a file in `rootdir` called `rootfile.txt` and write some content in it `1\n2\n3\n4\n5\n` \
 Create a second directory in rootdir called `subdir` and create another file `subfile.txt` with the same content as `rootfile.txt`.
