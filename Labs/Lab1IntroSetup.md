@@ -128,7 +128,7 @@ Replace the placeholder values above with your own AWS Access Key, AWS Secret Ac
 
 **NOTE**: Regarding your region code, find it in the table below based on your student number (If you cannot find your region code, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region code.).
 
-| Student Number | Region Name | Region Code | ami id |
+| Student Number | Region | Region Name | ami id |
 | --- | --- | --- | --- |
 | 20666666 – 22980000 | US East (N. Virginia) |	us-east-1 |	ami-0a0e5d9c7acc336f1 |
 | 22984000 – 23370000 | Asia Pacific (Tokyo)	| ap-northeast-1	| ami-0162fe8bfebb6ea16 |
