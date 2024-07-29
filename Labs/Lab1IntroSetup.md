@@ -124,9 +124,9 @@ Default region name [None]: ap-southeast-2
 Default output format [None]: json
 ```
 
-Replace the placeholder values above with your own AWS Access Key, AWS Secret Access Key and region code.
+Replace the placeholder values above with your own AWS Access Key, AWS Secret Access Key and default region name.
 
-**NOTE**: Regarding your region code, find it in the table below based on your student number (If you cannot find your region code, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region code.).
+**NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
 
 | Student Number | Region | Region Name | ami id |
 | --- | --- | --- | --- |
