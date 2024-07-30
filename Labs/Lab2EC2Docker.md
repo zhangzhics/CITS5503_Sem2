@@ -72,7 +72,7 @@ Based on your region code, find the corresponding ami id in the table above and 
  ```
   aws ec2 create-tags --resources <Instance Id from above> --tags Key=Name,Value=<student number>
  ```
-**NOTE**: If you need to create a single instance, follow the naming format of <student number>-vm (e.g., 24242424-vm). If you need to create multiple ones, follow the naming format of <student number>-vm1 and <student number>-vm2 (e.g., 24242424-vm1, 24242424-vm2).
+**NOTE**: If you need to create a single instance, follow the naming format of `<student number>-vm` (e.g., 24242424-vm). If you need to create multiple ones, follow the naming format of `<student number>-vm1` and `<student number>-vm2` (e.g., 24242424-vm1, 24242424-vm2).
 
 ### [6] Get the public IP address
 
