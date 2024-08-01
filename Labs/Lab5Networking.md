@@ -102,7 +102,7 @@ forwarding on to the target group.
 
 Try and access each EC2 instance using its public IP address in a browser. The load balancer is expected not to work at the moment because Apache 2 is not installed in the instance. To make it work, follow the steps below:
 
-First, ssh to each of the two instances. If you can't make it. Look at [here](https://bobbyhadz.com/blog/aws-ssh-permission-denied-publickey).
+First, ssh to each of the two instances. If you can't make it, try [here](https://bobbyhadz.com/blog/aws-ssh-permission-denied-publickey).
 
 Second, update each instance:
 
