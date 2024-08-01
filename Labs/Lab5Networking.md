@@ -73,13 +73,11 @@ The aim of this part of the lab is to create an application load balancer and lo
 
 ### [1] Create 2 EC2 instances
 
-Write a Python Boto3 script to create 2 EC2 instances in two availability zones (name the instances following the format: \<student number\>-vm1 and \<student number\>-vm2) in the region mapped to your student number. 
-
-**NOTE**: The created security group must authorise inbound traffic for HTTP and SSH, which will be used by the following steps)
+Write a Python Boto3 script to create 2 EC2 instances in two different availability zones (name the instances following the format: \<student number\>-vm1 and \<student number\>-vm2) in the region mapped to your student number. In this script, a security group should be created to authorise inbound traffic for HTTP and SSH, which will be used by the following steps.
 
 ### [2] Create an Application Load Balancer
 
-Update the script below to create an application load balancer and load balance HTTP requests to the created 2 instances. Note that the v2 of the ELB interface below should be used:
+Update the script above to create an application load balancer and load balance HTTP requests to the created 2 instances. Note that the v2 of the ELB interface below should be used:
 
 ```
 client = boto3.client('elbv2')
@@ -87,7 +85,7 @@ client = boto3.client('elbv2')
 
 The script updates include:
 
-First, create a load balancer, during which specify the two region subnets and the
+First, create a load balancer, during which specify the two created region subnets and the
 security group created in the previous step.
 
 Second, create a target group using the same VPC that was used to create
@@ -100,7 +98,7 @@ forwarding on to the target group.
 
 ### [3] Test the Application Load Balancer
 
-Try and access each EC2 instance using its public IP address in a browser. The load balancer is expected not to work at the moment because Apache 2 is not installed in the instance. To make it work, follow the steps below:
+Try and access each EC2 instance using its public IP address in a browser. The load balancer is expected not to work at the moment, because Apache 2 is not installed in the instance. To make it work, follow the steps below:
 
 First, ssh to each of the two instances. If you can't make it, try [here](https://bobbyhadz.com/blog/aws-ssh-permission-denied-publickey).
 
