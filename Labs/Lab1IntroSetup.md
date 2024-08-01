@@ -48,7 +48,7 @@ Click on your user account and click the Security Credentials tab: create access
 
 **NOTE**: You have multiple options for the setup, for example, Windows WSL with recommended Ubuntu OS 20.04 LTS, and Virtual Machine Manager (e.g., VirtualBox, UTM and VMWare) with recommended Ubuntu OS 20.04 LTS. If you have already installed a recent Linux OS, you don't need to re-install it and instead attach appropriate screenshots and description for your write-up (other Linux distributions such as recent Kali Linux should be fine). 
 
-For Windows/MacOS (non-M1) users, please refer to 1.1 in the link below. For M1/M2 etc. MacBook users, please refer to 1.2 in the link.
+For Windows/MacOS (non-M1) users, please refer to 2.1 in the link below. For M1/M2 etc. MacBook users, please refer to 2.2 in the link.
 
 [https://uwacyber.gitbook.io/cits1003/cits1003-labs/setting-up-your-laptop](https://uwacyber.gitbook.io/cits1003/cits1003-labs/lab-1-setting-up-your-laptop)
 
