@@ -33,7 +33,7 @@ The aim of this lab is to write a program that will:
 
 ## Program
 
-### [1] Prepare
+### [1] Preparation
 
 Download the python code `cloudstorage.py` from the directory of [src](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/cloudstorage.py) \
 Create a directory `rootdir` \
