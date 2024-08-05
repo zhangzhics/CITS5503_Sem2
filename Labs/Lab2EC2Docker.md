@@ -67,6 +67,8 @@ Based on your region code, find the corresponding ami id in the table above and 
 
  ```
 
+If you are allocated to Europe (Stockholm), eu-north-1, please use `t3.micro` to replace `t2.micro` in the command above.
+
 ### [5] Add a tag to your Instance
 
  ```
