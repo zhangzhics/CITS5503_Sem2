@@ -42,7 +42,7 @@ Create a second directory in rootdir called `subdir`, and in the `subdir` direct
 
 ### [2] Save to S3 by updating `cloudstorage.py`
 
-Write a Python script to create an S3 bucket named `<student ID>-cloudstorage`.
+Modify the download Python script, `cloudstorage.py`, to create an S3 bucket named `<student ID>-cloudstorage`.
 
 When the program traverses the directory starting at the root directory `rootdir`, upload each file onto the S3 bucket. An easy way to upload files is to use the command below:
 
