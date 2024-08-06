@@ -75,6 +75,12 @@ wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar –sharedDb
 ```
 
+You can use the following command to extract files from dynamodb_local_latest.tar.gz
+
+```
+tar -zxvf dynamodb_local_latest.tar.gz
+```
+
 Alternatively, you can use docker:
 ```
 docker run -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -inMemory -sharedDb
