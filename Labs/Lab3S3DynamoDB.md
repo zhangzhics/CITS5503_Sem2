@@ -72,7 +72,6 @@ Install jre if not done
 ```
 sudo apt-get install default-jre
 wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local_latest.tar.gz
-java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar –sharedDb
 ```
 
 You can use the following command to extract files from dynamodb_local_latest.tar.gz
@@ -81,10 +80,17 @@ You can use the following command to extract files from dynamodb_local_latest.ta
 tar -zxvf dynamodb_local_latest.tar.gz
 ```
 
+After the extraction, run the command below
+
+```
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar –sharedDb
+```
+
 Alternatively, you can use docker:
 ```
 docker run -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -inMemory -sharedDb
 ```
+**Note**: Do not close the current window, open a new window to run the following Python script.
 
 Write a Python script to create a table called `CloudFiles` on your local DynamoDB and the attributes for the table are:
 
