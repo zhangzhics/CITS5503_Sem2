@@ -33,16 +33,16 @@ The aim of this lab is to write a program that will:
 
 ## Program
 
-### [1] Prepare
+### [1] Preparation
 
 Download the python code `cloudstorage.py` from the directory of [src](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/cloudstorage.py) \
 Create a directory `rootdir` \
 Create a file in `rootdir` called `rootfile.txt` and write some content in it `1\n2\n3\n4\n5\n` \
-Create a second directory in rootdir called `subdir` and create another file `subfile.txt` with the same content as `rootfile.txt`.
+Create a second directory in rootdir called `subdir`, and in the `subdir` directory create another file `subfile.txt` with the same content as `rootfile.txt`.
 
 ### [2] Save to S3 by updating `cloudstorage.py`
 
-Create an S3 bucket named `<student ID>-cloudstorage`
+Modify the downloaded Python script, `cloudstorage.py`, to create an S3 bucket named `<student ID>-cloudstorage`.
 
 When the program traverses the directory starting at the root directory `rootdir`, upload each file onto the S3 bucket. An easy way to upload files is to use the command below:
 
@@ -75,7 +75,7 @@ wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local
 java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar –sharedDb
 ```
 
-Alternatively, you can use docker in Week 2:
+Alternatively, you can use docker:
 ```
 docker run -p 8000:8000 amazon/dynamodb-local -jar DynamoDBLocal.jar -inMemory -sharedDb
 ```

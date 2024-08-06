@@ -67,6 +67,8 @@ Based on your region code, find the corresponding ami id in the table above and 
 
  ```
 
+If you are allocated to Europe (Stockholm), eu-north-1, please use `t3.micro` to replace `t2.micro` in the command above.
+
 ### [5] Add a tag to your Instance
 
  ```
@@ -92,7 +94,7 @@ ssh -i <student number>-key.pem ubuntu@<IP Address from above>
 
 Use a Python script to implement the steps above (steps 1-6 and 8 are required, step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details.
 
-**NOTE**: When you are done, log into the EC2 console and terminate the instances you created.
+**NOTE**: If you are allocated to Europe (Stockholm), eu-north-1, the type of the instance in your script should be `t3.micro` rather than `t2.micro`. When you are done, log into the EC2 console and terminate the instances you created.
 
 ## Use Docker inside a Linux OS
 
