@@ -122,7 +122,7 @@ Then, you need to get the attributes above for each file of the S3 bucket and th
 | Asia Pacific (Singapore) | ap-southeast-1 |
 | Asia Pacific (Sydney)	| ap-southeast-2 |
 
-**If you don't use a region in the table above, please output the container for the ID of the owner rather than the owner name.**
+If you don't use a region in the table above, please output the **container for the ID of the owner** rather than the owner name.
 
 ### [5] Scan the table
 
