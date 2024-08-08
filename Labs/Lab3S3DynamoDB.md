@@ -113,7 +113,7 @@ Then, you need to get the attributes above for each file of the S3 bucket and th
 
 1) The table should have 2 items. One item corresponds to one file in the bucket and consists of the attributes above and their values.
 
-2) Container for the display name of the owner is only supported in the following Amazon Web Services Regions (we used for this unit):
+2) Regarding the attribute `owner`, if you use a region in the table below, its value should be **owner's ID**. Otherwise, its value should be **owner's name**.
 
 | Region | Region Name |
 | --- | --- |
@@ -122,7 +122,6 @@ Then, you need to get the attributes above for each file of the S3 bucket and th
 | Asia Pacific (Singapore) | ap-southeast-1 |
 | Asia Pacific (Sydney)	| ap-southeast-2 |
 
-If you don't use a region in the table above, please output the **container for the ID of the owner** rather than the owner name.
 
 ### [5] Scan the table
 
