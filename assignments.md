@@ -45,8 +45,7 @@ Discuss the principles that you would use to create a policy that would achieve 
 Write the policy as a JSON file that you would use.
 
 Note: you can have individual statements for each department.
-
-～～[14] What aspects of security does the OSI Security Architecture X.800 standard cover? Which particular components of this standard does AWS Identity and Access Management deal with?～～
+~~[14] What aspects of security does the OSI Security Architecture X.800 standard cover? Which particular components of this standard does AWS Identity and Access Management deal with?~~
 
 [15] Name 3 of the keys that you would find in a Policy. Explain their role. An example of a key is “Version” that specifies the version of the policy syntax and is normally “Version”: “2012-10-17”
 
