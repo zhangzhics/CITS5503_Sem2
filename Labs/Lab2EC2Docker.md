@@ -92,7 +92,7 @@ ssh -i <student number>-key.pem ubuntu@<IP Address from above>
 
 ## Create an EC2 instance with Python Boto3
 
-Use a Python script to implement the steps above (steps 1-6 and 8 are required, step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details.
+Use a Python script to implement the steps above (steps 1-6 are required, repeat step 8 using the AWS console again. Step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details.
 
 **NOTE**: If you are allocated to Europe (Stockholm), eu-north-1, the type of the instance in your script should be `t3.micro` rather than `t2.micro`. When you are done, log into the EC2 console and terminate the instances you created.
 

@@ -85,10 +85,10 @@ Sentiment analysis (or opinion mining) uses NLP to determine whether data is pos
 Question 1: In your words describe what entities are.
 
 #### [Step 4] Repeat steps from [Step 2] for detecting keyphrases.
-Question 1: In your words describe what keyphrases are.
+Question 2: In your words describe what keyphrases are.
 
 #### [Step 5] Repeat steps from [Step 2] for detecting syntax.
-Question 1: In your words describe what syntaxes are.
+Question 3: In your words describe what syntaxes are.
 
 ## AWS Rekognition
 
