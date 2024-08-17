@@ -157,7 +157,9 @@ Update the script to attach the following policy to the key.
 
 ### [3] Check whether the script works
 
-Use the AWS KMS console to test whether your username is the key administrator and key user. 
+Use the AWS KMS console to test whether your username is the key administrator and key user.
+ 
+**NOTE**: After you log into the console, you perform the test by showing the policy you create, i.e., which ARN is the key administrator and which ARN is the key user.
 
 ### [4] Use the created KMS key for encryption/decryption
 
