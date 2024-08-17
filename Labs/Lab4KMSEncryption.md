@@ -98,7 +98,7 @@ Update the script to attach the following policy to the key.
       "Sid": "Allow access for Key Administrators",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::<489389878001:user/<your_username>"
+        "AWS": "arn:aws:iam::489389878001:user/<your_username>"
       },
       "Action": [
         "kms:Create*",
