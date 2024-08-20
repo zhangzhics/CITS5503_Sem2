@@ -73,7 +73,7 @@ Test the policy by using a username that is not your to access the folder called
 
 Write a Python script to create a KMS key, where your student number works as an alias for the key.
 
-### [1] Attach a policy to the created KMS key
+### [2] Attach a policy to the created KMS key
 
 Update the script to attach the following policy to the key.
 
@@ -98,7 +98,7 @@ Update the script to attach the following policy to the key.
       "Sid": "Allow access for Key Administrators",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::<489389878001:user/<your_username>"
+        "AWS": "arn:aws:iam::489389878001:user/<your_username>"
       },
       "Action": [
         "kms:Create*",
@@ -155,15 +155,17 @@ Update the script to attach the following policy to the key.
 }
 ```
 
-### [2] Check whether the script works
+### [3] Check whether the script works
 
-Use the AWS KMS console to test whether your username is the key administrator and key user. 
+Use the AWS KMS console to test whether your username is the key administrator and key user.
+ 
+**NOTE**: After you log into the console, you perform the test by showing the policy you create, i.e., which ARN is the key administrator and which ARN is the key user.
 
-### [3] Use the created KMS key for encryption/decryption
+### [4] Use the created KMS key for encryption/decryption
 
 Write a Python script where each file from the S3 bucket is encrypted and then decrypted via the created KMS key. Both encrypted and decrypted files will be in the same folder as the original file. 
 
-### [4] Apply `pycryptodome` for encryption/decryption
+### [5] Apply `pycryptodome` for encryption/decryption
 
 Write another Python script that uses the python library `pycryptodome` to encrypt and decrypt each file in the S3 bucket. Both encrypted and decrypted files will be in the same folder as the original file.
 
