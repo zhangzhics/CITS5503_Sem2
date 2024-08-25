@@ -39,10 +39,9 @@ Apply the following policy to the S3 bucket you created in the last lab to allow
 
 
 ```
-
 {
   "Version": "2012-10-17",
-  "Statement": {
+  "Statement": [{
    "Sid": "AllowAllS3ActionsInUserFolderForUserOnly",
     "Effect": "DENY",
     "Principal": "*",
@@ -53,10 +52,8 @@ Apply the following policy to the S3 bucket you created in the last lab to allow
           "aws:username":"<studentnumber>@student.uwa.edu.au"
        }
     }
-  }
+  }]
 }
-
-
 ```
 
 
