@@ -2,6 +2,8 @@
 
 Version: 1.2 Date: 15/9/2018 Author: David Glance
 
+Date: 24/07/2024 Updated by Zhi Zhang
+
 ## Learning Objectives
 
 1. Install and configure Fabric
@@ -15,19 +17,19 @@ Version: 1.2 Date: 15/9/2018 Author: David Glance
 * Python
 * Fabric
 
-Note: please use your Linux VM – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
+**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 
 The aim of this lab is to write a program that will:
  
 [1] Background and basics to Fabric
+
 [2] How to automatically deploy a server using Fabric
 
-### [Step 1] Create an EC2 instance
+### Create an EC2 instance
 
-Use your existing code to create an EC2 instance that you will test
-your Fabric-based installation on.
+Use your existing code to create an EC2 instance where you will test your Fabric-based installation.
 
 **NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
 
@@ -44,9 +46,7 @@ your Fabric-based installation on.
 | 24071100 – 24141000 | Europe (Frankfurt)	| eu-central-1	| ami-07652eda1fbad7432 |
 | 24143000 – 24700000 | Europe (Stockholm)	| eu-north-1	| ami-07a0715df72e58928 |
 
-### [Step 2] Install and configure Fabric on your VM
-
-NOTE do this on your VirtualBox VM
+### Install and configure Fabric 
 
 The easiest way to install fabric is to:
 
@@ -57,8 +57,8 @@ pip install fabric
 You will need to create a config file in ~/.ssh with the contents:
 
 ```
-Host <ec2instance>
-	Hostname <EC2 instance public DNS>
+Host <your EC2 instance name>
+	Hostname <your EC2 instance public DNS>
 	User ubuntu
 	UserKnownHostsFile /dev/null
 	StrictHostKeyChecking no
@@ -66,52 +66,26 @@ Host <ec2instance>
 	IdentityFile <path to your private key>
 ```
 
-Use ssh <file name>  to connect to you instance
+Replace **<your EC2 instance name>** and **<your EC2 instance public IPv4 DNS>** above with your real ones.
 
-
-Remember to replace <ec2instance> with your EC2 name you used in the
-configuration - use your student number to identify resources.
-
-
-You can test fabric from the command line:
+Rely on the fabric code below to connect to you instance.
 
 ```
-python
+python3
 >>> from fabric import Connection
->>> c = Connection(‘<ec2instance>’)
->>> result = c.run(‘uname -s’)
+>>> c = Connection('<your EC2 instance name>')
+>>> result = c.run('uname -s')
 Linux
 >>>
 ```
 
-### [Step 3] Write a python script to automate the installation of nginx
+### Use Fabric for automation
 
-Write a python script using fabric to set up and configure nginx as
-you did for the Django app last week
+Write a python script where you first need to automate the setup of a Python 3 virtual environment, nginx and a Django app within the EC2 instance you just created. Then, you should run the Django development server on port 8000 in the background.
 
-This will consist of doing the same commands you would do manually to
-configure nginx but using the commands:
+From your local OS environment, access the URL: http://\<ip address of your EC2 instance>/polls/, and output what you've got. 
 
-sudo("commands go here separated by ;")
-
-and/or
-
-run("Commands go here separated by ;")
-
-## [Step 4] Update the python script to install your Django app
-
-You will copy the files from your local directory to the new EC2 instance. You may find this easier if you create a tar/zip file first of the code and then untar/unzip on the EC2 machine.
-
-Add the necessary commands to configure the virtual environment and
-clone your Django app from your local directory - this is basically taking the
-instructions you used in that lab and converting them to Fabric commands.
-
-The final command should be the command to run the server - if you add
-an '&' at the end it will run the process in the background. Note -
-you would normally use Gunicorn to do this not manage.py runserver but
-we are keeping it simple.
-
-The documentation for Fabric is here: http://docs.fabfile.org/en/2.0/
+**NOTE**:  this python script basically needs you to convert instructions (in **Set up an EC2 instance** and **Set up Django inside the created EC2 instance**) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
 Lab Assessment:
 	
