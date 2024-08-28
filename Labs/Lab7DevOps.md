@@ -2,7 +2,7 @@
 
 Version: 1.2 Date: 15/9/2018 Author: David Glance
 
-Date: 24/07/2024 Updated by Zhi Zhang
+Date: 28/07/2024 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -66,7 +66,7 @@ Host <your EC2 instance name>
 	IdentityFile <path to your private key>
 ```
 
-Replace **<your EC2 instance name>** and **<your EC2 instance public IPv4 DNS>** above with your real ones.
+Replace `<your EC2 instance name>` and `<your EC2 instance public IPv4 DNS>` above with your real ones.
 
 Rely on the fabric code below to connect to you instance.
 
@@ -83,9 +83,9 @@ Linux
 
 Write a python script where you first need to automate the setup of a Python 3 virtual environment, nginx and a Django app within the EC2 instance you just created. Then, you should run the Django development server on port 8000 in the background.
 
-From your local OS environment, access the URL: http://\<ip address of your EC2 instance>/polls/, and output what you've got. 
+From your local OS environment, access the URL: `http://\<ip address of your EC2 instance>/polls/`, and output what you've got. 
 
-**NOTE**:  this python script basically needs you to convert instructions (in **Set up an EC2 instance** and **Set up Django inside the created EC2 instance**) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
+**NOTE**:  this python script basically needs you to convert instructions (in `Set up an EC2 instance` and `Set up Django inside the created EC2 instance`) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
 Lab Assessment:
 	
