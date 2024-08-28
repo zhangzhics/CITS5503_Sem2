@@ -58,7 +58,7 @@ You will need to create a config file in ~/.ssh with the contents:
 
 ```
 Host <your EC2 instance name>
-	Hostname <your EC2 instance public DNS>
+	Hostname <your EC2 instance public IPv4 DNS>
 	User ubuntu
 	UserKnownHostsFile /dev/null
 	StrictHostKeyChecking no
@@ -83,7 +83,7 @@ Linux
 
 Write a python script where you first need to automate the setup of a Python 3 virtual environment, nginx and a Django app within the EC2 instance you just created. Then, you should run the Django development server on port 8000 in the background.
 
-From your local OS environment, access the URL: `http://\<ip address of your EC2 instance>/polls/`, and output what you've got. 
+From your local OS environment, access the URL: `http://<ip address of your EC2 instance>/polls/`, and output what you've got. 
 
 **NOTE**:  this python script basically needs you to convert instructions (in `Set up an EC2 instance` and `Set up Django inside the created EC2 instance`) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
