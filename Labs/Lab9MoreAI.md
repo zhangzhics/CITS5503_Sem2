@@ -2,7 +2,7 @@
 
 Version: 1.0 Date: 4/10/2021 Author: Camilo Pestana
 
-Date: 21/07/2023 Updated by Zhi Zhang
+Date: 29/07/2024 Updated by Zhi Zhang
 
 ## Learning Objectives
 
@@ -86,19 +86,19 @@ Sentiment analysis (or opinion mining) uses NLP to determine whether data is pos
 
 Use boto3 and AWS comprehend to create a python script for sentiment analysis and apply the previous 4 texts to test the script.
 
-#### Detect entities
+### Detect entities
 
 Use boto3 and AWS comprehend to create a python script for entities detection and apply the previous 4 texts to test the script.
 
 Answer this question: describe what entities are in your own words.
 
-#### Detect keyphrases
+### Detect keyphrases
 
 Use boto3 and AWS comprehend to create a python script for keyphrases detection and apply the previous 4 texts to test the script.
 
 Answer this question: describe what keyphrases are in your own words.
 
-#### Detect syntaxes
+### Detect syntaxes
 
 Use boto3 and AWS Comprehend to create a python script for syntax detection and apply the previous 4 texts to test the script.
 
@@ -114,19 +114,19 @@ Currently, given an image, AWS Rekognition allows:
 3. **Facial Analysis**: get a complete analysis of facial attributes, including confidence scores.
 4. **Extract Text from an image**: automatically detect and extract text in your images.
 
-### [1] Add pictures
+### Add images
 
 Create a python script: create an S3 bucket named as <studentid>-lab9 in the region you are mapped to. Add the 4 following images into the bucket:
 
-1. Add a picture of an urban setting (named as urban.jpg).
+1. Add an image of an urban setting (named as urban.jpg).
 
-2. Add a picture of a person on the beach (named as beach.jpg).
+2. Add an image of a person on the beach (named as beach.jpg).
 
-3. Add a picture with people showing their faces (named as faces.jpg).
+3. Add an image with people showing their faces (named as faces.jpg).
 
-4. Add a picture with texts (named as text.jpg).
+4. Add an image with texts (named as text.jpg).
 
-### [2] Test AWS rekognition
+### Test AWS rekognition
 
 Update the python script above by using boto3 and AWS rekognition to test label recognition, image moderation, facial analysis and text extraction from images.
 
