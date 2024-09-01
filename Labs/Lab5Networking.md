@@ -73,7 +73,7 @@ The aim of this part of the lab is to create an application load balancer and lo
 
 ### [1] Create 2 EC2 instances
 
-Write a Python Boto3 script to create 2 EC2 instances in two different availability zones (name the instances following the format: \<student number\>-vm1 and \<student number\>-vm2) in the region mapped to your student number. In this script, a security group should be created to authorise inbound traffic for HTTP and SSH, which will be used by the following steps.
+Write a Python Boto3 script to create 2 EC2 instances (the instance type can be `t2.micro` or `t3.micro`) in two different availability zones (name the instances following the format: \<student number\>-vm1 and \<student number\>-vm2) in the region mapped to your student number. In this script, a security group should be created to authorise inbound traffic for HTTP and SSH, which will be used by the following steps. 
 
 **NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
 
