@@ -27,6 +27,12 @@ The aim of this lab is to write a series of scripts that will test the main feat
 
 AWS Comprehend and AWS Rekognition services are available in a few limited regions. To make sure your lab experience is smooth, please refer to the table below.
 
+| Student Number | Region | Region Name |
+| --- | --- | --- |
+| 20000000 – 23820000| Asia Pacific (Seoul)	| ap-northeast-2	|
+| 23820001 – 23964000 | Asia Pacific (Singapore)	| ap-southeast-1	|
+| 23964001 – 24700000 | Asia Pacific (Sydney)	| ap-southeast-2	|
+
 ## AWS Comprehend
 
 AWS Comprehend offers different services to analyse text using machine learning. With Comprehend API, you will be able to perform common NLP tasks such as sentiment analysis, or simply detecting the language from the text.
