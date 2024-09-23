@@ -25,7 +25,7 @@ The aim of this lab is to write a series of scripts that will test the main feat
 
 ## Available Regions
 
-AWS Comprehend and AWS Rekognition services are available in a few limited regions. Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
+While AWS Comprehend and AWS Rekognition services are available in only a few regions, it is **recommended**, but not mandatory, that you use a region from the table below based on your student number.
 
 | Student Number | Region | Region Name |
 | --- | --- | --- |
