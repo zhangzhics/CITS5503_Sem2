@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore~
+.idea/
+Labs/.DS_Store
+Lectures/.DS_Store
+Lectures/~*
+Labs/*~
+Labs/~*
+Labs/.#*
+.DS_Store
+Lectures/CloudLectures2018.xlsx
+~*
+*~
+
