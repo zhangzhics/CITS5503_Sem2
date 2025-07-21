@@ -8,7 +8,7 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 
 1. Register for an AWS account and explore the user interface
 2. Obtain API keys and secret
-3. Install a recent VM-based Linux OS, e.g., Ubuntu 20.04 LTS
+3. Install a recent VM-based Linux OS, e.g., Ubuntu 22.04 LTS
 4. On the Ubuntu 20.04 LTS instance
 5. Install AWS CLI on VM
 6. Install a virtual environment with Python 3.6
@@ -47,8 +47,9 @@ Click on your user account and click the Security Credentials tab: create access
 You have several options to set up a Linux environment:
 
 ### Windows Users
-- Use **WSL2 (Windows Subsystem for Linux)** with **Ubuntu 20.04 LTS**.
-- Follow this guide: [Install Ubuntu on WSL2](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2).
+- Use **WSL2 (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS** (**Note: Ubuntu 23.04 and above is not suggested. You may meet unexpected errors.**)
+- Follow this guide: [How To Install Ubuntu 22.04 LTS On Windows 11 With WSL2 + RUN Linux GUI Apps](https://www.youtube.com/watch?v=Rzg144v3hfo).
+- No WSL2 on your machine? Follow this guide: [How to Install WSL2 on Windows 11 (Windows Subsystem for Linux)](https://www.youtube.com/watch?v=eId6K8d0v6o).
 
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
