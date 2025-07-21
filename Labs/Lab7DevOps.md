@@ -41,7 +41,7 @@ Use your existing code to create an EC2 instance where you will test your Fabric
 | 24030001 – 24122100 | US West (Oregon)	| us-west-2	| ami-05f991c49d264708f |
 | 24122100 – 24237000 | Asia Pacific (Mumbai)	| ap-south-1	| ami-0f918f7e67a3323f0 |
 | 24237001 – 24315000 | Asia Pacific (Singapore)	| ap-southeast-1	| ami-0497a974f8d5dcef8 |
-| 24315001 – 24400000 | Asia Pacific (Sydney)	| ap-southeast-2	| ami-02c7683e4ca3ebf58 |
+| 24315001 – 24400000 | Asia Pacific (Sydney)	| ap-southeast-2	| ami-010876b9ddd38475e |
 | 24400001 – 24497500 | Canada (Central)	| ca-central-1	| ami-0c0a551d0459e9d39 |
 | 24497501 – 24590000 | Europe (Frankfurt)	| eu-central-1	| ami-02003f9f0fde924ea |
 | 24590001 – 26000000 | Europe (Stockholm)	| eu-north-1	| ami-042b4708b1d05f512 |
