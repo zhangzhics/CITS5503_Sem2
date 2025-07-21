@@ -131,7 +131,7 @@ Use AWS CLI command to scan the created DynamoDB table, and output what you've g
 
 Use AWS CLI command to delete the table.
 
-**NOTE**: Delete the created S3 bucket from AWS console after the lab is done.
+**NOTE**: Do NOT delete the created S3 bucket, you will reuse the created S3 bucket in Labs 4 and 9.
 
 Lab Assessment:
 
