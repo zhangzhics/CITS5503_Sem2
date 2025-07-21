@@ -54,8 +54,7 @@ You have several options to set up a Linux environment:
 
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
-- For Apple Silicon (M1/M2) users, refer to **section 2.2** in this guide:  
-  [Mac/Linux Setup Guide](https://uwacyber.gitbook.io/cits1003/cits1003-labs/lab-1-setting-up-your-laptop).
+- For Apple Silicon (M1/M2) users, follow this guide:  [Mac/Linux Setup Guide](https://uwacyber.gitbook.io/cits1003/cits1003-labs/lab-1-setting-up-your-laptop).
 
 ### Other Linux Users
 - If you already have a recent Linux distribution (e.g., Ubuntu 20.04 LTS or Kali Linux), you can keep using it.
