@@ -48,8 +48,9 @@ You have several options to set up a Linux environment:
 
 ### Windows Users
 - Use **WSL2 (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS** (**Note: Ubuntu 23.04 and above is not suggested. You may meet unexpected errors.**)
-- Follow this guide: [How To Install Ubuntu 22.04 LTS On Windows 11 With WSL2 + RUN Linux GUI Apps](https://www.youtube.com/watch?v=Rzg144v3hfo).
 - No WSL2 on your machine? Follow this guide: [How to Install WSL2 on Windows 11 (Windows Subsystem for Linux)](https://www.youtube.com/watch?v=eId6K8d0v6o).
+- Follow this guide to install Ubuntu distribution on your machine: [How To Install Ubuntu 22.04 LTS On Windows 11 With WSL2 + RUN Linux GUI Apps](https://www.youtube.com/watch?v=Rzg144v3hfo).
+
 
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
