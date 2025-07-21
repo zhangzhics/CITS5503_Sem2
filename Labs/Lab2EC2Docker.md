@@ -6,8 +6,7 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 
 ## Learning Objectives
 1. Create an EC2 instance, security group and ssh keys using awscli and python/boto
-2. Configure VirtualBox to allow for inbound IP traffic
-3. Install and configure Docker and run a hello world application that can be called from the host machine
+2. Install and configure Docker and run a hello world application that can be called from the host machine
 
 ## Technologies Covered
 
