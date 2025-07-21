@@ -46,22 +46,20 @@ Click on your user account and click the Security Credentials tab: create access
 
 ## Set up recent Linux OSes
 
-**NOTE**: You have multiple options for the setup, for example, Windows WSL with recommended Ubuntu OS 20.04 LTS, and Virtual Machine Manager (e.g., VirtualBox, UTM and VMWare) with recommended Ubuntu OS 20.04 LTS. If you have already installed a recent Linux OS, you don't need to re-install it and instead attach appropriate screenshots and description for your write-up (other Linux distributions such as recent Kali Linux should be fine). 
+You have several options to set up a Linux environment:
 
-For Windows/MacOS (non-M1) users, please refer to **2.1** in the link below. For M1/M2 etc. MacBook users, please refer to **2.2** in the link.
+### Windows Users
+- Use **WSL2 (Windows Subsystem for Linux)** with **Ubuntu 20.04 LTS**.
+- Follow this guide: [Install Ubuntu on WSL2](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2).
 
-[https://uwacyber.gitbook.io/cits1003/cits1003-labs/setting-up-your-laptop](https://uwacyber.gitbook.io/cits1003/cits1003-labs/lab-1-setting-up-your-laptop)
+### macOS Users
+- Use the built-in **Terminal app** (no extra setup needed for most tasks).
+- For Apple Silicon (M1/M2) users, refer to **section 2.2** in this guide:  
+  [Mac/Linux Setup Guide](https://uwacyber.gitbook.io/cits1003/cits1003-labs/setting-up-your-laptop).
 
-For Windows users, WSL is also good and detailed below:
-
-[https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2](https://canonical-ubuntu-wsl.readthedocs-hosted.com/en/latest/guides/install-ubuntu-wsl2)
-
-
-**Optional:** If you want to run the VirtualBox environment in full screen:
-
-[https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting](https://askubuntu.com/questions/1230797/ubuntu-20-04-vm-always-resizes-screen-to-default-size-when-booting)
-
-**Optional:** If you are using VirtualBox and have any issues with copy-paste from your host machine to your VM, you should enable clipboard copying from the Devices menu of VirtualBox (Settings > General > Advance > Shared Clipboard > Bidirectional). You will need to run and install the VirtualBox Guest Additions first from the same menu (On Ubuntu 20.04, you should install build tools first `sudo apt install linux-headers-$(uname -r) build-essential dkms -y`
+### Other Linux Users
+- If you already have a recent Linux distribution (e.g., Ubuntu 20.04 LTS or Kali Linux), you can keep using it.
+- Provide relevant screenshots and a brief description for your write-up.
 
 ## Install Linux packages
 
