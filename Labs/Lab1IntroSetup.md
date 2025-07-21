@@ -55,9 +55,8 @@ You have several options to set up a Linux environment:
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
 - Follow this guide:
-  
--- [Install Homebrew](https://brew.sh/)
--- [Install the AWS CLI on Mac using Homebrew](https://www.youtube.com/watch?v=V5bZsTNz1wY)
+  - [Install Homebrew](https://brew.sh/)
+  - [Install the AWS CLI on Mac using Homebrew](https://www.youtube.com/watch?v=V5bZsTNz1wY)
 
 ### Other Linux Users
 - If you already have a recent Linux distribution (e.g., Ubuntu 20.04 LTS or Kali Linux), you can keep using it.
