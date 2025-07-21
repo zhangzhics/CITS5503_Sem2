@@ -63,11 +63,9 @@ chmod 400 <student number>-key.pem
 Based on your region code, find the corresponding ami id in the table above and fill it in the command below:
 
 ```
- aws ec2 run-instances --image-id <ami id> --security-group-ids <student number>-sg --count 1 --instance-type t2.micro --key-name <student number>-key --query 'Instances[0].InstanceId'
+ aws ec2 run-instances --image-id <ami id> --security-group-ids <student number>-sg --count 1 --instance-type t3.micro --key-name <student number>-key --query 'Instances[0].InstanceId'
 
  ```
-
-If you are allocated to Europe (Stockholm), eu-north-1, please use `t3.micro` to replace `t2.micro` in the command above.
 
 ### [5] Add a tag to your Instance
 
