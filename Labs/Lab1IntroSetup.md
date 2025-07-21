@@ -21,7 +21,7 @@ Date: 24/07/2024 Updated by Zhi Zhang
 
 * AWS
 
-* VirtualBox Python/Boto/awscli/bash scripts
+* Python/Boto/awscli/bash scripts
 
 **NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
