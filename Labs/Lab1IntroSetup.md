@@ -9,9 +9,9 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 1. Register for an AWS account and explore the user interface
 2. Obtain API keys and secret
 3. Install a recent VM-based Linux OS, e.g., Ubuntu 22.04 LTS
-4. On the Ubuntu 20.04 LTS instance
+4. On the Ubuntu 22.04 LTS instance
 5. Install AWS CLI on VM
-6. Install a virtual environment with Python 3.6
+6. Install a virtual environment with Python 3.10
 7. Configure the AWSCLI environment with API details and default region
 8. Verify awscli is working and write a python boto script to emulate a awscli command
 
@@ -54,9 +54,7 @@ You have several options to set up a Linux environment:
 
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
-- Follow these guides:
-  - First, [Install Homebrew](https://brew.sh/)
-  - Second, [Install the AWS CLI on Mac using Homebrew](https://www.youtube.com/watch?v=V5bZsTNz1wY)
+- Follow this guide: [Install Homebrew](https://brew.sh/)
 
 ### Other Linux Users
 - If you already have a recent Linux distribution (e.g., Ubuntu 20.04 LTS or Kali Linux), you can keep using it.
@@ -64,11 +62,11 @@ You have several options to set up a Linux environment:
 
 ## Install Linux packages
 
-**NOTE**: If you have already installed AWS CLI, Python 3.8.x, and Python Boto3 library, you don't need to re-install it and instead attach relevant evidence for your write-up.
+**NOTE**: If you have already installed AWS CLI, Python 3.10, and Python Boto3 library, you don't need to re-install it and instead attach relevant evidence for your write-up.
 
-### [1] Install Python 3.8.x
+### [1a] Install Python 3.10 (Windows users only)
 
-The recent Ubuntu versions such as 20.04 LTS have Python 3.8.x installed. You should update the packages
+The recent Ubuntu versions such as 22.04 LTS have Python 3.10 installed. You should update the packages
 to obtain the latest version:
 
 ```
@@ -88,8 +86,19 @@ sudo apt install -y python3-pip
 
 Python packages can be installed by: `pip3 install package_name`
 
+### [1b] Install Python 3.10 (Mac users only)
 
-### [2] Install awscli
+Install Python 3.10:
+```
+brew install python@3.10
+```
+
+Check the version:
+```
+python3.10 --version
+```
+
+### [2a] Install awscli (Windows users only)
 
 ```
 sudo apt install awscli
@@ -107,6 +116,10 @@ Alternatively:
 sudo snap install aws-cli --classic
 ```
 
+### [2b] Install awscli (Mac users only)
+
+[Install the AWS CLI on Mac using Homebrew](https://www.youtube.com/watch?v=V5bZsTNz1wY)
+
 ### [3] Configure AWS
 
 After typing the command below:
@@ -117,9 +130,9 @@ aws configure
 You should see an output like this:
 
 ```
-AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: ap-southeast-2
+AWS Access Key ID [None]: <Your AWS Access Key ID>
+AWS Secret Access Key [None]: <Your AWS Secret Access Key>
+Default region name [None]: <Your assigned region>
 Default output format [None]: json
 ```
 
