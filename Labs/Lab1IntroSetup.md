@@ -225,7 +225,7 @@ This will create an un-tabulated response.
 
 ### [3] Write a Python script
 
-Tabulate the un-tabulated response above to have 2 columns with Endpoint and RegionName.
+Tabulate the un-tabulated response above to have **2 columns** with **Endpoint** and **RegionName**.
 
 ## Lab Assessment
 
