@@ -54,7 +54,7 @@ Write a Python Boto3 script to create 2 EC2 instances in two different availabil
 
 ### [2] Create an Application Load Balancer
 
-Update the script above to create an application load balancer and load balance HTTP requests to the created 2 instances. Note that the v2 of the ELB interface below should be used:
+Create an application load balancer and load balance HTTP requests to the created 2 instances. Note that the v2 of the ELB interface below should be used:
 
 ```
 client = boto3.client('elbv2')
@@ -65,13 +65,11 @@ The script updates include:
 First, create a load balancer, during which specify the two created region subnets and the
 security group created in the previous step.
 
-Second, create a target group using the same VPC that was used to create
-the instances.
+Second, create a target group using the same VPC that was used to create the instances.
 
 Third, register targets in the target group.
 
-Last, create a listener with a default rule Protocol: HTTP and Port 80
-forwarding on to the target group.
+Last, create a listener with a default rule Protocol: `HTTP` and `Port 80` forwarding on to the target group.
 
 ### [3] Test the Application Load Balancer
 
