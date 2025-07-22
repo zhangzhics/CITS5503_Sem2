@@ -10,10 +10,9 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 2. Obtain API keys and secret
 3. Install a recent VM-based Linux OS, e.g., Ubuntu 22.04 LTS
 4. On the Ubuntu 22.04 LTS instance
-5. Install AWS CLI on VM
-6. Install a virtual environment with Python 3.10
-7. Configure the AWSCLI environment with API details and default region
-8. Verify awscli is working and write a python boto script to emulate a awscli command
+5. Install AWS CLI in a Linux environment.
+6. Configure the AWS CLI environment with API details and default region
+7. Verify AWS CLI is working and write a Python boto script to emulate an AWS CLI command
 
 ## Technologies Covered
 
@@ -30,7 +29,7 @@ Your username is <student number>@student.uwa.edu.au. Password details will be p
 
 The login is here: https://489389878001.signin.aws.amazon.com/console, where 489389878001 is the account root user id.
 
-You must change your password after login.
+You must change your password after logging.
 
 Alternatively, you can create your own owner account using your own credit card and utilise free resource tiers on AWS.
 
@@ -79,7 +78,7 @@ You should see the installed version number.
 
 ### [1a] Install Python 3.10 (Windows users only)
 
-The recent Ubuntu versions such as 22.04 LTS have Python 3.10 installed. You should update the packages
+The recent Ubuntu versions, such as 22.04 LTS, have Python 3.10 installed. You should update the packages
 to obtain the latest version:
 
 ```
