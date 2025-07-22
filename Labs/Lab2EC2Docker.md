@@ -15,8 +15,6 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 * AWS EC2 Python/Boto/awscli/bash scripts
 * Docker
 
-**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
-
 ## Create an EC2 instance using awscli
 ### [1] Create a security group
 
@@ -185,6 +183,6 @@ docker stop my-app
 docker rm my-app
 ```
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
