@@ -17,8 +17,6 @@ Date: 29/07/2024 Updated by Zhi Zhang
 * boto3
 * Python
 
-**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
-
 ## Background
 
 The aim of this lab is to write a series of scripts that will test the main features of AWS Comprehend and AWS Rekognition.
@@ -48,15 +46,15 @@ By executing the code above, we will get something like this:
 ```
 This means that the detected language is 'en' (English) and has a confidence in the prediction greater than 0.99. 
 
-**NOTE**: remember that often in machine learning the confidence score is expressed as a value in the range [0,1] where 0 indicates the lack of certainty and 1 means totally certain of the prediction.
+**NOTE**: Remember that often in machine learning the confidence score is expressed as a value in the range [0,1] where 0 indicates the lack of certainty and 1 means totally certain of the prediction.
 
 ### Detect Languages from text
 
 #### [1] Modify the code above
-Based on the previous code, write a python script that can detect different languages. Besides, instead of language code (e.g., 'en' for English or 'it' for Italian), the script should be return the message "<predicted_language> detected with <xx> confidence" where <predicted_language> correspond to the name of the language in English and <xx> is given as a percentage. For the previous example, the result should look like this:
+Based on the previous code, write a Python script that can detect different languages. Besides, instead of language code (e.g., 'en' for English or 'it' for Italian), the script should be return the message "<predicted_language> detected with <xx> confidence" where <predicted_language> correspond to the name of the language in English and <xx> is given as a percentage. For the previous example, the result should look like this:
 
 ```
-English detected with 99% confidence
+English was detected with 99% confidence
 ```
 
 **NOTE**: The relevant APIs are available [here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/comprehend.html).
@@ -80,27 +78,27 @@ Test your code using the following texts in different languages:
 "L'amor che move il sole e l'altre stelle."
 [Quote from "Divine Comedy" - Dante Alighieri]
 
-### Analyze sentiment 
+### Analyse sentiment 
 
 Sentiment analysis (or opinion mining) uses NLP to determine whether data is positive, negative or neutral. Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.
 
-Use boto3 and AWS comprehend to create a python script for sentiment analysis and apply the previous 4 texts to test the script.
+Use boto3 and AWS Comprehend to create a Python script for sentiment analysis and apply the previous 4 texts to test the script.
 
 ### Detect entities
 
-Use boto3 and AWS comprehend to create a python script for entities detection and apply the previous 4 texts to test the script.
+Use boto3 and AWS Comprehend to create a Python script for entities detection and apply the previous 4 texts to test the script.
 
 Answer this question: describe what entities are in your own words.
 
 ### Detect keyphrases
 
-Use boto3 and AWS comprehend to create a python script for keyphrases detection and apply the previous 4 texts to test the script.
+Use boto3 and AWS Comprehend to create a Python script for keyphrases detection and apply the previous 4 texts to test the script.
 
-Answer this question: describe what keyphrases are in your own words.
+Answer this question: Describe what keyphrases are in your own words.
 
 ### Detect syntaxes
 
-Use boto3 and AWS Comprehend to create a python script for syntax detection and apply the previous 4 texts to test the script.
+Use boto3 and AWS Comprehend to create a Python script for syntax detection and apply the previous 4 texts to test the script.
 
 Answer this question: describe what syntaxes are in your own words.
 
@@ -116,7 +114,7 @@ Currently, given an image, AWS Rekognition allows:
 
 ### Add images
 
-Create a python script: create an S3 bucket named as <studentid>-lab9 in the region you are mapped to. Add the 4 following images into the bucket:
+Create a Python script: create an S3 bucket named as <studentid>-lab9 in the region you are mapped to. Add the following 4 images into the bucket:
 
 1. Add an image of an urban setting (named as urban.jpg).
 
@@ -124,11 +122,11 @@ Create a python script: create an S3 bucket named as <studentid>-lab9 in the reg
 
 3. Add an image with people showing their faces (named as faces.jpg).
 
-4. Add an image with texts (named as text.jpg).
+4. Add an image with text (named as text.jpg).
 
 ### Test AWS rekognition
 
-Update the python script above by using boto3 and AWS rekognition to test label recognition, image moderation, facial analysis and text extraction from images.
+Update the Python script above by using boto3 and AWS Rekognition to test label recognition, image moderation, facial analysis and text extraction from images.
 
 **NOTE**: The relevant APIs are available [here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html).
 
