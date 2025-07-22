@@ -17,8 +17,6 @@ Date: 28/07/2024 Updated by Zhi Zhang
 * Python
 * Fabric
 
-**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
-
 ## Background
 
 The aim of this lab is to write a program that will:
@@ -68,7 +66,7 @@ Host <your EC2 instance name>
 
 Replace `<your EC2 instance name>` and `<your EC2 instance public IPv4 DNS>` above with your real ones.
 
-Rely on the fabric code below to connect to you instance.
+Rely on the fabric code below to connect to your instance.
 
 ```
 python3
@@ -81,13 +79,13 @@ Linux
 
 ### Use Fabric for automation
 
-Write a python script where you first need to automate the setup of a Python 3 virtual environment, nginx and a Django app within the EC2 instance you just created. Then, you should run the Django development server on port 8000 in the background.
+Write a Python script where you first need to automate the setup of a Python 3 virtual environment, nginx and a Django app within the EC2 instance you just created. Then, you should run the Django development server on port 8000 in the background.
 
 From your local OS environment, access the URL: `http://<ip address of your EC2 instance>/polls/`, and output what you've got. 
 
-**NOTE**:  this python script basically needs you to convert instructions (in `Set up an EC2 instance` and `Set up Django inside the created EC2 instance`) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
+**NOTE**:  This Python script basically needs you to convert instructions (in `Set up an EC2 instance` and `Set up Django inside the created EC2 instance`) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
-Lab Assessment:
+## Lab Assessment
 	
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
 
