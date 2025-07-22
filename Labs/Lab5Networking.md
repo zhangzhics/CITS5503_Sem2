@@ -19,7 +19,6 @@ Technologies Covered
 * Python/Boto scripts
 * VirtualBox
 
-**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 
@@ -83,7 +82,7 @@ Second, update each instance:
 sudo apt-get update
 ```
 
-Third, install apache2 in each instance:
+Third, install Apache2 in each instance:
 
 ```
 sudo apt install apache2
@@ -91,10 +90,10 @@ sudo apt install apache2
 
 Fourth, edit the `<title>` and `</title>` tags inside the `/var/www/html/index.html` file to show the instance name.
 
-Last, use a browser from your host OS to access each instance by their respective IP address and see if you can get an Apache web page that shows your instance name. Output what you've got. If you are using the University network, it is likely that you cannot access the installed apache2. To address this issue, you may switch to a non-university network.
+Last, use a browser from your host OS to access each instance by its respective IP address and see if you can get an Apache web page that shows your instance name. Output what you've got. If you are using the University network, it is likely that you cannot access the installed apache2. To address this issue, you may switch to a non-university network.
 
-**NOTE**: Delete all the created AWS resources from AWS console after the lab is done.
+**NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
