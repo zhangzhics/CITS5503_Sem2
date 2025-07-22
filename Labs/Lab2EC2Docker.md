@@ -86,10 +86,9 @@ ssh -i <student number>-key.pem ubuntu@<IP Address from above>
 
 ### [8] List the created instance using the AWS console
 
-
 ## Create an EC2 instance with Python Boto3
 
-Use a Python script to implement the steps above (steps 1-6 are required, repeat step 8 using the AWS console again; Step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details.
+Use a Python script to implement the steps above (steps 1-6 are required, repeat step 8 using the AWS console again; Step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details. **Note**: Remember that your security group name, key pair name, and instance name should be different from those used in **Create an EC2 instance using awscli**.
 
 ## Use Docker inside a Linux OS
 
