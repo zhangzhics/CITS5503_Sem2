@@ -69,9 +69,21 @@ cd dynamodb
 
 Install jre if not done
 
+For Linux users:
 ```
 sudo apt-get install default-jre
 wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local_latest.tar.gz
+```
+
+For Mac users:
+```
+brew install openjdk wget
+
+echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+
+wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local_latest.tar.gz
+
+source ~/.zshrc
 ```
 
 You can use the following command to extract files from dynamodb_local_latest.tar.gz
