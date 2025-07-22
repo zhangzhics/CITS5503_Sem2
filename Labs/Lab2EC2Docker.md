@@ -24,7 +24,7 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 aws ec2 create-security-group --group-name <student number>-sg --description "security group for development environment"
 ```
 
-This will use the default VPC (if you want to specify a VPC, use --vpc-id vpc-xxxxxxxx). Take a note of the security group id that is created. 
+This will use the default VPC (if you want to specify a VPC, use `--vpc-id vpc-xxxxxxxx`). Take a note of the security group id that is created. 
 
 ### [2] Authorise inbound traffic for ssh
 
