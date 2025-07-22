@@ -55,6 +55,12 @@ You have several options to set up a Linux environment:
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
 - Follow this guide: [Install Homebrew](https://brew.sh/)
+- Check list
+  - Use `brew list` to see all the packages in your local environment.
+
+  ```
+    brew list
+    ```
 
 ### Other Linux Users
 - If you already have a recent Linux distribution (e.g., Ubuntu 20.04 LTS or Kali Linux), you can keep using it.
