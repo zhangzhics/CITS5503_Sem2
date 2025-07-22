@@ -108,12 +108,6 @@ brew upgrade python
 ```
 
 
-`pip3` usually comes with Python 3.8+ installations on Mac, but if you need to install it:
-```
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3 get-pip.py
-```
-
 ### [2a] Install awscli (Windows users only)
 
 ```
