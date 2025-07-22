@@ -19,7 +19,6 @@ Date: 25/07/2024 Updated by Zhi Zhang
 * Python/Boto scripts
 * VirtualBox
 
-**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
 
 ## Background
 
@@ -29,7 +28,7 @@ The aim of this lab is to write a program that will:
 2. Create a key in KMS and use it to encrypt files on the client before uploading to S3 and decrypt them after downloading from S3
 3. Implement AES using python and test the difference in performance between the KMS solution and the local one.
 
-## Apply a policy to restrict permissions on bucket
+## Apply a policy to restrict permissions on the bucket
 
 ### [1] Write a Python script
 
@@ -59,9 +58,9 @@ Apply the following policy to the S3 bucket you created in the last lab to allow
 
 ### [2] Check whether the script works
 
-Use AWS CLI command and AWS S3 console to display the policy content applied to the S3 bucket. 
+Use the AWS CLI command and the AWS S3 console to display the policy content applied to the S3 bucket. 
 
-Test the policy by using a username that is not your to access the folder called `rootdir` and output what you've got. 
+Test the policy by using a username that is not your own to access the folder called `rootdir` and output what you've got. 
 
 
 ## AES Encryption using KMS
@@ -164,7 +163,7 @@ Write a Python script where each file from the S3 bucket is encrypted and then d
 
 ### [5] Apply `pycryptodome` for encryption/decryption
 
-Write another Python script that uses the python library `pycryptodome` to encrypt and decrypt each file in the S3 bucket. Both encrypted and decrypted files will be in the same folder as the original file.
+Write another Python script that uses the Python library `pycryptodome` to encrypt and decrypt each file in the S3 bucket. Both encrypted and decrypted files will be in the same folder as the original file.
 
 For encryption/decryption, refer to the example code from [fileencrypt.py](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/fileencrypt.py)
 
@@ -172,10 +171,8 @@ For encryption/decryption, refer to the example code from [fileencrypt.py](https
 
 ## Answer the following question (Marked)
 
-```
-What is the performance difference between using KMS and using the custom solution?
-```
+*What is the performance difference between using KMS and using the custom solution?*
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
