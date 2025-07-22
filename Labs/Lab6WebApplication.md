@@ -18,8 +18,6 @@ Date: 24/07/2024 Updated by Zhi Zhang
 * RDS
 * Python/Boto scripts
 
-**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
-
 ## Background
 
 The aim of this lab is to write a program that will:
@@ -203,7 +201,7 @@ Access the URL: http://\<load balancer dns name>/polls/, and output what you've 
 
 ## Web interface for CloudStorage application
 
-You need to create an AWS DynamoDB table copied from the local DynamoDB of the previous lab 3 as well as a copy of your AWS credentials.
+You need to create an AWS DynamoDB table copied from the local DynamoDB of the previous lab 3, as well as a copy of your AWS credentials.
 
 In views.py, add boto3 code to scan the AWS DynamoDB table. Display the results in the calling page.
 
@@ -275,6 +273,6 @@ def index(request):
 
 You can add variables to the template and more formatting functionality to display the information correctly.
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
