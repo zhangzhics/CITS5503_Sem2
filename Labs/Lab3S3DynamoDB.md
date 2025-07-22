@@ -69,13 +69,13 @@ cd dynamodb
 
 Install jre if not done
 
-For Linux users:
+For **Linux** users:
 ```
 sudo apt-get install default-jre
 wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local_latest.tar.gz
 ```
 
-For Mac users:
+For **Mac** users:
 ```
 brew install openjdk wget
 
