@@ -8,7 +8,7 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 
 1. Register for an AWS account and explore the user interface
 2. Obtain API keys and secret
-3. Install a recent VM-based Linux OS, e.g., Ubuntu 22.04 LTS
+3. Install a recent Linux OS, e.g., Ubuntu 22.04 LTS
 4. On the Ubuntu 22.04 LTS instance
 5. Install AWS CLI in a Linux environment.
 6. Configure the AWS CLI environment with API details and default region
