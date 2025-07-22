@@ -38,7 +38,7 @@ aws ec2 authorize-security-group-ingress --group-name <student number>-sg --prot
 aws ec2 create-key-pair --key-name <student number>-key --query 'KeyMaterial' --output text > <student number>-key.pem
 ```
 
-To use this key on Linux, copy the file to a directory ~/.ssh and change the permissions to:
+To use this key on Linux, copy the file to a directory `~/.ssh` and change the permissions to:
 
 ```
 chmod 400 <student number>-key.pem
