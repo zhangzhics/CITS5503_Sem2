@@ -133,3 +133,7 @@ Update the Python script above by using boto3 and AWS Rekognition to test label 
 Lab Assessment:
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
+
+## Important Notes
+
+**Delete all AWS resources you have created since week 2.**
