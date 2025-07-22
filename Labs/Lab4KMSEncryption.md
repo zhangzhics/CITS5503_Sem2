@@ -169,7 +169,7 @@ For encryption/decryption, refer to the example code from [fileencrypt.py](https
 
 **NOTE**: Delete the created S3 bucket and KMS key from AWS console after the lab is done.
 
-## Answer the following question (Marked)
+## Answer the following question in your lab report
 
 *What is the performance difference between using KMS and using the custom solution?*
 
