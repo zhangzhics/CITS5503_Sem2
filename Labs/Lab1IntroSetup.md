@@ -51,14 +51,23 @@ You have several options to set up a Linux environment:
 - No WSL2 on your machine? Follow this guide: [How to Install WSL2 on Windows 11 (Windows Subsystem for Linux)](https://www.youtube.com/watch?v=eId6K8d0v6o).
 - Follow this guide to install an Ubuntu distribution on your machine: [How To Install Ubuntu 22.04 LTS On Windows 11 With WSL2 + RUN Linux GUI Apps](https://www.youtube.com/watch?v=Rzg144v3hfo).
 
-
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
-- Follow this guide: [Install Homebrew](https://brew.sh/)
-- Check list
-  - Use `brew list` to see all the packages in your local environment.
-  - Before you install any software package with Homebrew, run `brew update` to update Homebrew.
-  - Before you install any software package with Homebrew, run `brew doctor` to check that Homebrew is ready to install a package.
+- Run the following command in your Terminal:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Follow the on-screen instructions. You may be asked to enter your password. If you have not installed Xcode command line tools, you will be prompted to install them. 
+- After installing Homebrew, the script will suggest adding Homebrew to your shell profile:
+```bash
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+- To check if Homebrew is installed correctly, run:
+```bash
+brew --version
+```
+You should see the installed version number.
 
 ### Other Linux Users
 - If you already have a recent Linux distribution (e.g., Ubuntu 20.04 LTS or Kali Linux), you can keep using it.
@@ -92,21 +101,38 @@ Python packages can be installed by: `pip3 install package_name`
 
 ### [1b] Install Python 3.10 (Mac users only)
 
+Check you Python version
+```bash
+python3 --version
+```
+
+If you have installed Python 3.8 or above, you can skip this step. Otherwise, you can install Python 3.10 using Homebrew.
+
 Install Python 3.10:
 ```
 brew install python@3.10
 ```
 
+Add the following lines to your shell config file (~/.zshrc, ~/.bash_profile, or ~/.bashrc depending on your shell):
+```bash
+# Add Python 3.10 to PATH
+echo 'export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"' >> ~/.zshrc
+
+# Set python3 and pip3 aliases
+echo 'alias python3="/opt/homebrew/opt/python@3.10/bin/python3.10"' >> ~/.zshrc
+echo 'alias pip3="/opt/homebrew/opt/python@3.10/bin/pip3.10"' >> ~/.zshrc
+```
+For Intel Macs, change `/opt/homebrew/opt/` to `/usr/local/opt/`
+
+Then apply the changes:
+```bash
+source ~/.zshrc
+```
+
 Check the version:
 ```
-python3.10 --version
+python3 --version
 ```
-
-Use `brew upgrade python` to upgrade to the newest version of Python.
-```
-brew upgrade python
-```
-
 
 ### [2a] Install awscli (Windows users only)
 
@@ -127,6 +153,14 @@ sudo snap install aws-cli --classic
 ```
 
 ### [2b] Install awscli (Mac users only)
+
+In your Terminal, run the following command to install AWS CLI using Homebrew:
+
+```
+brew install awscli
+```
+
+The following YouTube video is for your reference.
 
 [Install the AWS CLI on Mac using Homebrew](https://www.youtube.com/watch?v=V5bZsTNz1wY)
 
