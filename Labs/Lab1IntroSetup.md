@@ -228,7 +228,6 @@ This will create an un-tabulated response.
 
 Tabulate the un-tabulated response above to have 2 columns with Endpoint and RegionName.
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
-
