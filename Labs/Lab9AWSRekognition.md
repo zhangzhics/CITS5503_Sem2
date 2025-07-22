@@ -130,7 +130,7 @@ Update the Python script above by using boto3 and AWS Rekognition to test label 
 
 **NOTE**: The relevant APIs are available [here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html).
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
 
