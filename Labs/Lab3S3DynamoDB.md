@@ -83,7 +83,7 @@ tar -zxvf dynamodb_local_latest.tar.gz
 After the extraction, run the command below
 
 ```
-java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar –sharedDb
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
 ```
 
 Alternatively, you can use docker:
