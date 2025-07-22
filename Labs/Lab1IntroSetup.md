@@ -55,6 +55,10 @@ You have several options to set up a Linux environment:
 ### macOS Users
 - Use the built-in **Terminal app** (no extra setup needed for most tasks).
 - Follow this guide: [Install Homebrew](https://brew.sh/)
+- Check list
+  - Use `brew list` to see all the packages in your local environment.
+  - Before you install any software package with Homebrew, run `brew update` to update Homebrew.
+  - Before you install any software package with Homebrew, run `brew doctor` to check that Homebrew is ready to install a package.
 
 ### Other Linux Users
 - If you already have a recent Linux distribution (e.g., Ubuntu 20.04 LTS or Kali Linux), you can keep using it.
@@ -97,6 +101,12 @@ Check the version:
 ```
 python3.10 --version
 ```
+
+Use `brew upgrade python` to upgrade to the newest version of Python.
+```
+brew upgrade python
+```
+
 
 `pip3` usually comes with Python 3.8+ installations on Mac, but if you need to install it:
 ```
