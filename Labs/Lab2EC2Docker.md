@@ -92,28 +92,40 @@ Use a Python script to implement the steps above (steps 1-6 are required, repeat
 
 ## Use Docker inside a Linux OS
 
-### [1] Install Docker
+### macOS Users
+
+- Go to the official Docker website: [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop//)
+- Choose the version for your chip type(Apple Silicon/Intel) and Download the .dmg file
+- Launch Docker from Applications
+- Open Terminal and run the following command to check if Docker is running:
+      
+```bash
+docker --version
+```
+### Linux/WSL2 Users
+
+#### [1] Install Docker
 ```
 sudo apt install docker.io -y
 ```
 
-### [2] Start Docker
+#### [2] Start Docker
 ```
 sudo systemctl start docker
 ```
 
-### [3] Enable Docker
+#### [3] Enable Docker
 ```
 sudo systemctl enable docker
 ```
 
-### [4] Check the version
+#### [4] Check the version
 
 ```
 docker --version
 ```
 
-### [5] Build and run an httpd container
+#### [5] Build and run an httpd container
 
 Create a directory called html
 
@@ -159,7 +171,7 @@ Open a browser and access address: http://localhost or http://127.0.0.1.
 
 Confirm you get "Hello World!"
 
-### [6] Other docker commands
+#### [6] Other docker commands
 
 To check what is running
 
