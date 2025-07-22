@@ -45,7 +45,7 @@ pip install ipykernel
 We tune hyperparameters from the Jupyter notebook we installed above. The instructions for this step are available [here](https://github.com/zhangzhics/CITS5503_Sem2_2023/tree/master/Labs/src/LabAI.ipynb).
 
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
 
