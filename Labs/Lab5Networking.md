@@ -29,44 +29,6 @@ The aim of this lab is to write a program that will:
 
 [2] Understand IP addressing and CIDR and the meaning of TCP and UDP ports
 
-## Networking
-
-**Optional**: Configure inbound IP on your VM (Unmarked)
-
-This can be done in a number of ways, but we are going to use NAT port mapping. When a VM is created, it defaults to creating a single NAT interface. Here, VirtualBox is used as an example.
-
-[1] Turn off a specific VM you want to configure.
-
-[2] In the VirtualBox Manager, select the VM, click `Settings` and then `Network`. Choose Adapter 1 that should have been configured as NAT. Click on `Advanced` and then `Port Forwarding`. Set up 1 rule:
-   Use the host IP 127.0.0.1 and host port 2222 and map that to Guest Port 22
-
-[3] You can test the NAT'd port by seeing if you can access it from your host OS. Enable SSH to the VM by installing **sshd** as follows:
-
-```
-sudo apt install tasksel
-sudo tasksel install openssh-server
-```
-
-start the ssh service by:
-
-```
-sudo service ssh start
-```
-
-you can stop it using:
-
-```
- sudo service ssh stop
- ```
-
-To SSH to the VM, open a terminal on your host OS (or use Putty from Windows) and SSH as
-
-```
-ssh -p 2222 <usermame>@127.0.0.1
-```
-
-You should be prompted for your password
-
 ## Application Load Balancer
 
 The aim of this part of the lab is to create an application load balancer and load balance requests to 2 EC2 instances. 
