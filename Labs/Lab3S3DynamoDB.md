@@ -19,8 +19,6 @@ Date: 24/07/2024 Updated by Zhi Zhang
 * Python/Boto scripts
 * VirtualBox
 
-**NOTE**: please use your Linux environment – if you do it from any other OS (e.g., Windows, Mac – some unknow issues might occur)
-
 ## Background
 
 The aim of this lab is to write a program that will:
@@ -137,14 +135,14 @@ Then, you need to get the attributes above for each file of the S3 bucket and th
 
 ### [5] Scan the table
 
-Use AWS CLI command to scan the created DynamoDB table, and output what you've got. 
+Use the AWS CLI command to scan the created DynamoDB table, and output what you've got. 
 
 ### [6] Delete the table
 
-Use AWS CLI command to delete the table.
+Use the AWS CLI command to delete the table.
 
 **NOTE**: Do NOT delete the created S3 bucket, you will reuse the created S3 bucket in Labs 4 and 9.
 
-Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
