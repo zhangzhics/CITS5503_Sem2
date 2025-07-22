@@ -201,7 +201,7 @@ Access the URL: http://\<load balancer dns name>/polls/, and output what you've 
 
 **NOTE**: When you are done, delete the instance and ALB you created.
 
-## [Unmarked] Web interface for CloudStorage application
+## Web interface for CloudStorage application
 
 You need to create an AWS DynamoDB table copied from the local DynamoDB of the previous lab 3 as well as a copy of your AWS credentials.
 
