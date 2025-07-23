@@ -112,7 +112,8 @@ Install Python 3.10:
 brew install python@3.10
 ```
 
-Add the following lines to your shell config file (~/.zshrc, ~/.bash_profile, or ~/.bashrc depending on your shell):
+Add the following lines to your shell config file (~/.zshrc, ~/.bash_profile, or ~/.bashrc depending on your shell). If your macOS version is Catalina (10.15) or later, the default shell is zsh (~/.zshrc). If you are using an older version, it is likely bash (e.g., ~/.bash_profile or ~/.bashrc).
+
 ```bash
 # Add Python 3.10 to PATH
 echo 'export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"' >> ~/.zshrc
