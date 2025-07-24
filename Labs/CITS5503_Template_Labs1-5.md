@@ -19,13 +19,13 @@
 
 [Refer to the marking rubrics for sufficient step-by-step description.]
 
-## Set up recent Linux OSes
+## Set up recent Unix-like OSes
 
 [Refer to the marking rubrics for sufficient step-by-step description.]
 
 ## Install Linux packages
 
-### [1] Install Python 3.8.x
+### [1] Install Python
 
 [Refer to the marking rubrics for sufficient step-by-step description.]
 
