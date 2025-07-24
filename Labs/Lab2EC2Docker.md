@@ -10,7 +10,6 @@ Date: 21/07/2025 Updated by Zhi Zhang and Jichunyang Li
 
 ## Technologies Covered
 
-* Ubuntu
 * AWS
 * AWS EC2 Python/Boto/awscli/bash scripts
 * Docker
@@ -36,7 +35,7 @@ aws ec2 authorize-security-group-ingress --group-name <student number>-sg --prot
 aws ec2 create-key-pair --key-name <student number>-key --query 'KeyMaterial' --output text > <student number>-key.pem
 ```
 
-To use this key on Linux, copy the file to a directory `~/.ssh` and change the permissions to:
+To use this key, copy the file to a directory `~/.ssh` and change the permissions to:
 
 ```
 chmod 400 <student number>-key.pem
@@ -67,9 +66,9 @@ Based on your region code, find the corresponding ami id in the table above and 
 ### [5] Add a tag to your Instance
 
  ```
-  aws ec2 create-tags --resources <Instance Id from above> --tags Key=Name,Value=<student number>
+  aws ec2 create-tags --resources <Instance Id from above> --tags Key=Name,Value=<Instance Name>
  ```
-**NOTE**: If you need to create a single instance, follow the naming format of `<student number>-vm` (e.g., 24242424-vm). If you need to create multiple ones, follow the naming format of `<student number>-vm1` and `<student number>-vm2` (e.g., 24242424-vm1, 24242424-vm2).
+**NOTE**: If you create a single instance, you must name it using the format of `<student number>-vm` (e.g., 24242424-vm). If you need to create multiple ones, follow the naming format of `<student number>-vm1` and `<student number>-vm2` (e.g., 24242424-vm1, 24242424-vm2).
 
 ### [6] Get the public IP address
 
@@ -86,21 +85,29 @@ ssh -i <student number>-key.pem ubuntu@<IP Address from above>
 
 ## Create an EC2 instance with Python Boto3
 
-Use a Python script to implement the steps above (steps 1-6 are required, repeat step 8 using the AWS console again; Step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details. **Note**: Remember that your security group name, key pair name, and instance name should be different from those used in **Create an EC2 instance using awscli**.
+Use a Python script to implement the steps above (steps 1-6 are required, repeat step 8 using the AWS console again; Step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details. **NOTE**: Remember that your security group name, key pair name, and instance name should be different from those used in **Create an EC2 instance using awscli**.
 
-## Install Docker on macOS, Linux/WSL2
+## Install Docker
 
-### macOS Users
+### Apple Silicon MacOS Users
 
-- Go to the official Docker website: [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop//)
-- Choose the version for your chip type(Apple Silicon/Intel) and Download the .dmg file
-- Launch Docker from Applications
-- Open Terminal and run the following command to check if Docker is running:
+#### [1] Download Docker
+
+Go to the official Docker website: [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop//), choose the version for your processor type (e.g., Apple Silicon), and download the `.dmg` file.
+
+#### [2] Start Docker
+
+Open Docker from Applications.
+
+#### [3] Check the version
+
+Open the terminal and run the following command:
       
 ```bash
 docker --version
 ```
-### Linux/WSL2 Users
+
+### Linux and WSL2 Users
 
 #### [1] Install Docker
 ```
@@ -123,11 +130,11 @@ sudo systemctl enable docker
 docker --version
 ```
 
-### Build and run an httpd container
+## Build and run an httpd container
 
-Create a directory called html
+Create a directory called html.
 
-Edit a file index.html inside the html directory and add the following content
+Edit a file index.html inside the html directory and add the following content:
 
 ```
   <html>
@@ -145,7 +152,7 @@ FROM httpd:2.4
 COPY ./html/ /usr/local/apache2/htdocs/
 ```
 
-Build a docker image
+Build a docker image.
 
 ```
 docker build -t my-apache2 .
@@ -157,7 +164,7 @@ If you run into permission errors, you may need add your user to the docker grou
 sudo usermod -a -G docker <username>
 ```
 
-Be sure to log out and log back in for this change to take effect.
+Make sure to log out and log back in for this change to take effect.
 
 Run the image
 
@@ -169,19 +176,23 @@ Open a browser and access address: http://localhost or http://127.0.0.1.
 
 Confirm you get "Hello World!"
 
-#### Other docker commands
-
-To check what is running
+List all Docker containers, including both running and stopped ones:
 
 ```
 docker ps -a
 ```
-To stop and remove the container
+
+Stop the running container:
 
 ```
-docker stop my-app
 docker rm my-app
 ```
+
+Then, remove the running container:
+```
+docker rm my-app
+```
+
 
 ## Lab Assessment
 
