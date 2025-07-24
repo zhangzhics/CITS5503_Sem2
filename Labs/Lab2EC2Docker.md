@@ -188,7 +188,7 @@ Stop the running container:
 docker rm my-app
 ```
 
-Then, remove the running container:
+Then, remove the stopped container:
 ```
 docker rm my-app
 ```
