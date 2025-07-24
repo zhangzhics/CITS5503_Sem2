@@ -185,7 +185,7 @@ docker ps -a
 Stop the running container:
 
 ```
-docker rm my-app
+docker stop my-app
 ```
 
 Then, remove the stopped container:
