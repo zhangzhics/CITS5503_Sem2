@@ -193,6 +193,7 @@ Then, remove the stopped container:
 docker rm my-app
 ```
 
+**NOTE**: Delete the created EC2 instance(s) from AWS console after the lab is done.
 
 ## Lab Assessment
 

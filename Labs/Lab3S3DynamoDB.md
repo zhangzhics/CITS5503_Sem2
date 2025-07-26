@@ -12,7 +12,6 @@ Date: 24/07/2024 Updated by Zhi Zhang
 
 ## Technologies Covered
 
-* Ubuntu
 * AWS
 * AWS S3
 * AWS DynamoDB
@@ -65,15 +64,16 @@ mkdir dynamodb
 cd dynamodb
 ```
 
-Install jre if not done
+Install jre if not done: 
 
-For **Linux/WSL2** users:
+### Linux and WSL2 Users
+
 ```
 sudo apt-get install default-jre
 wget https://s3-ap-northeast-1.amazonaws.com/dynamodb-local-tokyo/dynamodb_local_latest.tar.gz
 ```
 
-For **Mac** users:
+### Apple Silicon MacOS Users
 ```
 brew install openjdk wget
 
@@ -141,7 +141,7 @@ Use the AWS CLI command to scan the created DynamoDB table, and output what you'
 
 Use the AWS CLI command to delete the table.
 
-**NOTE**: Do NOT delete the created S3 bucket, you will reuse the created S3 bucket in Labs 4 and 9.
+**NOTE**: Delete the created S3 bucket(s) from AWS console after the lab is done.
 
 ## Lab Assessment
 
