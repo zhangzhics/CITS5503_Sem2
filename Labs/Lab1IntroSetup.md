@@ -120,7 +120,7 @@ Check you Python version from your terminal:
 python3 --version
 ```
 
-If you have installed Python 3.8 or 3.10, you can skip this step. Otherwise, you can install Python 3.10 using Homebrew as follows:
+If you have installed Python 3.8-3.10, you can skip this step. Otherwise, you can install Python 3.10 using Homebrew as follows:
 
 ```
 brew install python@3.10
@@ -129,10 +129,8 @@ brew install python@3.10
 Add the following lines to your shell config file (i.e., `~/.zshrc`).
 
 ```bash
-# Add Python 3.10 to PATH
 echo 'export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"' >> ~/.zshrc
 
-# Set python3 and pip3 aliases
 echo 'alias python3="/opt/homebrew/opt/python@3.10/bin/python3.10"' >> ~/.zshrc
 echo 'alias pip3="/opt/homebrew/opt/python@3.10/bin/pip3.10"' >> ~/.zshrc
 ```
