@@ -73,7 +73,7 @@ Write a Python script to create a KMS key, where your student number works as an
 
 Update the script to attach the following policy to the key.
 
-**NOTE**: in the policy below, you should replace `<your_username>` with your own username.
+**NOTE**: in the policy below, **you should replace all `<your_username>` with your own username**.
 
 
 ```
