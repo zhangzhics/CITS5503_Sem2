@@ -32,9 +32,9 @@ The aim of this lab is to write a program that will:
 
 ### [1] Write a Python script
 
-Apply the following policy to the S3 bucket you created in the last lab to allow only your username to access the bucket. Make appropriate changes (e.g., `Resource`, `Condition`, etc) to the policy as necessary.
+Apply the following policy to an S3 bucket to allow only your username to access the bucket. Make appropriate changes (e.g., `Resource`, `Condition`, etc) to the policy as necessary.
 
-**NOTE**: in the policy below, you should replace `<your_s3_bucket>` with the S3 bucket you created and `<studentnumber>` with your own student number. You can use AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
+**NOTE**: in the policy below, **you should replace `<your_s3_bucket>` with the S3 bucket you created and `<studentnumber>` with your own student number**. You can use AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
 
 
 ```
@@ -45,10 +45,10 @@ Apply the following policy to the S3 bucket you created in the last lab to allow
     "Effect": "DENY",
     "Principal": "*",
     "Action": "s3:*",
-    "Resource": "arn:aws:s3:::<your_s3_bucket>/folder1/folder2/*",
+    "Resource": "arn:aws:s3:::**<your_s3_bucket>**/folder1/folder2/*",
     "Condition": {
       "StringNotLike": {
-          "aws:username":"<studentnumber>@student.uwa.edu.au"
+          "aws:username":"**<studentnumber>**@student.uwa.edu.au"
        }
     }
   }]
