@@ -45,10 +45,10 @@ Apply the following policy to an S3 bucket to allow only your username to access
     "Effect": "DENY",
     "Principal": "*",
     "Action": "s3:*",
-    "Resource": "arn:aws:s3:::**<your_s3_bucket>**/folder1/folder2/*",
+    "Resource": "arn:aws:s3:::<your_s3_bucket>/folder1/folder2/*",
     "Condition": {
       "StringNotLike": {
-          "aws:username":"**<studentnumber>**@student.uwa.edu.au"
+          "aws:username":"<studentnumber>@student.uwa.edu.au"
        }
     }
   }]
