@@ -47,7 +47,9 @@ When the program traverses the directory starting at the root directory `rootdir
 s3.upload_file()
 ```
 
-**NOTE**: Make sure your S3 bucket has the same file structure as shown in `[1] Preparation`.
+**NOTE**: 
+- Make sure your S3 bucket has the same file structure as shown in `[1] Preparation`.
+- For historical reasons, buckets in `us-east-1` are created without specifying a LocationConstraint. All other regions require the LocationConstraint to be explicitly specified. If your region is `us-east-1` then you simply run the command without the `--location` constraint because by default bucket is created in the `us-east-1` region.
 
 ### [3] Restore from S3
 
