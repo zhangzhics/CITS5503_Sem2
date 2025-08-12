@@ -332,6 +332,6 @@ Once the notebook has been updated, open a browser and navigate to the following
 
 **NOTE**: Delete relevant ECR, ECS and S3 resources from AWS console after the lab is done.
 
-## Lab Assessment:
+## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). Terminate your ECS task and delete your ECR repository.
