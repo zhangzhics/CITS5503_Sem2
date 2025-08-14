@@ -25,8 +25,6 @@ The aim of this lab is to create multiple scripts that will:
 3. Access jupyter notebook from the deployed image and implement a Tuning Job via the SageMaker.
 4. Use jupyter notebooks and pandas to explore a dataset.
 5. Use boto3 and SageMaker to create training and hyperparameter optimization jobs.
-6. After a job is learned, SageMaker allows to deploy models in EC2 instances, which is optional.
-
 
 ## Create a Dockerfile and build a Docker image
 
@@ -334,4 +332,4 @@ Once the notebook has been updated, open a browser and navigate to the following
 
 ## Lab Assessment
 
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). Terminate your ECS task and delete your ECR repository.
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
