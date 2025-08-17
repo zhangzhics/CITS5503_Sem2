@@ -318,7 +318,7 @@ aws ecs describe-tasks \
 
 ## Run Hyperparameter Tuning Jobs
 
-For this step, it is detailed in the notebook [here](https://github.com/zhangzhics/CITS5503_Lab_89/blob/fa717b69fde7845ff8f3278cdd7a71caf18aaf99/lab8/LabAI.ipynb). 
+For this step, it is detailed in the notebook [here](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/LabAI.ipynb). 
 
 **NOTE**: The notebook has been copied to your Docker image in the first step. It needs to be updated before you run it. 
 
