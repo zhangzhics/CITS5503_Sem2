@@ -112,7 +112,7 @@ Write a Python script to create a table called `CloudFiles` on your local Dynamo
             'fileName',
             'path',
             'lastUpdated',
-	    'owner',
+	    	'owner',
             'permissions'
             }
         )
