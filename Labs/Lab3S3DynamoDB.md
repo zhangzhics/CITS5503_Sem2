@@ -115,7 +115,6 @@ Write a Python script to create a table called `CloudFiles` on your local Dynamo
 	    	'owner',
             'permissions'
             }
-        )
 ```
 `userId` is the partition key and `fileName` is the sort key. Regarding the creation, refer to this [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html)
 
