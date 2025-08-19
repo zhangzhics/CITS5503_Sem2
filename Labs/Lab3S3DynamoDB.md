@@ -136,7 +136,7 @@ Then, you need to get the attributes above for each file of the S3 bucket and th
 | Europe (Ireland) |
 | South America (São Paulo) |
 
-If `displayname` is not supported in your assigned region, use `ID` for the `owner` attribute instead.
+If `displayname` is not supported in your assigned region, use `ID` for the `owner` attribute instead (the same as the value for the `userId` attribute).
 
 ### [5] Scan the table
 
