@@ -124,6 +124,7 @@ Then, you need to get the attributes above for each file of the S3 bucket and th
 
 1) The table should have 2 items. One item corresponds to one file in the bucket and consists of the attributes above and their values.
 2) The value for `owner` is `displayname`, but `displayname` is only supported in the following AWS Regions:
+   
 | Region Name |
 |-------------|
 | US East (N. Virginia) |
