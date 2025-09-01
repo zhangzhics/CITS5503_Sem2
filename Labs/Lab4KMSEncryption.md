@@ -34,7 +34,9 @@ The aim of this lab is to write a program that will:
 
 Apply the following policy to an S3 bucket to allow only your username to access the bucket. Make appropriate changes (e.g., `Resource`, `Condition`, etc) to the policy as necessary.
 
-**NOTE**: in the policy below, **you should replace `<your_s3_bucket>` with the S3 bucket you created and `<studentnumber>` with your own student number**. You can use AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
+**NOTE**: 
+ 1. In the policy below, **you should replace `<your_s3_bucket>` with the S3 bucket you created and `<studentnumber>` with your own student number**. You can use AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
+ 2. Check if your ```Resource``` section includes permissions for both the bucket itself AND the objects inside it.
 
 
 ```
