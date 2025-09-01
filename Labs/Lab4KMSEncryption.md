@@ -34,7 +34,9 @@ The aim of this lab is to write a program that will:
 
 Apply the following policy to an S3 bucket to allow only your username to access the bucket. Make appropriate changes (e.g., `Resource`, `Condition`, etc) to the policy as necessary.
 
-**NOTE**: in the policy below, **you should replace `<your_s3_bucket>` with the S3 bucket you created and `<studentnumber>` with your own student number**. You can use AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
+**NOTE**: 
+ 1. In the policy below, **you should replace `<your_s3_bucket>` with the S3 bucket you created and `<studentnumber>` with your own student number**. You can use AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
+ 2. Check if your ```Resource``` section includes permissions for both the bucket itself AND the objects inside it.
 
 
 ```
@@ -166,6 +168,10 @@ Write a Python script where each file from the S3 bucket is encrypted and then d
 Write another Python script that uses the Python library `pycryptodome` to encrypt and decrypt each file in the S3 bucket. Both encrypted and decrypted files will be in the same folder as the original file.
 
 For encryption/decryption, refer to the example code from [fileencrypt.py](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/fileencrypt.py)
+
+### [6] Uploading
+
+Upload all encrypted and decrypted files to your S3 bucket.
 
 **NOTE**: Delete the created S3 bucket(s) and KMS key(s) from AWS console after the lab is done.
 
