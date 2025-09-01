@@ -169,6 +169,10 @@ Write another Python script that uses the Python library `pycryptodome` to encry
 
 For encryption/decryption, refer to the example code from [fileencrypt.py](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/fileencrypt.py)
 
+### [6] Uploading
+
+Upload all encrypted and decrypted files to your S3 bucket.
+
 **NOTE**: Delete the created S3 bucket(s) and KMS key(s) from AWS console after the lab is done.
 
 ## Answer the following question in your lab report
