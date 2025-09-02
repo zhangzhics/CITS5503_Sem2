@@ -252,7 +252,7 @@ from botocore.exceptions import ClientError
 def index(request):
     template = loader.get_template('files.html')
 
-    dynamodb = boto3.resource('dynamodb', region_name='ap-southeast-2',
+    dynamodb = boto3.resource('dynamodb', region_name='<Your assigned region>',
                               aws_access_key_id='Your Access Key',
                               aws_secret_access_key='Your Secret')
 
