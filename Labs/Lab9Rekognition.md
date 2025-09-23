@@ -22,6 +22,7 @@ Date: 29/07/2024 Updated by Zhi Zhang
 The aim of this lab is to write a series of scripts that will test the main features of AWS Comprehend and AWS Rekognition.
 
 ## AWS Comprehend
+**Important Note: AWS Comprehend and Rekognition are NOT fully supported in Europe (Stockholm) (eu-north-1) and Canada (Central) (ca-central-1). If you were allocated to these 2 regions, please use Asia Pacific (Sydney) (ap-southeast-2) to complete this lab.**
 
 AWS Comprehend offers different services to analyse text using machine learning. With Comprehend API, you will be able to perform common NLP tasks such as sentiment analysis, or simply detecting the language from the text.
 
