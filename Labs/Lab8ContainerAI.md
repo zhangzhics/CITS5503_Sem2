@@ -153,7 +153,7 @@ import boto3
 
 def create_ecs_task_definition(
     client, image_uri, account_id, task_role_name, execution_role_name, student_id,
-    environment_dict=None, log_group=None, log_region=None, port=8888, cpu='256', memory='512'
+    environment_dict=None,port=8888, cpu='256', memory='512'
 ):
     task_role_arn = f'arn:aws:iam::{account_id}:role/{task_role_name}'
     execution_role_arn = f'arn:aws:iam::{account_id}:role/{execution_role_name}'
@@ -201,8 +201,6 @@ task_definition = create_ecs_task_definition(
     task_role_name,
     execution_role_name,
     student_id,
-    log_group='/ecs/lab8-service', 
-    log_region='ap-southeast-2',   
     port=8888                      
 )
 print("Task Definition ARN:", task_definition['taskDefinition']['taskDefinitionArn'])
