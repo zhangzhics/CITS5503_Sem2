@@ -200,8 +200,7 @@ Access the URL: http://\<load balancer dns name>/polls/, and output what you've 
 **NOTE**: When you are done, delete the instance and ALB you created.
 
 ## Web interface for CloudStorage application
-
-You need to create an AWS DynamoDB table copied from the local DynamoDB of the previous lab 3, as well as a copy of your AWS credentials.
+You need to create an AWS DynamoDB table by copying it from the local DynamoDB used in Lab 3, as well as provide a copy of your AWS credentials. If you did not save the data from Lab 3, you will need to repeat some steps to retrieve the files from the S3 bucket and use them as attributes to be stored in the AWS DynamoDB table.
 
 In views.py, add boto3 code to scan the AWS DynamoDB table. Display the results in the calling page.
 
