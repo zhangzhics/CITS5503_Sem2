@@ -197,8 +197,6 @@ Confirm the health check fetch the /polls/ page every 30 seconds.
 
 Access the URL: http://\<load balancer dns name>/polls/, and output what you've got.
 
-**NOTE**: When you are done, delete all the created resources.
-
 ## Web interface for CloudStorage application
 You need to create an AWS DynamoDB table by copying it from the local DynamoDB used in Lab 3, as well as provide a copy of your AWS credentials. If you did not save the data from Lab 3, you will need to repeat some steps to retrieve the files from the S3 bucket and use them as attributes to be stored in the AWS DynamoDB table. You can  run your Django application locally.
 
@@ -275,3 +273,4 @@ You can add variables to the template and more formatting functionality to displ
 ## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
+**NOTE**: When you are done, delete all the created resources.
