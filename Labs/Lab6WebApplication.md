@@ -270,7 +270,8 @@ def index(request):
 
 You can add variables to the template and more formatting functionality to display the information correctly.
 
+**NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+
 ## Lab Assessment
 
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
-**NOTE**: When you are done, delete all the created resources.

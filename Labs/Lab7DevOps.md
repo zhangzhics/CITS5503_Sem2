@@ -85,6 +85,8 @@ From your local OS environment, access the URL: `http://<ip address of your EC2 
 
 **NOTE**:  This Python script basically needs you to convert instructions (in `Set up an EC2 instance` and `Set up Django inside the created EC2 instance`) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
+**NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+
 ## Lab Assessment
 	
 A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
