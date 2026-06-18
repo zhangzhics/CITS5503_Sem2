@@ -318,7 +318,7 @@ aws ecs describe-tasks \
 
 For this step, it is detailed in the notebook [here](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/LabAI.ipynb). 
 
-Oen a browser and navigate to the following address to run it within your ECS. Your public IP address was returned in the previous step.
+Open a browser and navigate to the following address to run it within your ECS. Your public IP address was returned in the previous step.
 
 ```
 <YOUR PUBLIC IP>:8888
