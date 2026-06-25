@@ -32,15 +32,13 @@ The course consists of 12 weeks of lectures and 9 weeks of practical lab classes
 
 ## AI Tools
 
-For lab assignments, students may make limited use of AI tools (Tier 2: AI assistance, outlined in the \[UWA guide](https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-ai-tools-at-uwa---a-guide-for-students-(2025).pdf) to support learning and troubleshooting. For example, to clarify concepts, look up relevant AWS CLI commands, interpret error messages, or understand how python API works. However, submissions must reflect a student's own work. Students must not use AI to generate complete solutions (e.g., step-by-step descriptions that students simply follow without understanding). Students are responsible for verifying the accuracy of any AI output, and should keep a brief record of prompts and outputs in case questions arise. 
+For lab assignments, students may make limited use of AI tools (Tier 2: AI assistance, outlined in https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-ai-tools-at-uwa---a-guide-for-students-(2025).pdf to support learning and troubleshooting. For example, to clarify concepts, look up relevant AWS CLI commands, interpret error messages, or understand how python API works. However, submissions must reflect a student's own work. Students must not use AI to generate complete solutions (e.g., step-by-step descriptions that students simply follow without understanding). Students are responsible for verifying the accuracy of any AI output, and should keep a brief record of prompts and outputs in case questions arise.
 
 
 
-When using any public AI system (e.g., ChatGPT, and Google Gemini), students must not input personal data, and must not upload or paste any copyrighted material that is not their own, including UWA or staff materials such as lecture slides, handouts. Also, DeepSeek must not be used in any form due to safety and security concerns raised by the Department of Home Affairs (refer to the \[UWA guide](https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-ai-tools-at-uwa---a-guide-for-students-(2025).pdf) for more details).
+When using any public AI system (e.g., ChatGPT, and Google Gemini), students must not input personal data, and must not upload or paste any copyrighted material that is not their own, including UWA or staff materials such as lecture slides, handouts. Also, DeepSeek must not be used in any form due to safety and security concerns raised by the Department of Home Affairs (refer to https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-ai-tools-at-uwa---a-guide-for-students-(2025).pdf for more details).
 
 
 
 Both mid-sem test and final exam are invigilated. So no AI tools are allowed during the test/exam.
-
-
 
