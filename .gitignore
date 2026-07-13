@@ -12,3 +12,7 @@ Lectures/CloudLectures2018.xlsx
 ~*
 *~
 
+# GitBook / HonKit
+_book/
+node_modules/
+

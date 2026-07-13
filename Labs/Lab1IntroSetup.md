@@ -1,60 +1,48 @@
-# Practical Worksheet 1 Version: 1.2
-
-Date: 21/07/2025 Polished by Zhi Zhang, Jichunyang Li, Fudong Qin
+# Lab 1 - Introduction & Setup
 
 ## Learning Objectives
 
 1. Register for an AWS account and explore the user interface
 2. Obtain API keys and secret
 3. Install AWS CLI in a Unix-like environment.
-6. Configure the AWS CLI environment with API details and default region
-7. Verify AWS CLI is working and write a Python boto script to emulate an AWS CLI command
+4. Configure the AWS CLI environment with API details and default region
+5. Verify AWS CLI is working and write a Python boto script to emulate an AWS CLI command
 
 ## Technologies Covered
 
 * Unix-like commands
-
 * AWS
-
 * Python/Boto/awscli/bash scripts
 
 ## AWS Accounts and Log In
-### [1] Log into an IAM user account created for you on AWS.
 
-Your username is <student number>@student.uwa.edu.au. Password details will be provided separately.
+### \[1] Log into an IAM user account created for you on AWS.
 
-The login is here: https://489389878001.signin.aws.amazon.com/console, where 489389878001 is the account root user id.
+Your username is @student.uwa.edu.au. Password details will be provided separately.
 
+The login is here: [https://489389878001.signin.aws.amazon.com/console](https://489389878001.signin.aws.amazon.com/console), where `489389878001` is the account root user id.
+
+{% hint style="warning" %}
 You must change your password after logging.
+{% endhint %}
 
 Alternatively, you can create your own owner account using your own credit card and utilise free resource tiers on AWS.
 
-### [2] Search and open Identity Access Management
+### \[2] Search and open Identity Access Management
 
-Click on your user account and click the Security Credentials tab: create access key and make a note of the Access key ID and the secret access key – you will need these for programmatic access to resources.
+Click on your user account and click the **Security Credentials tab**: create access key and make a note of the Access key ID and the secret access key (Use case: **Command Line Interface (CLI)**) – you will need these for programmatic access to resources.
 
-<div class="alert alert-info" style="font-size:100%">
-<b>NOTE:</b> You should treat the Access key ID and secret carefully. If stolen, these details allow someone to create large numbers of resources and do bad things with the user account. You should bear the incurred costs.
-</div>
+NOTE: You should treat the Access key ID and secret carefully. If stolen, these details allow someone to create large numbers of resources and do bad things with the user account. You should bear the incurred costs.
 
 ## Set up recent Unix-like OSes
 
-You have the following options to set up a Unix-like environment:
+You have the following options to set up a Unix-like environment \[**Choose the ONE best option**]:
 
-### Linux Users
-
-If you're already using a recent Linux distribution (e.g., Ubuntu 20.04 LTS and Ubuntu 22.04 LTS), please continue with it, and attach relevant evidence of this step in your write-up.
-
-<div class="alert alert-info" style="font-size:100%">
-<b>NOTE:</b> Ubuntu 23.04, Debian 12 and their newer versions have not been tested, and might lead to unexpected errors when installing Linux packages in the next step.
-</div>
-
-### Windows Users
+### Optrion 1: Windows Users
 
 Use **WSL2 (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS**. If you do not have WSL2 on your machine, please follow this guide: [How to Install WSL2 on Windows 11 (Windows Subsystem for Linux)](https://www.youtube.com/watch?v=eId6K8d0v6o). After installing WSL2, please follow this guide to install Ubuntu 22.04 LTS: [How To Install Ubuntu 22.04 LTS On Windows 11 With WSL2 + RUN Linux GUI Apps](https://www.youtube.com/watch?v=Rzg144v3hfo).
 
-
-### Apple Silicon MacOS Users
+### Option 3: Apple Silicon MacOS Users
 
 Open your built-in **Terminal** app and run the following command in your Terminal:
 
@@ -72,23 +60,26 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
 To check if Homebrew is installed successfully, run:
+
 ```bash
 brew --version
 ```
 
 You should be able to see the installed Homebrew version.
 
+### Option 3: Linux Users
+
+If you're already using a recent Linux distribution (e.g., Ubuntu 20.04 LTS and Ubuntu 22.04 LTS), please continue with it, and attach relevant evidence of this step in your write-up.
+
+NOTE: Ubuntu 23.04, Debian 12 and their newer versions have not been tested, and might lead to unexpected errors when installing Linux packages in the next step.
+
 ## Install Linux packages
 
-<div class="alert alert-info" style="font-size:100%">
-<b>NOTE:</b> If you have already installed the following packages such as AWS CLI, Python 3.8 or 3.10, and Python Boto3 library, you don't need to re-install it and instead attach relevant evidence of this step for your write-up.
-</div>
+NOTE: If you have already installed the following packages such as AWS CLI, Python 3.8 or 3.10, and Python Boto3 library, you don't need to re-install it and instead attach relevant evidence of this step for your write-up.
 
-### [1] Install Python
+### \[1] Install Python
 
-<div class="alert alert-info" style="font-size:100%">
-<b>NOTE:</b> Python 3.8 and 3.10 are recommended. 
-</div>
+NOTE: Python 3.8 and 3.10 are recommended.
 
 #### Linux and WSL2 Users
 
@@ -100,6 +91,7 @@ sudo apt -y upgrade
 ```
 
 To check the latest version:
+
 ```
 python3 -V
 ```
@@ -147,7 +139,7 @@ Check the version:
 python3 --version
 ```
 
-### [2] Install awscli
+### \[2] Install awscli
 
 #### Linux and WSL2 Users
 
@@ -155,7 +147,7 @@ python3 --version
 sudo apt install awscli
 ```
 
-Then, 
+Then,
 
 ```
 pip3 install awscli --upgrade
@@ -177,13 +169,14 @@ brew install awscli
 
 This guide might be helpful: [Install the AWS CLI on Mac using Homebrew](https://www.youtube.com/watch?v=V5bZsTNz1wY)
 
-### [3] Configure AWS
+### \[3] Configure AWS
 
 After typing the command below:
 
 ```
 aws configure
 ```
+
 You should see an output like this:
 
 ```
@@ -197,21 +190,9 @@ Replace the placeholder values above with your own AWS Access Key, AWS Secret Ac
 
 **NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
 
-| Student Number | Region | Region Name | ami id |
-| --- | --- | --- | --- |
-| 21000000 - 23330000 | US East (N. Virginia) |	us-east-1 |	ami-020cba7c55df1f615 |
-| 23330001 – 23625120 | Asia Pacific (Tokyo)	| ap-northeast-1	| ami-054400ced365b82a0 |
-| 23625121 – 24030000 | Asia Pacific (Seoul)	| ap-northeast-2	| ami-0662f4965dfc70aca |
-| 24030001 – 24122100 | US West (Oregon)	| us-west-2	| ami-05f991c49d264708f |
-| 24122100 – 24237000 | Asia Pacific (Mumbai)	| ap-south-1	| ami-0f918f7e67a3323f0 |
-| 24237001 – 24315000 | Asia Pacific (Singapore)	| ap-southeast-1	| ami-0497a974f8d5dcef8 |
-| 24315001 – 24400000 | Asia Pacific (Sydney)	| ap-southeast-2	| ami-010876b9ddd38475e |
-| 24400001 – 24497500 | Canada (Central)	| ca-central-1	| ami-0c0a551d0459e9d39 |
-| 24497501 – 24590000 | Europe (Frankfurt)	| eu-central-1	| ami-02003f9f0fde924ea |
-| 24590001 – 26000000 | Europe (Stockholm)	| eu-north-1	| ami-042b4708b1d05f512 |
+<table data-search="false"><thead><tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>ami id</th></tr></thead><tbody><tr><td>10000000-24057000</td><td>US East (N. Virginia)</td><td>us-east-1</td><td>ami-0b6d9d3d33ba97d99</td></tr><tr><td>24057001 – 24550000</td><td>Asia Pacific (Tokyo)</td><td>ap-northeast-1</td><td>ami-0126975fb247bf2e7</td></tr><tr><td>24550001 – 24762000</td><td>US West (Oregon)</td><td>us-west-2</td><td>ami-02167eae61967e403</td></tr><tr><td>24762001 – 25063530</td><td>Asia Pacific (Sydney)</td><td>ap-southeast-2</td><td>ami-06259b63260eddc13</td></tr><tr><td>25063531 – 29999999</td><td>Europe (Frankfurt)</td><td>eu-central-1</td><td>ami-0303e2e4a29f041a3</td></tr></tbody></table>
 
-
-### [4] Install boto3
+### \[4] Install boto3
 
 ```
 pip3 install boto3
@@ -219,28 +200,27 @@ pip3 install boto3
 
 ## Test the installed environment
 
-### [1] Test the AWS environment
+### \[1] Test the AWS environment
 
 ```
 aws ec2 describe-regions --output table
 ```
 
-### [2] Test the python environment
+### \[2] Test the python environmen
 
 ```
-python3
->>> import boto3
->>> ec2 = boto3.client('ec2')
->>> response = ec2.describe_regions()
->>> print(response)
+import boto3
+ec2 = boto3.client('ec2')
+response = ec2.describe_regions()
+print(response)
 ```
 
 This will create an un-tabulated response.
 
-### [3] Write a Python script
+### \[3] Write a Python script
 
 Tabulate the un-tabulated response above to have **2 columns** with **Endpoint** and **RegionName**.
 
 ## Lab Assessment
 
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

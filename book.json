@@ -1,0 +1,30 @@
+{
+  "title": "CITS5503 Cloud Computing",
+  "description": "CITS5503 Cloud Computing Lab Worksheets and Course Materials",
+  "author": "CITS5503 Teaching Team",
+  "language": "en",
+  "pdf": {
+    "pageNumbers": true,
+    "fontSize": 12,
+    "fontFamily": "Arial",
+    "paperSize": "a4",
+    "margin": {
+      "right": 62,
+      "left": 62,
+      "top": 56,
+      "bottom": 56
+    }
+  },
+  "plugins": [
+    "code",
+    "highlight",
+    "copy-code-button",
+    "expandable-chapters",
+    "back-to-top-button"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    }
+  }
+}
