@@ -36,13 +36,13 @@ NOTE: You should treat the Access key ID and secret carefully. If stolen, these 
 
 ## Set up recent Unix-like OSes
 
-You have the following options to set up a Unix-like environment \[**Choose the ONE best option**]:
+You have the following options to set up a Unix-like environment \[Choose one option]:
 
-### Optrion 1: Windows Users
+### Option 1: Windows Users
 
 Use **WSL2 (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS**. If you do not have WSL2 on your machine, please follow this guide: [How to Install WSL2 on Windows 11 (Windows Subsystem for Linux)](https://www.youtube.com/watch?v=eId6K8d0v6o). After installing WSL2, please follow this guide to install Ubuntu 22.04 LTS: [How To Install Ubuntu 22.04 LTS On Windows 11 With WSL2 + RUN Linux GUI Apps](https://www.youtube.com/watch?v=Rzg144v3hfo).
 
-### Option 3: Apple Silicon MacOS Users
+### Option 2: Apple Silicon MacOS Users
 
 Open your built-in **Terminal** app and run the following command in your Terminal:
 
@@ -190,7 +190,7 @@ Replace the placeholder values above with your own AWS Access Key, AWS Secret Ac
 
 **NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
 
-<table data-search="false"><thead><tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>ami id</th></tr></thead><tbody><tr><td>10000000-24057000</td><td>US East (N. Virginia)</td><td>us-east-1</td><td>ami-0b6d9d3d33ba97d99</td></tr><tr><td>24057001 – 24550000</td><td>Asia Pacific (Tokyo)</td><td>ap-northeast-1</td><td>ami-0126975fb247bf2e7</td></tr><tr><td>24550001 – 24762000</td><td>US West (Oregon)</td><td>us-west-2</td><td>ami-02167eae61967e403</td></tr><tr><td>24762001 – 25063530</td><td>Asia Pacific (Sydney)</td><td>ap-southeast-2</td><td>ami-06259b63260eddc13</td></tr><tr><td>25063531 – 29999999</td><td>Europe (Frankfurt)</td><td>eu-central-1</td><td>ami-0303e2e4a29f041a3</td></tr></tbody></table>
+<table data-search="false"><thead><tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>ami id</th></tr></thead><tbody><tr><td>XXXXXXXX - XXXXXXXX</td><td>US East (N. Virginia)</td><td>us-east-1</td><td>ami-0b6d9d3d33ba97d99</td></tr><tr><td>XXXXXXXX – 24550000</td><td>Asia Pacific (Tokyo)</td><td>ap-northeast-1</td><td>ami-0126975fb247bf2e7</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>US West (Oregon)</td><td>us-west-2</td><td>ami-02167eae61967e403</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Asia Pacific (Sydney)</td><td>ap-southeast-2</td><td>ami-06259b63260eddc13</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Europe (Frankfurt)</td><td>eu-central-1</td><td>ami-0303e2e4a29f041a3</td></tr></tbody></table>
 
 ### \[4] Install boto3
 
