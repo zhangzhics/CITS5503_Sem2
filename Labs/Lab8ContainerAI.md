@@ -1,4 +1,4 @@
-# Practical Worksheet 8
+# Lab 8 - Container & AI
 
 ## Learning Objectives
 
@@ -20,17 +20,17 @@
 
 The aim of this lab is to create multiple scripts that will:
 
-1. Build a docker image file based on a provided Dockerfile.
-2. Push the docker image into ECR and deploy the image via ECS.
-3. Access jupyter notebook from the deployed image and implement a Tuning Job via the SageMaker.
-4. Use jupyter notebooks and pandas to explore a dataset.
-5. Use boto3 and SageMaker to create training and hyperparameter optimization jobs.
+1. Build a Docker image file based on a provided Dockerfile.
+2. Push the Docker image into ECR and deploy the image via ECS.
+3. Access a Jupyter notebook from the deployed image and implement a Tuning Job via SageMaker.
+4. Use Jupyter notebooks and pandas to explore a dataset.
+5. Use boto3 and SageMaker to create training and hyperparameter optimisation jobs.
 
 ## Create a Dockerfile and build a Docker image
 
-Create your Dockerfile: (Please read through the Dockerfile carefully, you may need to use the token to access Jupyter Notebook)
+Create your Dockerfile: (Please read through the Dockerfile carefully; you may need to use the token to access Jupyter Notebook)
 
-```Dockerfile
+```dockerfile
 FROM python:3.10
 
 RUN pip install jupyter boto3 sagemaker awscli
@@ -54,7 +54,7 @@ CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--al
 
 ```
 
-Build your dockerfile:
+Build your Dockerfile:
 
 ```bash
 docker build -t YOUR_STUDENT_NUMBER-lab8 .
@@ -71,9 +71,10 @@ You can go to 127.0.0.1:8888 to check if a notebook file has been downloaded suc
 ## Prepare ECR via Boto3 scripts on your local machine
 
 ### ECR
+
 ECR is a fully managed Docker container registry that allows developers to store, manage, and deploy Docker container images securely and efficiently within AWS.
 
-We use Boto3 script to create a ECR repository:
+We use a boto3 script to create an ECR repository:
 
 ```python
 import boto3
@@ -94,9 +95,9 @@ repository_uri = create_or_check_repository(repository_name)
 print("ECR URI:", repository_uri)
 ```
 
-This gives you a **ECR URI**, and you need use this uri to push your Dockerfile into the ECR repository.
+This gives you an **ECR URI**, and you need use this uri to push your Dockerfile into the ECR repository.
 
-The following code uses the AWS Boto3 to obtain an authorisation token from AWS ECR, decodes it to retrieve the username and password, and then generates a Docker login command. This allows the user to log into ECR using the produced command, enabling them to push and pull Docker images.
+The following code uses AWS Boto3 to obtain an authorisation token from AWS ECR, decodes it to retrieve the username and password, and then generates a Docker login command. This allows the user to log into ECR using the produced command, enabling them to push and pull Docker images.
 
 To get the Docker token:
 
@@ -113,17 +114,19 @@ def get_docker_login_cmd():
 print(get_docker_login_cmd())
 ```
 
-You will get the command to grant the Docker access to the ECR repo. You have to run the output command from the script above in your terminal, and you will get "Login Succeeded" from the terminal if it goes well.
+You will get the command to grant Docker access to the ECR repo. You have to run the output command from the script above in your terminal, and you will get "Login Succeeded" from the terminal if it goes well.
 
-**NOTE**: If you're using WSL 2, DNS often breaks and returns an error message such as "no such host". If so, try this:
-- Edit your WSL resolv.conf:
-  
+**NOTE**: If you're using WSL2, DNS often breaks and returns an error message such as "no such host". If so, try this:
+
+* Edit your WSL resolv.conf:
+
 ```bash
 sudo rm /etc/resolv.conf
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
 sudo chattr +i /etc/resolv.conf
 ```
-- Restart WSL2
+
+* Restart WSL2
 
 ## Push a local Docker image onto ECR
 
@@ -142,6 +145,7 @@ docker push YOUR_ECR_URI:latest
 The step above takes some time to upload, which depends on your internet connection.
 
 ## Deploy your Docker image onto ECS
+
 ECS is a fully managed container orchestration service from AWS that allows developers to run, stop, and manage Docker containers on a cluster of virtual machines without needing to install or manage their own container orchestration software.
 
 ### Create a task definition for an ECS task:
@@ -209,7 +213,7 @@ print("Task Definition ARN:", task_definition['taskDefinition']['taskDefinitionA
 
 The printed task definition ARN is used for the next step.
 
-*NOTE*: For Apple Silicon macOS users, you have built your Docker image on the ARM64 architecture. Thus, you should add a specific runtime platform in your ECS Task Definition to resolve the incompatibility issue as follows:
+_NOTE_: For Apple Silicon macOS users, you have built your Docker image on the ARM64 architecture. Thus, you should add a specific runtime platform in your ECS Task Definition to resolve the incompatibility issue as follows:
 
 ```python
     response = client.register_task_definition(
@@ -262,9 +266,9 @@ def create_ecs_service(client, cluster_name, service_name, task_definition, subn
     return response
 ```
 
-To invoke the functions above, you first need to configure a security group from AWS console that allows **outbound HTTPS (port 443)** and **inbound TCP (port 8888)**. You then need the following code:
+To invoke the functions above, you first need to configure a security group from the AWS console that allows **outbound HTTPS (port 443)** and **inbound TCP (port 8888)**. You then need the following code:
 
-*NOTE*: remember to update the values in relevant variables below. For variables of **subnet_id_1**, **subnet_id_2**, and **subnet_id_3**, retrieve their values from AWS console based on your region.
+_NOTE_: Remember to update the values in the relevant variables below. For variables of **subnet\_id\_1**, **subnet\_id\_2**, and **subnet\_id\_3**, retrieve their values from the AWS console based on your region.
 
 ```python
 #This function is to check when the service becomes stable
@@ -316,7 +320,9 @@ aws ecs describe-tasks \
 
 ## Run Hyperparameter Tuning Jobs
 
-For this step, it is detailed in the notebook [here](https://github.com/zhangzhics/CITS5503_Sem2/blob/master/Labs/src/LabAI.ipynb). 
+For this step, it is detailed in the notebook here.
+
+{% file src="../.gitbook/assets/LabAI.ipynb" %}
 
 Open a browser and navigate to the following address to run it within your ECS. Your public IP address was returned in the previous step.
 
@@ -324,8 +330,8 @@ Open a browser and navigate to the following address to run it within your ECS. 
 <YOUR PUBLIC IP>:8888
 ```
 
-**NOTE**: Delete relevant ECR, ECS and S3 resources from AWS console after the lab is done.
+**NOTE**: Delete relevant ECR, ECS and S3 resources from the AWS console after the lab is done.
 
 ## Lab Assessment
 
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%). 
+A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

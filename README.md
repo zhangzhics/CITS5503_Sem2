@@ -1,4 +1,4 @@
-# CITS5503 Cloud Computing
+# Introduction
 
 This unit introduces cloud computing as the provision of computing resources. Students are exposed to modern systems architectures and software development kits that, together, provide cloud computing frameworks. Students will learn about different aspects of the design, development, provisioning and management of cloud-based applications.
 
@@ -34,11 +34,12 @@ The course consists of 12 weeks of lectures and 9 weeks of practical lab classes
 
 For lab assignments, students may make limited use of AI tools (Tier 2: AI assistance, outlined in https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-artificial-intelligence-tools-at-uwa---a-guide-for-students-(2026).pdf to support learning and troubleshooting. For example, to clarify concepts, look up relevant AWS CLI commands, interpret error messages, or understand how python API works. However, submissions must reflect a student's own work. Students must not use AI to generate complete solutions (e.g., step-by-step descriptions that students simply follow without understanding). Students are responsible for verifying the accuracy of any AI output, and should keep a brief record of prompts and outputs in case questions arise.
 
-
-
 When using any public AI system (e.g., ChatGPT, and Google Gemini), students must not input personal data, and must not upload or paste any copyrighted material that is not their own, including UWA or staff materials such as lecture slides, handouts. Also, DeepSeek must not be used in any form due to safety and security concerns raised by the Department of Home Affairs (refer to https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-artificial-intelligence-tools-at-uwa---a-guide-for-students-(2026).pdf for more details).
-
-
 
 Both mid-sem test and final exam are invigilated. So no AI tools are allowed during the test/exam.
 
+#### License Terms <a href="#greater-than-greater-than-license-terms" id="greater-than-greater-than-license-terms"></a>
+
+Except where otherwise specified, the text in this course is licensed under the Creative Commons Attribution-ShareAlike License 4.0 (International) (CC-BY-SA 4.0).
+
+Contents on this page are further developed by Zhi Zhang (2023\~) and Jichunyang Li (2024\~).
