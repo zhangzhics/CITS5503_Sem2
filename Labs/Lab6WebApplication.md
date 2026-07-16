@@ -26,7 +26,7 @@ The aim of this lab is to write a program that will:
 
 ### \[1] Create an EC2 micro instance with Ubuntu and SSH into it
 
-**NOTE**: Regarding your [region name](Lab1IntroSetup.md#id-3-configure-aws), find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
+**NOTE**: Regarding your region, find it in the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws).
 
 ### \[2] Install the Python 3 virtual environment package
 
@@ -248,7 +248,3 @@ def index(request):
 You can add variables to the template and more formatting functionality to display the information correctly.
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
-
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

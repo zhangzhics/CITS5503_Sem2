@@ -188,7 +188,7 @@ Default output format [None]: json
 
 Replace the placeholder values above with your own AWS Access Key, AWS Secret Access Key and default region name.
 
-**NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
+**NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region.).
 
 <table data-search="false"><thead><tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>ami id</th></tr></thead><tbody><tr><td>XXXXXXXX - XXXXXXXX</td><td>US East (N. Virginia)</td><td>us-east-1</td><td>ami-0b6d9d3d33ba97d99</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Asia Pacific (Tokyo)</td><td>ap-northeast-1</td><td>ami-0126975fb247bf2e7</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>US West (Oregon)</td><td>us-west-2</td><td>ami-02167eae61967e403</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Asia Pacific (Sydney)</td><td>ap-southeast-2</td><td>ami-06259b63260eddc13</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Europe (Frankfurt)</td><td>eu-central-1</td><td>ami-0303e2e4a29f041a3</td></tr></tbody></table>
 

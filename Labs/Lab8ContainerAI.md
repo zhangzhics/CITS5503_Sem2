@@ -9,7 +9,6 @@
 
 ## Technologies Covered
 
-* AWS
 * AWS ECS (Elastic Container Service), Fargate
 * AWS ECR (Elastic Container Registry)
 * Amazon SageMaker
@@ -331,7 +330,3 @@ Open a browser and navigate to the following address to run it within your ECS. 
 ```
 
 **NOTE**: Delete relevant ECR, ECS and S3 resources from the AWS console after the lab is done.
-
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

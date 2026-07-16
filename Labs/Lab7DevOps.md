@@ -8,7 +8,6 @@
 
 ## Technologies Covered
 
-* Ubuntu
 * AWS
 * Python
 * `Fabric`
@@ -25,7 +24,7 @@ The aim of this lab is to write a program that will:
 
 Use your existing code to create an EC2 instance where you will test your `Fabric`-based installation.
 
-**NOTE**: Regarding your [region name](Lab1IntroSetup.md#id-3-configure-aws), find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
+**NOTE**: Regarding your region, find it in the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws).
 
 ### Install and configure `Fabric`
 
@@ -69,7 +68,3 @@ From your local OS environment, access the URL: `http://<ip address of your EC2 
 **NOTE**: This Python script basically needs you to convert instructions (in Set up an EC2 instance and Set up Django inside the created EC2 instance) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
-
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

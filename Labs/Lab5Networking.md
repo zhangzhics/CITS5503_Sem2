@@ -7,13 +7,10 @@
 
 Technologies Covered
 
-* Ubuntu
-* AWS
 * AWS ELB
 * Networking
 * NAT
 * Python/Boto scripts
-* VirtualBox
 
 ## Background
 
@@ -31,7 +28,7 @@ The aim of this part of the lab is to create an application load balancer and lo
 
 Write a Python Boto3 script to create 2 EC2 instances in two different availability zones (name the instances following the format: `<student number>-vm1` and `<student number>-vm2`) in the region mapped to your student number. In this script, a security group should be created to authorise inbound traffic for HTTP and SSH, which will be used by the following steps.
 
-**NOTE**: Regarding your [region name](Lab1IntroSetup.md#id-3-configure-aws), find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
+**NOTE**: Regarding your region, find it in the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws).
 
 ### \[2] Create an Application Load Balancer
 
@@ -71,7 +68,3 @@ Fourth, edit the `<title>` and `</title>` tags inside the `/var/www/html/index.h
 Last, use a browser from your host OS to access each instance by its respective IP address and see if you can get an Apache web page that shows your instance name. Output what you've got. If you are using the University network, you likely cannot access the installed `Apache2`. To address this issue, you may switch to a non-university network.
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
-
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

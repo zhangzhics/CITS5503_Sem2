@@ -159,7 +159,7 @@ Write a Python script that encrypts each file in the S3 bucket and then decrypts
 
 Write another Python script that uses the Python library `pycryptodome` to encrypt and decrypt each file in the S3 bucket. Both encrypted and decrypted files will be in the same folder as the original file.
 
-For encryption/decryption, refer to the example code from here.
+For encryption/decryption, refer to the example code below.
 
 {% file src="../.gitbook/assets/fileencrypt.py" %}
 
@@ -169,10 +169,3 @@ Upload all encrypted and decrypted files to your S3 bucket.
 
 **NOTE**: Delete the created S3 bucket(s) and KMS key(s) from the AWS console after the lab is done.
 
-## Answer the following question in your lab report
-
-_What is the performance difference between using KMS and using the custom solution?_
-
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).
