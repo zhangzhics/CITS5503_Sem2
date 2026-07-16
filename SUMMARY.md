@@ -16,8 +16,5 @@
 * [Lab 8 - Container \& AI](Labs/Lab8ContainerAI.md)
 * [Lab 9 - Rekognition](Labs/Lab9Rekognition.md)
 
-## Submission Templates
-
-* [Lab Report Templates](submission-templates/lab-report-templates.md)
-* [Lab Reports Marking Guide](https://docs.google.com/document/d/1-mhkO6kiAdkRIGsDc7srHTd4K4fytzosLUvx17Mgh70/edit?usp=sharing)
+## 
 
