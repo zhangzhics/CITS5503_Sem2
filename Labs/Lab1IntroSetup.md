@@ -18,7 +18,7 @@
 
 ### \[1] Log into an IAM user account created for you on AWS.
 
-Your username is @student.uwa.edu.au. Password details will be provided separately.
+Your username is your UWA student email address. Password details will be provided separately.
 
 The login is here: [https://489389878001.signin.aws.amazon.com/console](https://489389878001.signin.aws.amazon.com/console), where `489389878001` is the account root user id.
 
@@ -30,13 +30,13 @@ Alternatively, you can create your own owner account using your own credit card 
 
 ### \[2] Search and open Identity Access Management
 
-Click on your user account and click the **Security Credentials tab**: create access key and make a note of the Access key ID and the secret access key (Use case: **Command Line Interface (CLI)**) – you will need these for programmatic access to resources.
+Click on your user account and click the **Security Credentials tab**: create access key and make a note of the Access key ID and the secret access key (use case: **Command Line Interface (CLI)**) – you will need these for programmatic access to resources.
 
-NOTE: You should treat the Access key ID and secret carefully. If stolen, these details allow someone to create large numbers of resources and do bad things with the user account. You should bear the incurred costs.
+NOTE: You should treat the Access key ID and secret access key carefully. If stolen, these details allow someone to create large numbers of resources and do bad things with the user account. You should bear the incurred costs.
 
 ## Set up recent Unix-like OSes
 
-You have the following options to set up a Unix-like environment \[Choose one option]:
+You have the following options to set up a Unix-like environment \[Choose one option that suits your computer]:
 
 ### Option 1: Windows Users
 
@@ -69,7 +69,7 @@ You should be able to see the installed Homebrew version.
 
 ### Option 3: Linux Users
 
-If you're already using a recent Linux distribution (e.g., Ubuntu 20.04 LTS and Ubuntu 22.04 LTS), please continue with it, and attach relevant evidence of this step in your write-up.
+If you're already using a recent Linux distribution (e.g., Ubuntu 20.04 LTS and Ubuntu 22.04 LTS), please continue with it.
 
 NOTE: Ubuntu 23.04, Debian 12 and their newer versions have not been tested, and might lead to unexpected errors when installing Linux packages in the next step.
 
@@ -190,7 +190,7 @@ Replace the placeholder values above with your own AWS Access Key, AWS Secret Ac
 
 **NOTE**: Regarding your region name, find it in the table below based on your student number (If you cannot find your region name, it means you enrolled late and you should send an email to `cits5503-pmc@uwa.edu.au` requesting your region name.).
 
-<table data-search="false"><thead><tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>ami id</th></tr></thead><tbody><tr><td>XXXXXXXX - XXXXXXXX</td><td>US East (N. Virginia)</td><td>us-east-1</td><td>ami-0b6d9d3d33ba97d99</td></tr><tr><td>XXXXXXXX – 24550000</td><td>Asia Pacific (Tokyo)</td><td>ap-northeast-1</td><td>ami-0126975fb247bf2e7</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>US West (Oregon)</td><td>us-west-2</td><td>ami-02167eae61967e403</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Asia Pacific (Sydney)</td><td>ap-southeast-2</td><td>ami-06259b63260eddc13</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Europe (Frankfurt)</td><td>eu-central-1</td><td>ami-0303e2e4a29f041a3</td></tr></tbody></table>
+<table data-search="false"><thead><tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>ami id</th></tr></thead><tbody><tr><td>XXXXXXXX - XXXXXXXX</td><td>US East (N. Virginia)</td><td>us-east-1</td><td>ami-0b6d9d3d33ba97d99</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Asia Pacific (Tokyo)</td><td>ap-northeast-1</td><td>ami-0126975fb247bf2e7</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>US West (Oregon)</td><td>us-west-2</td><td>ami-02167eae61967e403</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Asia Pacific (Sydney)</td><td>ap-southeast-2</td><td>ami-06259b63260eddc13</td></tr><tr><td>XXXXXXXX – XXXXXXXX</td><td>Europe (Frankfurt)</td><td>eu-central-1</td><td>ami-0303e2e4a29f041a3</td></tr></tbody></table>
 
 ### \[4] Install boto3
 
@@ -206,7 +206,7 @@ pip3 install boto3
 aws ec2 describe-regions --output table
 ```
 
-### \[2] Test the python environmen
+### \[2] Test the python environment
 
 ```
 import boto3
@@ -220,7 +220,3 @@ This will create an un-tabulated response.
 ### \[3] Write a Python script
 
 Tabulate the un-tabulated response above to have **2 columns** with **Endpoint** and **RegionName**.
-
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

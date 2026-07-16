@@ -41,7 +41,7 @@ chmod 400 <student number>-key.pem
 
 ### \[4] Create the instance
 
-Based on your [region code](Lab1IntroSetup.md#id-3-configure-aws), find the corresponding ami id in the table above and fill it in the command below:
+Based on the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws), find your corresponding ami id and fill it in the command below:
 
 ```
  aws ec2 run-instances --image-id <ami id> --security-group-ids <student number>-sg --count 1 --instance-type t3.micro --key-name <student number>-key --query 'Instances[0].InstanceId'
@@ -191,7 +191,3 @@ docker rm my-app
 ```
 
 **NOTE**: Delete the created EC2 instance(s) from AWS console after the lab is done.
-
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).

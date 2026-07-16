@@ -12,7 +12,6 @@
 * AWS S3
 * AWS DynamoDB
 * Python/Boto scripts
-* VirtualBox
 
 ## Background
 
@@ -28,7 +27,7 @@ The aim of this lab is to write a program that will:
 
 ### \[1] Preparation
 
-* Download the Python code `cloudstorage.py` .
+* Download the Python code `cloudstorage.py`.
 
 {% file src="../.gitbook/assets/cloudstorage.py" %}
 
