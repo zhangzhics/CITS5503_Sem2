@@ -103,7 +103,7 @@ Currently, given an image, AWS Rekognition allows:
 
 ### Add images
 
-Create a Python script: create an S3 bucket named as -lab9 in the region you are mapped to. Add the following 4 images into the bucket:
+Create a Python script: create an S3 bucket named as <studentid>-lab9 in the region you are mapped to. Add the following 4 images into the bucket:
 
 1. Add the image of an urban setting (named as urban.jpg).
 
@@ -115,11 +115,11 @@ Create a Python script: create an S3 bucket named as -lab9 in the region you are
 
 3. Add the image with people showing their faces (named as faces.jpg).
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p><a href="https://museum.wa.gov.au/explore/online-exhibitions/wa-faces">https://museum.wa.gov.au/explore/online-exhibitions/wa-faces</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/faces.png" alt=""><figcaption><p><a href="https://museum.wa.gov.au/explore/online-exhibitions/wa-faces">https://museum.wa.gov.au/explore/online-exhibitions/wa-faces</a></p></figcaption></figure>
 
 4. Add the image with text (named as text.jpg).
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://www.studyperth.com.au/moving-to-perth/when-you-arrive/">https://www.studyperth.com.au/moving-to-perth/when-you-arrive/</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/text.png" alt=""><figcaption><p><a href="https://www.studyperth.com.au/moving-to-perth/when-you-arrive/">https://www.studyperth.com.au/moving-to-perth/when-you-arrive/</a></p></figcaption></figure>
 
 ### Test AWS rekognition
 
@@ -127,10 +127,6 @@ Update the Python script above by using boto3 and AWS Rekognition to test label 
 
 **NOTE**: The relevant APIs are available [here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html).
 
-## Lab Assessment
-
-A structured presentation (15%). A clear step-by-step with detailed descriptions (85%).
-
 ## Important Notes
 
-**Delete all AWS resources you have created since week 2.**
+**Delete all AWS resources you have created**
