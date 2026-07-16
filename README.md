@@ -36,7 +36,7 @@ Recordings of live lectures are available (give up to 48 hours for it to be avai
 
 
 
-Live lecture slides will be made available early on Monday in each lecture week and can be downloaded from [our repo](https://github.com/zhangzhics/CITS5503_Sem2/tree/master/Live-lecture-slides) (live lecture slides in 2025 can also be found from the repo)
+Live lecture slides will be made available early on Monday in each lecture week and can be downloaded from [our repo](https://github.com/zhangzhics/CITS5503_Sem2/tree/refs/heads/master/Live-lecture-slides) (live lecture slides in 2025 can also be found from the repo)
 
 
 
