@@ -34,7 +34,9 @@ The course consists of 12 weeks of lectures and 9 weeks of practical labs. Asses
 
 Recordings of live lectures are available (give up to 48 hours for it to be available), which are on LMS -> Lecture Recordings.
 
-Live lecture slides will be made available early on Monday in each lecture week and can be downloaded from [our repo](https://github.com/zhangzhics/CITS5503_Sem2/tree/master/Live-lecture-slides) (live lecture slides in 2025 can also be found from the repo)
+
+
+Live lecture slides will be made available early on Monday in each lecture week and can be downloaded from \[our repo](https://github.com/zhangzhics/CITS5503\_Sem2/tree/master/Live-lecture-slides) (live lecture slides in 2025 can also be found from the repo)
 
 
 
