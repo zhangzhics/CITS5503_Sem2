@@ -16,5 +16,3 @@
 * [Lab 8 - Container \& AI](Labs/Lab8ContainerAI.md)
 * [Lab 9 - Rekognition](Labs/Lab9Rekognition.md)
 
-## 
-
