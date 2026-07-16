@@ -151,7 +151,7 @@ Use the AWS CLI command to delete the table.
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete the S3 upload and local DynamoDB work before joining the marking queue. Keep the S3 bucket and local `CloudFiles` table until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the S3 upload and local DynamoDB work before joining the marking queue. Keep the S3 bucket and local `CloudFiles` table until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or commands ready before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open `cloudstorage.py` and `restorefromcloud.py`, start DynamoDB Local, and prepare an empty restore directory separate from the original `rootdir`.
 

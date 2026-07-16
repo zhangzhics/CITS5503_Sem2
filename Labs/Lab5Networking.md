@@ -71,7 +71,7 @@ Last, use a browser from your host OS to access each instance by its respective 
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete both EC2 instances, the Application Load Balancer, and Apache setup before joining the marking queue. Keep the resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete both EC2 instances, the Application Load Balancer, and Apache setup before joining the marking queue. Keep the resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open the EC2 and Load Balancer Console pages and the direct and load-balanced web pages.
 

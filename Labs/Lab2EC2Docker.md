@@ -194,7 +194,7 @@ docker rm my-app
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete all instance creation and Docker work before joining the marking queue. Keep both EC2 instances running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete all instance creation and Docker work before joining the marking queue. Keep both EC2 instances running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, prepare:
 

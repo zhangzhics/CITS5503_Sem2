@@ -71,7 +71,7 @@ From your local OS environment, access the URL: `http://<ip address of your EC2 
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete the Fabric deployment before joining the marking queue. Keep the EC2 instance running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or command ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the Fabric deployment before joining the marking queue. Keep the EC2 instance running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or command ready before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open your Fabric deployment script and a terminal on your laptop. Open `http://<public-ip>/polls/` in a browser.
 

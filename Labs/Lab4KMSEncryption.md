@@ -171,7 +171,7 @@ Upload all encrypted and decrypted files to your S3 bucket.
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete the bucket policy, KMS setup, and both encryption scripts before joining the marking queue. Keep the Lab 4 bucket and KMS key until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the bucket policy, KMS setup, and both encryption scripts before joining the marking queue. Keep the Lab 4 bucket and KMS key until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
 
 You may create a new Lab 4 bucket with the same contents as Lab 3. You do not need to retain the Lab 3 bucket.
 

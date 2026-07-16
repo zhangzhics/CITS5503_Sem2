@@ -133,7 +133,7 @@ Update the Python script above by using boto3 and AWS Rekognition to test label 
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete all Comprehend and Rekognition scripts before joining the marking queue. Keep the Lab 9 S3 bucket until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete all Comprehend and Rekognition scripts before joining the marking queue. Keep the Lab 9 S3 bucket until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or commands ready before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open the scripts and terminal, and keep the four supplied text inputs and four required images ready.
 

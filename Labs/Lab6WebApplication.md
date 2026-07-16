@@ -249,7 +249,7 @@ You can add variables to the template and more formatting functionality to displ
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete the EC2, Django, nginx, ALB, and DynamoDB work before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the EC2, Django, nginx, ALB, and DynamoDB work before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
 
 Open the EC2, Load Balancer, and DynamoDB Console pages and the direct and load-balanced `/polls/` pages before joining the queue. Do not display or hard-code AWS credentials.
 

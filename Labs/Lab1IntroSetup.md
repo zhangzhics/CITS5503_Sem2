@@ -223,7 +223,7 @@ Tabulate the un-tabulated response above to have **2 columns** with **Endpoint**
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete the work before joining the marking queue and open the required terminal and script. The checkpoints and cleanup take no more than four minutes. Have any cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the work before joining the marking queue and open the required terminal and script. The checkpoints and cleanup take no more than four minutes. Have any cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
 
 ### Checkpoint 1: Environment and AWS identity — 0.5 marks
 

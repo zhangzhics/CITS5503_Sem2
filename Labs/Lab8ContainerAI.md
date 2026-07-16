@@ -334,7 +334,7 @@ Open a browser and navigate to the following address to run it within your ECS. 
 
 ## Live Assessment Checkpoints
 
-You do not need to submit a written report for this lab. Complete the image build and push, ECS deployment, and SageMaker tuning job before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open every Console page listed below and prepare cleanup before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the image build and push, ECS deployment, and SageMaker tuning job before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open every Console page listed below and prepare cleanup before joining the queue. Screenshots and saved output do not replace live results.
 
 The facilitator will refresh existing results. You will not rebuild the image, redeploy ECS, or rerun the tuning job during marking.
 
