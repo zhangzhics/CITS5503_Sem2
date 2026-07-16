@@ -106,7 +106,7 @@ In your app directory: `/opt/wwc/mysites/lab`, run:
 python3 manage.py runserver 8000
 ```
 
-Open a browser and enter the IP address of your EC2 instance. Take a screenshot of what you see and stop your server with CONTROL-C
+Open a browser and enter the IP address of your EC2 instance. Output what you've got and stop your server with CONTROL-C
 
 ## Set up Django inside the created EC2 instance
 

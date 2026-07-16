@@ -7,7 +7,6 @@
 
 ## Technologies Covered
 
-* Ubuntu
 * AWS Comprehend
 * AWS Rekognition
 * boto3
@@ -18,6 +17,8 @@
 The aim of this lab is to write a series of scripts that will test the main features of AWS Comprehend and AWS Rekognition.
 
 ## AWS Comprehend
+
+**NOTE**: AWS Comprehend and Rekognition are NOT fully supported in Europe (Stockholm) (eu-north-1) and Canada (Central) (ca-central-1). If you were allocated to these 2 regions, please use Asia Pacific (Sydney) (ap-southeast-2) to complete this lab.
 
 AWS Comprehend offers different services to analyse text using machine learning. With the Comprehend API, you will be able to perform common NLP tasks such as sentiment analysis or simply detecting the language from the text.
 
@@ -81,19 +82,13 @@ Use boto3 and AWS Comprehend to create a Python script for sentiment analysis an
 
 Use boto3 and AWS Comprehend to create a Python script for entity detection and apply the previous 4 texts to test the script.
 
-Answer this question: describe what entities are in your own words.
-
 ### Detect keyphrases
 
 Use boto3 and AWS Comprehend to create a Python script for keyphrase detection and apply the previous 4 texts to test the script.
 
-Answer this question: Describe what keyphrases are in your own words.
-
 ### Detect syntaxes
 
 Use boto3 and AWS Comprehend to create a Python script for syntax detection and apply the previous 4 texts to test the script.
-
-Answer this question: Describe what syntaxes are in your own words.
 
 ## AWS Rekognition
 
