@@ -169,3 +169,77 @@ Upload all encrypted and decrypted files to your S3 bucket.
 
 **NOTE**: Delete the created S3 bucket(s) and KMS key(s) from the AWS console after the lab is done.
 
+## Live Assessment Checkpoints
+
+You do not need to submit a written report for this lab. Complete the bucket policy, KMS setup, and both encryption scripts before joining the marking queue. Keep the Lab 4 bucket and KMS key until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+
+You may create a new Lab 4 bucket with the same contents as Lab 3. You do not need to retain the Lab 3 bucket.
+
+### Checkpoint 1: Bucket permission — 0.5 marks
+
+Prepare your S3 bucket policy and keep the protected `rootdir` objects in the bucket. Show the policy in the S3 Console or run:
+
+```bash
+aws s3api get-bucket-policy \
+  --bucket <student-bucket> \
+  --query Policy \
+  --output text
+```
+
+The policy must use your bucket name and IAM username, cover the bucket ARN and the object ARN ending in `/*` or the intended prefix, deny another user, and preserve your own access.
+
+The facilitator will test access with a facilitator-controlled administrator account. The administrator test must return `AccessDenied`, while your identity can still list the protected objects. The facilitator will not enter administrator credentials on your laptop.
+
+### Checkpoint 2: KMS configuration — 0.5 marks
+
+Open AWS Console → KMS → Customer managed keys and select the key whose alias contains your student number. Be ready to show that:
+
+- The key is enabled and belongs to your account.
+- The alias contains your student number.
+- The key policy lists your IAM ARN as both a key administrator and key user.
+
+CLI alternative if the Console does not display the details promptly:
+
+```bash
+aws kms list-aliases --output table
+aws kms describe-key \
+  --key-id alias/<student-number> \
+  --query 'KeyMetadata.{Arn:Arn,Account:AWSAccountId,Enabled:Enabled,State:KeyState,Manager:KeyManager}' \
+  --output table
+aws kms get-key-policy \
+  --key-id alias/<student-number> \
+  --policy-name default \
+  --output text
+```
+
+### Checkpoint 3: KMS and pycryptodome round trips — 1 mark
+
+Open both encryption scripts. One script must use your KMS key to encrypt and decrypt data. The other must perform a separate local AES encryption and decryption with `pycryptodome`. Both scripts must produce encrypted and decrypted output rather than copy the original file.
+
+Run both scripts live. Show that each decrypted result matches the original by printing the comparison, displaying the original and decrypted text, or opening the files. If your scripts do not show a clear comparison, use your actual filenames with:
+
+```bash
+cmp <original-file> <kms-decrypted-file> && echo "KMS match"
+cmp <original-file> <aes-decrypted-file> && echo "AES match"
+```
+
+Refresh your Lab 4 bucket in the S3 Console and show the original, encrypted, and decrypted objects produced by the scripts.
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Clean up only after the facilitator completes all three checkpoints. Through the AWS Console or commands/script:
+
+1. Empty and delete the Lab 4 S3 bucket.
+2. Schedule your customer-managed KMS key for deletion.
+
+CLI alternative:
+
+```bash
+aws s3 rm s3://<student-bucket> --recursive
+aws s3api delete-bucket --bucket <student-bucket>
+aws kms schedule-key-deletion \
+  --key-id <kms-key-id> \
+  --pending-window-in-days 7
+```
+
+Cleanup is complete when the S3 bucket is absent and the KMS key is `PendingDeletion`. No later lab requires this bucket or key.

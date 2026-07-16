@@ -191,3 +191,61 @@ docker rm my-app
 ```
 
 **NOTE**: Delete the created EC2 instance(s) from AWS console after the lab is done.
+
+## Live Assessment Checkpoints
+
+You do not need to submit a written report for this lab. Complete all instance creation and Docker work before joining the marking queue. Keep both EC2 instances running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+
+Before joining the queue, prepare:
+
+- The AWS CLI-created EC2 instance, security group, and key pair.
+- The separately named Boto3-created EC2 instance, security group, and key pair.
+- Your Boto3 script.
+- A working SSH session or SSH command for the CLI-created instance.
+- The running local Docker container and `http://127.0.0.1` open in a browser.
+
+### Checkpoint 1: AWS CLI EC2 resources and SSH — 0.5 marks
+
+In the AWS Console or through live AWS CLI output, show:
+
+- Your student-named EC2 instance.
+- Your student-named security group allowing TCP port 22.
+- Your student-named key pair.
+- The instance's public IP address.
+
+Then run:
+
+```bash
+ssh -i <key-file.pem> ubuntu@<public-ip> "hostname && uname -s"
+```
+
+An already-open SSH window is also acceptable. Run `hostname` and `uname -s` in that window. The output must identify the remote instance and include `Linux`.
+
+### Checkpoint 2: Boto3-created EC2 resources — 0.5 marks
+
+Open your Boto3 script and show the code that creates the instance, security group, key pair, and Name tag. Do not rerun a creation-only script during marking. Refresh the AWS Console and show the existing Boto3-created resources. Their names must include your student number and differ from the Checkpoint 1 names.
+
+### Checkpoint 3: Docker result — 1 mark
+
+Run:
+
+```bash
+docker ps
+```
+
+Show a running `my-app` container, or your published student-named equivalent, with host port 80 mapped to container port 80. Refresh `http://127.0.0.1` in your browser. The page must display `Hello World!`.
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Clean up only after the facilitator completes all three checkpoints. You may use the AWS Console or AWS commands/script.
+
+Terminate both EC2 instances. Do not leave an instance in `Running` or `Stopped`. If you created a separate EBS volume or Elastic IP for this lab, delete the unattached volume or release the address. You may keep the Lab 2 key pairs and security groups.
+
+CLI alternative for terminating the instances:
+
+```bash
+aws ec2 terminate-instances \
+  --instance-ids <cli-instance-id> <boto3-instance-id>
+```
+
+Cleanup is complete when both instances are `shutting-down`, `terminated`, or absent from the active instance list, with no extra Lab 2 EBS volume or Elastic IP remaining.

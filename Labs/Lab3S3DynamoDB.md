@@ -148,3 +148,62 @@ Use the AWS CLI command to scan the created DynamoDB table, and output what you'
 Use the AWS CLI command to delete the table.
 
 **NOTE**: Delete the created S3 bucket(s) from the AWS console after the lab is done.
+
+## Live Assessment Checkpoints
+
+You do not need to submit a written report for this lab. Complete the S3 upload and local DynamoDB work before joining the marking queue. Keep the S3 bucket and local `CloudFiles` table until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+
+Before joining the queue, open `cloudstorage.py` and `restorefromcloud.py`, start DynamoDB Local, and prepare an empty restore directory separate from the original `rootdir`.
+
+### Checkpoint 1: S3 upload and directory structure — 0.5 marks
+
+Open `cloudstorage.py`. The script must use boto3, traverse `rootdir`, preserve relative paths when it builds S3 object keys, and upload the files to your student-number bucket.
+
+Then open AWS Console → S3, refresh your bucket, and show these object keys relative to `rootdir`:
+
+- `rootfile.txt`
+- `subdir/subfile.txt`
+
+You do not need to upload the files again during marking. The script and refreshed S3 Console must show that the subdirectory structure was preserved.
+
+### Checkpoint 2: Restore from S3 — 0.5 marks
+
+Run `restorefromcloud.py` into an empty directory on your laptop. Do not restore over the original `rootdir`. Adjust `restore` below if your script uses another destination name:
+
+```bash
+python3 restorefromcloud.py
+find restore -type f -print
+cat restore/rootfile.txt
+cat restore/subdir/subfile.txt
+diff -r rootdir restore
+```
+
+The restored directory must contain both paths. `diff` must produce no output, showing that the restored files match the originals.
+
+### Checkpoint 3: DynamoDB Local table — 1 mark
+
+Run this command while DynamoDB Local is running:
+
+```bash
+aws dynamodb scan \
+  --table-name CloudFiles \
+  --endpoint-url http://localhost:8000 \
+  --output table
+```
+
+The live scan must return exactly two file records. Each record must contain `userId`, `fileName`, `path`, `lastUpdated`, `owner`, and `permissions`, and must correspond to an object in your S3 bucket.
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Clean up only after the facilitator completes all three checkpoints. Delete the local `CloudFiles` table, then empty and delete the S3 bucket. You may delete the S3 resources through the AWS Console or use the commands below:
+
+```bash
+aws dynamodb delete-table \
+  --table-name CloudFiles \
+  --endpoint-url http://localhost:8000
+
+aws s3 rm s3://<student-number>-cloudstorage --recursive
+aws s3api delete-bucket --bucket <student-number>-cloudstorage
+```
+
+The S3 bucket and its objects must be absent when cleanup finishes. You do not need to retain the Lab 3 S3 bucket or local DynamoDB table for Lab 4 or Lab 6; recreate any required data in the later lab.
