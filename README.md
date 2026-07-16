@@ -31,17 +31,18 @@ The course consists of 12 weeks of lectures and 9 weeks of practical labs. Asses
 * 50% Final Exam
 
 ## Live Lectures
-Recordings of live lectures are available (give up to 48 hours for it to be available), which are on LMS -> Lecture Recordings. 
 
-Live lecture slides will be made available early on Monday in each lecture week and can be downloaded from [our repo](https://github.com/zhangzhics/CITS5503_Sem2/tree/master/Live-lecture-slides) (live lecture slides in 2025 can also be found from the repo) 
+Recordings of live lectures are available (give up to 48 hours for it to be available), which are on LMS -> Lecture Recordings.
 
-[here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/comprehend.html)
+Live lecture slides will be made available early on Monday in each lecture week and can be downloaded from [our repo](https://github.com/zhangzhics/CITS5503_Sem2/tree/master/Live-lecture-slides) (live lecture slides in 2025 can also be found from the repo)
+
+
 
 ## AI Tools
 
-For lab assignments, students may make limited use of AI tools (Tier 2: AI assistance, outlined in the [UWA guide](https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-artificial-intelligence-tools-at-uwa---a-guide-for-students-(2026).pdf)) to support learning and troubleshooting. For example, to clarify concepts, look up relevant AWS CLI commands, interpret error messages, or understand how python API works. However, submissions must reflect a student's own work. Students must not use AI to generate complete solutions (e.g., step-by-step descriptions that students simply follow without understanding). Students are responsible for verifying the accuracy of any AI output, and should keep a brief record of prompts and outputs in case questions arise.
+For lab assignments, students may make limited use of AI tools (Tier 2: AI assistance, outlined in the [UWA guide](https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-artificial-intelligence-tools-at-uwa---a-guide-for-students-%282026%29.pdf)) to support learning and troubleshooting. For example, to clarify concepts, look up relevant AWS CLI commands, interpret error messages, or understand how python API works. However, submissions must reflect a student's own work. Students must not use AI to generate complete solutions (e.g., step-by-step descriptions that students simply follow without understanding). Students are responsible for verifying the accuracy of any AI output, and should keep a brief record of prompts and outputs in case questions arise.
 
-When using any public AI system (e.g., ChatGPT, and Google Gemini), students must not input personal data, and must not upload or paste any copyrighted material that is not their own, including UWA or staff materials such as lecture slides, handouts. Also, DeepSeek must not be used in any form due to safety and security concerns raised by the Department of Home Affairs (refer to the [UWA guide](https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-artificial-intelligence-tools-at-uwa---a-guide-for-students-(2026).pdf) for more details).
+When using any public AI system (e.g., ChatGPT, and Google Gemini), students must not input personal data, and must not upload or paste any copyrighted material that is not their own, including UWA or staff materials such as lecture slides, handouts. Also, DeepSeek must not be used in any form due to safety and security concerns raised by the Department of Home Affairs (refer to the [UWA guide](https://www.uwa.edu.au/students/-/media/project/uwa/uwa/students/academic-support/using-artificial-intelligence-tools-at-uwa---a-guide-for-students-%282026%29.pdf) for more details).
 
 Both mid-sem test and final exam are invigilated. So no AI tools are allowed during the test/exam.
 
@@ -50,3 +51,4 @@ Both mid-sem test and final exam are invigilated. So no AI tools are allowed dur
 Except where otherwise specified, the text in this course is licensed under the Creative Commons Attribution-ShareAlike License 4.0 (International) (CC-BY-SA 4.0).
 
 Contents on this page are further developed by Zhi Zhang (2023\~) and Jichunyang Li (2024\~).
+
