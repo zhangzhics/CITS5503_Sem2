@@ -10,6 +10,18 @@ An overarching goal of the unit is to provide students with an opportunity to un
 
 The course is based on the cloud services of Amazon Web Services and a range of open source and other products. It is not possible in a course such as this to cover all of the products that these cloud services provide. The theme has been to concentrate on the most common use cases of \[a] using AWS to deploy web applications utilising data sources such as databases and \[b] data analytics and machine learning.
 
+
+
+* When starting to use AWS in Lab 1, students should use their student numbers to look up their corresponding AWS regions in the [provided region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws), and allocate their AWS resources based on their region names.
+* When a lab is done, its AWS resources must be \*\*deleted/terminated manually from the AWS console by students themselves\*\*.
+* Every EC2 instance should be stopped \*\*at 10pm every night\*\* \*\*by students themselves\*\* and deleted/terminated at \*\*the same time every Friday night\*\* by us. Students can start their instance(s) \*\*after 7am every morning\*\*. If any student is detected \*\*3 times\*\* by creating/starting their instances between \*\*10pm-7am\*\*, they will be locked out of the AWS service by us and then they have to create their own AWS accounts using their own credit cards.
+* The maximum number of EC2 instances required for a lab is 2. Therefore, do not have more than 2 instances simultaneously. Otherwise, instances of a student ID from the oldest to the newest will be deleted/terminated \*\*every night at 10:00pm\*\* until the instance number is reduced to 2.  
+* Lab 5 requires application load balancers (ALBs). Every ALB and its related resources such as listeners will be deleted at \*\*10pm every night\*\* by us. Students can create their ALB \*\*after 7am every morning\*\*. If any student is detected 3 times by creating their ALB \*\*between 10pm-7am\*\*, they will be locked out of the AWS service by us and then they have to create their own AWS account using their own credit cards.
+
+
+
+
+
 ## Learning Outcomes
 
 Students are able to
