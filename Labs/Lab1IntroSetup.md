@@ -223,7 +223,7 @@ Tabulate the un-tabulated response above to have **2 columns** with **Endpoint**
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the work before joining the marking queue and open the required terminal and script. The checkpoints and cleanup take no more than four minutes. Have any cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the work before joining the marking queue and open the required terminal and script. The checkpoints and cleanup take no more than four minutes. Open any relevant AWS Console cleanup page before joining the queue. Screenshots and saved output do not replace live results.
 
 ### Checkpoint 1: Environment and AWS identity — 0.5 marks
 
@@ -260,4 +260,4 @@ Be ready to compare one row with the AWS CLI output from Checkpoint 2. Hard-code
 
 ### Cleanup
 
-Lab 1 creates no chargeable AWS resources. Keep your IAM access key because later labs require it. If you created temporary chargeable resources while troubleshooting, clean them up after the facilitator completes the checkpoints. You may use the AWS Console or AWS commands/script.
+Lab 1 creates no chargeable AWS resources. Keep your IAM access key because later labs require it. If you created temporary chargeable resources while troubleshooting, remove them through the relevant AWS Console service page after the facilitator completes the checkpoints.

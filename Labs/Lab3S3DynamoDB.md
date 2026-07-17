@@ -151,7 +151,7 @@ Use the AWS CLI command to delete the table.
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the S3 upload and local DynamoDB work before joining the marking queue. Keep the S3 bucket and local `CloudFiles` table until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the S3 upload and local DynamoDB work before joining the marking queue. Keep the S3 bucket and local `CloudFiles` table until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the S3 Console cleanup page before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open `cloudstorage.py` and `restorefromcloud.py`, start DynamoDB Local, and prepare an empty restore directory separate from the original `rootdir`.
 
@@ -195,15 +195,6 @@ The live scan must return exactly two file records. Each record must contain `us
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Clean up only after the facilitator completes all three checkpoints. Delete the local `CloudFiles` table, then empty and delete the S3 bucket. You may delete the S3 resources through the AWS Console or use the commands below:
+Clean up only after the facilitator completes all three checkpoints. Open AWS Console → S3 → Buckets, select your Lab 3 bucket, choose **Empty**, and then choose **Delete**.
 
-```bash
-aws dynamodb delete-table \
-  --table-name CloudFiles \
-  --endpoint-url http://localhost:8000
-
-aws s3 rm s3://<student-number>-cloudstorage --recursive
-aws s3api delete-bucket --bucket <student-number>-cloudstorage
-```
-
-The S3 bucket and its objects must be absent when cleanup finishes. You do not need to retain the Lab 3 S3 bucket or local DynamoDB table for Lab 4 or Lab 6; recreate any required data in the later lab.
+The S3 bucket and its objects must be absent when cleanup finishes. DynamoDB Local runs on your laptop and is outside the AWS cleanup check. No later lab requires the Lab 3 S3 bucket; recreate any required data in the later lab.

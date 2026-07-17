@@ -344,7 +344,7 @@ Before joining the queue:
 - Wait until the ECS service is stable and its task is running.
 - Wait until the SageMaker hyperparameter tuning job is complete.
 - Open the ECR **Images** list, the ECS service and running task, the completed SageMaker tuning job, and the exact S3 training prefix in separate tabs. During marking, refresh these tabs instead of navigating from each service's home page.
-- Prepare one cleanup script containing the Lab 8 cleanup commands below, or open each resource's deletion control in advance. Do not run cleanup until the facilitator finishes all three checkpoints.
+- Open each resource's cleanup control in the AWS Console before joining the queue. Do not run cleanup until the facilitator finishes all three checkpoints.
 
 ### Checkpoint 1: Local Docker image and ECR — 1 mark
 
@@ -426,36 +426,12 @@ aws sagemaker describe-training-job \
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Clean up only after the facilitator completes all three checkpoints. Run your prepared cleanup script or use the already-open AWS Console controls in this order:
+Clean up only after the facilitator completes all three checkpoints. Use the already-open AWS Console controls in this order:
 
-1. Scale the ECS service to zero and confirm that AWS accepts the update. The Fargate task may stop asynchronously.
-2. Delete all images you created in the ECR repository.
-3. Empty and delete the Lab 8 S3 bucket or student-created input and output prefixes.
-4. Schedule your student-created Jupyter token secret for deletion. If you added a student-specific permission for this secret to the shared execution role, remove that permission but keep the shared role.
-
-CLI alternatives:
-
-```bash
-aws ecs update-service \
-  --cluster <student-cluster> \
-  --service <student-service> \
-  --desired-count 0
-
-aws ecr batch-delete-image \
-  --repository-name <student-repository> \
-  --image-ids imageTag=<student-image-tag>
-
-aws s3 rm \
-  s3://<lab8-bucket>/sagemaker/<student-number>-hpo-xgboost-dm/ \
-  --recursive
-
-# Run this only if you created the whole bucket for Lab 8 and it is empty.
-aws s3api delete-bucket --bucket <lab8-bucket>
-
-aws secretsmanager delete-secret \
-  --secret-id <student-jupyter-token-secret> \
-  --recovery-window-in-days 7
-```
+1. Open AWS Console → ECS → Clusters → your cluster → Services, update the service, and set **Desired tasks** to `0`. Confirm that AWS accepts the update. The Fargate task may stop asynchronously.
+2. Open AWS Console → ECR → Repositories → your repository, select every image you created, and choose **Delete**.
+3. Open AWS Console → S3, then delete the Lab 8 training input and output prefixes. If you created the whole bucket for Lab 8, empty and delete it.
+4. Open AWS Console → Secrets Manager, select your student-created Jupyter token secret, and schedule it for deletion. If you added a student-specific permission for this secret to the shared execution role, remove that permission through the IAM Console but keep the shared role.
 
 Completed SageMaker tuning and training job records remain visible and do not count as active resources. Keep shared unit IAM roles such as `SageMakerRole` and `ecsTaskExecutionRole`. You may also keep the inactive ECS service, cluster, task definitions, empty ECR repository, and security group.
 

@@ -194,7 +194,7 @@ docker rm my-app
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete all instance creation and Docker work before joining the marking queue. Keep both EC2 instances running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete all instance creation and Docker work before joining the marking queue. Keep both EC2 instances running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the relevant EC2 Console cleanup pages before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, prepare:
 
@@ -237,15 +237,12 @@ Show a running `my-app` container, or your published student-named equivalent, w
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Clean up only after the facilitator completes all three checkpoints. You may use the AWS Console or AWS commands/script.
+Clean up only after the facilitator completes all three checkpoints. Open AWS Console → EC2 and complete these actions:
 
-Terminate both EC2 instances. Do not leave an instance in `Running` or `Stopped`. If you created a separate EBS volume or Elastic IP for this lab, delete the unattached volume or release the address. You may keep the Lab 2 key pairs and security groups.
+1. Open **Instances**, select both Lab 2 instances, then choose **Instance state → Terminate instance**. Do not leave an instance in `Running` or `Stopped`.
+2. If you created a separate EBS volume, open **Volumes** and delete the unattached volume.
+3. If you created an Elastic IP for this lab, open **Elastic IP addresses** and release it.
 
-CLI alternative for terminating the instances:
-
-```bash
-aws ec2 terminate-instances \
-  --instance-ids <cli-instance-id> <boto3-instance-id>
-```
+You may keep the Lab 2 key pairs and security groups.
 
 Cleanup is complete when both instances are `shutting-down`, `terminated`, or absent from the active instance list, with no extra Lab 2 EBS volume or Elastic IP remaining.

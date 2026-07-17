@@ -249,7 +249,7 @@ You can add variables to the template and more formatting functionality to displ
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the EC2, Django, nginx, ALB, and DynamoDB work before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the EC2, Django, nginx, ALB, and DynamoDB work before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the EC2 and DynamoDB Console cleanup pages before joining the queue. Screenshots and saved output do not replace live results.
 
 Open the EC2, Load Balancer, and DynamoDB Console pages and the direct and load-balanced `/polls/` pages before joining the queue. Do not display or hard-code AWS credentials.
 
@@ -328,24 +328,12 @@ You may recreate this data during Lab 6. The original Lab 3 S3 bucket and local 
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Clean up only after the facilitator completes all three checkpoints. Use the AWS Console or commands/script in this order:
+Clean up only after the facilitator completes all three checkpoints:
 
-1. Delete the Application Load Balancer.
-2. Terminate the EC2 instance; `Stopped` is not a completed cleanup state.
-3. Delete the Lab 6 AWS DynamoDB table.
-4. If you created a separate EBS volume or Elastic IP for this lab, delete the unattached volume or release the address.
+1. Open AWS Console → EC2 → Load Balancers, select the Lab 6 Application Load Balancer, and choose **Actions → Delete load balancer**.
+2. Open AWS Console → EC2 → Instances, select the Lab 6 instance, and choose **Instance state → Terminate instance**. `Stopped` is not a completed cleanup state.
+3. Open AWS Console → DynamoDB → Tables, select the Lab 6 table, and choose **Delete**.
+4. If you created a separate EBS volume, open AWS Console → EC2 → Volumes and delete the unattached volume.
+5. If you created an Elastic IP for this lab, open AWS Console → EC2 → Elastic IP addresses and release it.
 
 You may keep the target group, key pair, and security group. Cleanup is complete when the deletion requests are accepted and no Lab 6 compute, load-balancing, or DynamoDB resource remains active.
-
-CLI alternatives:
-
-```bash
-aws elbv2 delete-load-balancer \
-  --load-balancer-arn <load-balancer-arn>
-
-aws ec2 terminate-instances \
-  --instance-ids <lab6-instance-id>
-
-aws dynamodb delete-table \
-  --table-name <lab6-cloudstorage-table>
-```

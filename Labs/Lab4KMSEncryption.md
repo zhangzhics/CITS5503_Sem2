@@ -171,7 +171,7 @@ Upload all encrypted and decrypted files to your S3 bucket.
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the bucket policy, KMS setup, and both encryption scripts before joining the marking queue. Keep the Lab 4 bucket and KMS key until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the bucket policy, KMS setup, and both encryption scripts before joining the marking queue. Keep the Lab 4 bucket and KMS key until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the S3 and KMS Console cleanup pages before joining the queue. Screenshots and saved output do not replace live results.
 
 You may create a new Lab 4 bucket with the same contents as Lab 3. You do not need to retain the Lab 3 bucket.
 
@@ -227,19 +227,9 @@ Refresh your Lab 4 bucket in the S3 Console and show the original, encrypted, an
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Clean up only after the facilitator completes all three checkpoints. Through the AWS Console or commands/script:
+Clean up only after the facilitator completes all three checkpoints:
 
-1. Empty and delete the Lab 4 S3 bucket.
-2. Schedule your customer-managed KMS key for deletion.
-
-CLI alternative:
-
-```bash
-aws s3 rm s3://<student-bucket> --recursive
-aws s3api delete-bucket --bucket <student-bucket>
-aws kms schedule-key-deletion \
-  --key-id <kms-key-id> \
-  --pending-window-in-days 7
-```
+1. Open AWS Console → S3 → Buckets, select the Lab 4 bucket, choose **Empty**, and then choose **Delete**.
+2. Open AWS Console → KMS → Customer managed keys, select your Lab 4 key, and choose **Key actions → Schedule key deletion**.
 
 Cleanup is complete when the S3 bucket is absent and the KMS key is `PendingDeletion`. No later lab requires this bucket or key.

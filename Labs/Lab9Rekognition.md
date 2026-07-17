@@ -133,7 +133,7 @@ Update the Python script above by using boto3 and AWS Rekognition to test label 
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete all Comprehend and Rekognition scripts before joining the marking queue. Keep the Lab 9 S3 bucket until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete all Comprehend and Rekognition scripts before joining the marking queue. Keep the Lab 9 S3 bucket until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the S3 Console cleanup page before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open the scripts and terminal, and keep the four supplied text inputs and four required images ready.
 
@@ -177,11 +177,6 @@ Show plausible live results, including confidence values, detected faces, and ex
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Comprehend and Rekognition calls do not leave active compute resources. After the facilitator completes all three checkpoints, empty and delete your Lab 9 S3 bucket through the AWS Console or with commands:
-
-```bash
-aws s3 rm s3://<student-number>-lab9 --recursive
-aws s3api delete-bucket --bucket <student-number>-lab9
-```
+Comprehend and Rekognition calls do not leave active compute resources. After the facilitator completes all three checkpoints, open AWS Console → S3 → Buckets, select your Lab 9 bucket, choose **Empty**, and then choose **Delete**.
 
 Cleanup is complete when the bucket and all four objects are absent.

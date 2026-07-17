@@ -71,7 +71,7 @@ From your local OS environment, access the URL: `http://<ip address of your EC2 
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the Fabric deployment before joining the marking queue. Keep the EC2 instance running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console page or command ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the Fabric deployment before joining the marking queue. Keep the EC2 instance running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the EC2 Console cleanup page before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open your Fabric deployment script and a terminal on your laptop. Open `http://<public-ip>/polls/` in a browser.
 
@@ -106,13 +106,6 @@ The Django page must load through nginx on the EC2 instance configured by your F
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Clean up only after the facilitator completes both checkpoints. Terminate the Lab 7 EC2 instance through the AWS Console or with commands/script. You may keep the Lab 7 key pair and security group.
-
-CLI alternative:
-
-```bash
-aws ec2 terminate-instances \
-  --instance-ids <lab7-instance-id>
-```
+Clean up only after the facilitator completes both checkpoints. Open AWS Console → EC2 → Instances, select the Lab 7 instance, and choose **Instance state → Terminate instance**. You may keep the Lab 7 key pair and security group.
 
 Cleanup is complete when the instance is `shutting-down`, `terminated`, or absent from the active instance list. Lab 7 does not require a separate EBS volume or Elastic IP, so these do not need separate checks.

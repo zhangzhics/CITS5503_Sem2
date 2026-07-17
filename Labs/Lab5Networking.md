@@ -71,7 +71,7 @@ Last, use a browser from your host OS to access each instance by its respective 
 
 ## Live Assessment Checkpoints
 
-Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete both EC2 instances, the Application Load Balancer, and Apache setup before joining the marking queue. Keep the resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Have the cleanup Console pages or commands ready before joining the queue. Screenshots and saved output do not replace live results.
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete both EC2 instances, the Application Load Balancer, and Apache setup before joining the marking queue. Keep the resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the relevant EC2 Console cleanup pages before joining the queue. Screenshots and saved output do not replace live results.
 
 Before joining the queue, open the EC2 and Load Balancer Console pages and the direct and load-balanced web pages.
 
@@ -104,20 +104,11 @@ The live result must contain both instance names. Direct instance IPs alone do n
 
 ### Cleanup — 0.5-mark deduction if incomplete
 
-Clean up only after the facilitator completes both checkpoints. Use the AWS Console or commands/script in this order:
+Clean up only after the facilitator completes both checkpoints. Open AWS Console → EC2 and complete these actions in order:
 
-1. Delete the Application Load Balancer.
-2. Terminate both EC2 instances.
-3. If you created a separate EBS volume or Elastic IP for this lab, delete the unattached volume or release the address.
+1. Open **Load Balancers**, select the Lab 5 Application Load Balancer, and choose **Actions → Delete load balancer**.
+2. Open **Instances**, select both Lab 5 instances, and choose **Instance state → Terminate instance**.
+3. If you created a separate EBS volume, open **Volumes** and delete the unattached volume.
+4. If you created an Elastic IP for this lab, open **Elastic IP addresses** and release it.
 
 You may keep the target group, key pair, and security group. Cleanup is complete when the ALB is deleting or absent and both instances are `shutting-down`, `terminated`, or absent from the active instance list.
-
-CLI alternatives:
-
-```bash
-aws elbv2 delete-load-balancer \
-  --load-balancer-arn <load-balancer-arn>
-
-aws ec2 terminate-instances \
-  --instance-ids <vm1-instance-id> <vm2-instance-id>
-```
