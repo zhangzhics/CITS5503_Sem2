@@ -220,3 +220,39 @@ This will create an un-tabulated response.
 ### \[3] Write a Python script
 
 Tabulate the un-tabulated response above to have **2 columns** with **Endpoint** and **RegionName**.
+
+## Live Lab Assessment
+
+Make sure you have completed the following checkpoints before joining the marking queue, and get your commands/script/cleanup ready when you're the next turn. Note that screenshots, copied output, and prerecorded demonstrations do not count.
+
+### Checkpoint 1: Environment and AWS identity (0.5 marks)
+
+Make sure you run the following commands successfully:
+
+```bash
+python3 --version
+aws --version
+python3 -c "import boto3; print('boto3', boto3.__version__)"
+aws sts get-caller-identity --output table
+```
+
+**NOTE**: The commands above must run without errors. The AWS ARN must contain your student ID. 
+
+### Checkpoint 2: AWS region table (0.5 marks)
+
+Make sure you run the following commands successfully:
+
+```bash
+aws configure get region
+```
+
+**NOTE**: Your configured region must match your assigned region in the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws).
+
+### Checkpoint 3: Boto3 output table (1 mark)
+
+Make sure you finish your python script in [Test the installed environment](Lab1IntroSetup.md#id-3-write-a-python-script)and run it succesfully, which must retrieve the region data through boto3 and print a table with exactly two columns:
+
+- `Endpoint`
+- `RegionName`
+
+**NOTE**: Run your script and make sure your outputted table is correct in front of the lab facilitator.
