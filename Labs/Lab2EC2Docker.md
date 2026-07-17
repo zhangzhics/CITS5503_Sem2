@@ -68,7 +68,7 @@ aws ec2 describe-instances --instance-ids <Instance Id from above> --query 'Rese
 ssh -i <student number>-key.pem ubuntu@<IP Address from above>
 ```
 
-### \[8] List the created instance using the AWS console
+### \[8] List the created instance using the AWS Management Console
 
 ## Create an EC2 instance with Python Boto3
 
@@ -191,3 +191,33 @@ docker rm my-app
 ```
 
 **NOTE**: Delete the created EC2 instance(s) from AWS console after the lab is done.
+
+
+## Live Lab Assessment
+
+Make sure you have completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. Note that screenshots, copied output, and prerecorded demonstrations do not count.
+
+### Checkpoint 1: AWS CLI-based EC2 and SSH (0.5 marks)
+
+Make sure you complete the following two steps successfully:
+
+`First`, in the AWS Management Console, show:
+
+- Your EC2 instance. 
+- Your instance's public IP address.
+
+**NOTE**: If you create one EC2 instance, your instance type must be t3.micro and follow the naming format of <student number>-vm (e.g., 24242424-vm). If you create multiple ones, follow the naming format of <student number>-vm1 and <student number>-vm2 (e.g., 24242424-vm1, 24242424-vm2).
+
+`Second`, in your local terminal, run the following command:
+
+```bash
+ssh -i <key-file.pem> ubuntu@<public-ip> "hostname && uname -s"
+```
+
+### Checkpoint 2: Boto3-based EC2 (1 mark)
+
+Open your Boto3 script and show where you create an instance, and add a name tag. Still, your instance type must be t3.micro and follow the naming format above. You do NOT have to run the script during marking. Instead, navigate to the AWS Management Console and show the Boto3-created instance. Note that the instance name must be differ from one in Checkpoint 1.
+
+### Checkpoint 3: Cleanup (0.5 mark)
+
+After the first two checkpoints are completed, you must show that you delete/terminate the EC2 instances you created via AWS Management Console only, meaning that your instances are `shutting-down` or `terminated`.

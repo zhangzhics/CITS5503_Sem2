@@ -223,7 +223,7 @@ Tabulate the un-tabulated response above to have **2 columns** with **Endpoint**
 
 ## Live Lab Assessment
 
-Make sure you have completed the following checkpoints before joining the marking queue, and get your commands/script/cleanup ready when you're the next turn. Note that screenshots, copied output, and prerecorded demonstrations do not count.
+Make sure you have completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. Note that screenshots, copied output, and prerecorded demonstrations do not count.
 
 ### Checkpoint 1: Environment and AWS identity (0.5 marks)
 
