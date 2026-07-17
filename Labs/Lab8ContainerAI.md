@@ -330,3 +330,106 @@ Open a browser and navigate to the following address to run it within your ECS. 
 ```
 
 **NOTE**: Delete relevant ECR, ECS and S3 resources from the AWS console after the lab is done.
+
+## Live Assessment Checkpoints
+
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the image build and push, ECS deployment, and SageMaker tuning job before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open every Console page listed below and prepare cleanup before joining the queue. Screenshots and saved output do not replace live results.
+
+The facilitator will refresh existing results. You will not rebuild the image, redeploy ECS, or rerun the tuning job during marking.
+
+Before joining the queue:
+
+- Start the local Docker container and open Jupyter at `http://127.0.0.1:8888`.
+- Wait until the ECS service is stable and its task is running.
+- Wait until the SageMaker hyperparameter tuning job is complete.
+- Open the ECR **Images** list, the ECS service and running task, the completed SageMaker tuning job, and the exact S3 training prefix in separate tabs. During marking, refresh these tabs instead of navigating from each service's home page.
+- Open each resource's cleanup control in the AWS Console before joining the queue. Do not run cleanup until the facilitator finishes all three checkpoints.
+
+### Checkpoint 1: Local Docker image and ECR — 1 mark
+
+Run:
+
+```bash
+docker images
+docker ps
+```
+
+Show a running local container whose image tag contains your student number. Refresh `http://127.0.0.1:8888` and show `LabAI.ipynb` in Jupyter.
+
+Then open AWS Console → Elastic Container Registry → Repositories, select your repository, and refresh the **Images** list. Match the demonstrated local image to an ECR image tag or digest.
+
+CLI alternative if the Console does not display the image details promptly:
+
+```bash
+aws ecr describe-images \
+  --repository-name <student-repository> \
+  --output table
+```
+
+### Checkpoint 2: ECS deployment — 1 mark
+
+Open AWS Console → Elastic Container Service → Clusters, select your cluster, and refresh the **Services** and **Tasks** tabs. Open the Lab 8 service and its running task. Show that:
+
+- The service is active.
+- Running count equals desired count.
+- The running task uses Fargate.
+- The task definition's image URI matches the ECR image from Checkpoint 1.
+- The task's networking details contain a public IP.
+
+CLI alternative for the service summary:
+
+```bash
+aws ecs describe-services \
+  --cluster <student-cluster> \
+  --services <student-service> \
+  --query 'services[0].{Status:status,Running:runningCount,Desired:desiredCount,TaskDefinition:taskDefinition}' \
+  --output table
+```
+
+Refresh the remote Jupyter page:
+
+```text
+http://<task-public-ip>:8888
+```
+
+The remote page must contain `LabAI.ipynb` and use the image demonstrated in Checkpoint 1.
+
+### Checkpoint 3: SageMaker hyperparameter tuning — 1 mark
+
+Open AWS Console → SageMaker AI → Training → Hyperparameter tuning jobs, refresh the list, and select your Lab 8 job. Show that:
+
+- The tuning status is `Completed`.
+- A best training job is identified.
+- The final objective metric and value are present.
+- The best training job's model artefact points to your S3 location.
+
+Follow the model artefact S3 location in the Console. Show these objects under your `sagemaker/<student-number>-hpo-xgboost-dm/` prefix:
+
+- `train/train.csv`
+- `validation/validation.csv`
+- The best training job's model artefact ending in `output/model.tar.gz`
+
+CLI alternatives if the Console does not display the job details promptly:
+
+```bash
+aws sagemaker describe-hyper-parameter-tuning-job \
+  --hyper-parameter-tuning-job-name <job-name> \
+  --query '{Status:HyperParameterTuningJobStatus,BestJob:BestTrainingJob.TrainingJobName,Metric:BestTrainingJob.FinalHyperParameterTuningJobObjectiveMetric}' \
+  --output table
+
+aws sagemaker describe-training-job \
+  --training-job-name <best-training-job-name> \
+  --query 'ModelArtifacts.S3ModelArtifacts' \
+  --output text
+```
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Clean up only after the facilitator completes all three checkpoints. Use the already-open AWS Console controls in this order:
+
+1. Open AWS Console → ECS → Clusters → your cluster → Services, update the service, and set **Desired tasks** to `0`. Confirm that AWS accepts the update. The Fargate task may stop asynchronously.
+2. Open AWS Console → ECR → Repositories → your repository, select every image you created, and choose **Delete**.
+3. Open AWS Console → S3, then delete the Lab 8 training input and output prefixes. If you created the whole bucket for Lab 8, empty and delete it.
+Completed SageMaker tuning and training job records remain visible and do not count as active resources. Keep shared unit IAM roles such as `SageMakerRole` and `ecsTaskExecutionRole`. You may also keep the inactive ECS service, cluster, task definitions, empty ECR repository, and security group.
+
+The ECS scale-down may finish asynchronously. If AWS accepts `desired count = 0` and the task is stopping, the facilitator can record cleanup as pending; you do not need to wait at the marking station. Cleanup is complete when the scale-down is accepted, the ECR repository contains none of your images, and your Lab 8 S3 data is absent.

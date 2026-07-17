@@ -248,3 +248,94 @@ def index(request):
 You can add variables to the template and more formatting functionality to display the information correctly.
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+
+## Live Assessment Checkpoints
+
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the EC2, Django, nginx, ALB, and DynamoDB work before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the EC2 and DynamoDB Console cleanup pages before joining the queue. Screenshots and saved output do not replace live results.
+
+Open the EC2, Load Balancer, and DynamoDB Console pages and the direct and load-balanced `/polls/` pages before joining the queue.
+
+### Checkpoint 1: Student-owned EC2, Django, and nginx — 0.5 marks
+
+Open AWS Console → EC2 → Instances, refresh the page, and select your Lab 6 instance. Show its instance ID, student-number Name tag, `Running` state, assigned region and availability zone, and public IP address.
+
+Refresh:
+
+```text
+http://<public-ip>/polls/
+```
+
+The page must load through nginx, and its IP must match the selected EC2 instance.
+
+CLI alternative if the Console does not display the instance details promptly:
+
+```bash
+aws ec2 describe-instances \
+  --instance-ids <lab6-instance-id> \
+  --query 'Reservations[].Instances[].{InstanceId:InstanceId,Name:Tags[?Key==`Name`]|[0].Value,AZ:Placement.AvailabilityZone,State:State.Name,PublicIp:PublicIpAddress}' \
+  --output table
+```
+
+### Checkpoint 2: Application Load Balancer — 0.5 marks
+
+Open AWS Console → EC2 → Load Balancers, refresh the page, and select your Lab 6 ALB. Follow its listener and target-group links. Show:
+
+- The Lab 6 instance registered as a target.
+- Health check path `/polls/`.
+- Target status `healthy`.
+- The HTTP listener forwarding to that target group.
+
+Refresh:
+
+```text
+http://<load-balancer-dns-name>/polls/
+```
+
+The Django page must load through the ALB DNS name.
+
+CLI alternatives if the Console does not display the listener or target-health details promptly:
+
+```bash
+aws elbv2 describe-target-groups \
+  --names <lab6-target-group-name> \
+  --query 'TargetGroups[0].{Arn:TargetGroupArn,Path:HealthCheckPath,Port:Port,Protocol:Protocol}' \
+  --output table
+
+aws elbv2 describe-target-health \
+  --target-group-arn <lab6-target-group-arn> \
+  --query 'TargetHealthDescriptions[].{Instance:Target.Id,Health:TargetHealth.State}' \
+  --output table
+
+aws elbv2 describe-listeners \
+  --load-balancer-arn <lab6-load-balancer-arn> \
+  --query 'Listeners[].{Port:Port,Protocol:Protocol,ForwardTo:DefaultActions[0].TargetGroupArn}' \
+  --output table
+```
+
+### Checkpoint 3: DynamoDB integration — 1 mark
+
+Open AWS Console → DynamoDB → Tables, select your Lab 6 table, and open **Explore table items**. Refresh the table and show the CloudStorage file records and attributes produced by your script. Unrelated sample rows do not meet this checkpoint.
+
+CLI alternative:
+
+```bash
+aws dynamodb scan \
+  --table-name <lab6-cloudstorage-table> \
+  --output table
+```
+
+Refresh the Django page. The filenames on the page must match the refreshed DynamoDB items. Be ready to show the `table.scan()` call and the template loop that renders `fileName` if the source of the page data is unclear.
+
+You may recreate this data during Lab 6. The original Lab 3 S3 bucket and local DynamoDB table do not need to exist.
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Clean up only after the facilitator completes all three checkpoints:
+
+1. Open AWS Console → EC2 → Load Balancers, select the Lab 6 Application Load Balancer, and choose **Actions → Delete load balancer**.
+2. Open AWS Console → EC2 → Instances, select the Lab 6 instance, and choose **Instance state → Terminate instance**. `Stopped` is not a completed cleanup state.
+3. Open AWS Console → DynamoDB → Tables, select the Lab 6 table, and choose **Delete**.
+4. If you created a separate EBS volume, open AWS Console → EC2 → Volumes and delete the unattached volume.
+5. If you created an Elastic IP for this lab, open AWS Console → EC2 → Elastic IP addresses and release it.
+
+You may keep the target group, key pair, and security group. Cleanup is complete when the deletion requests are accepted and no Lab 6 compute, load-balancing, or DynamoDB resource remains active.

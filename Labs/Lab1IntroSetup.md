@@ -220,3 +220,44 @@ This will create an un-tabulated response.
 ### \[3] Write a Python script
 
 Tabulate the un-tabulated response above to have **2 columns** with **Endpoint** and **RegionName**.
+
+## Live Assessment Checkpoints
+
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the work before joining the marking queue and open the required terminal and script. The checkpoints and cleanup take no more than four minutes. Open any relevant AWS Console cleanup page before joining the queue. Screenshots and saved output do not replace live results.
+
+### Checkpoint 1: Environment and AWS identity — 0.5 marks
+
+Run these commands in your Lab 1 working directory:
+
+```bash
+python3 --version
+aws --version
+python3 -c "import boto3; print('boto3', boto3.__version__)"
+aws sts get-caller-identity --output table
+```
+
+The commands must run without errors. The AWS ARN must belong to you and use the unit account. Do not display your access key or secret access key.
+
+### Checkpoint 2: AWS CLI region table — 0.5 marks
+
+Run:
+
+```bash
+aws configure get region
+aws ec2 describe-regions --output table
+```
+
+Your configured region must match your assigned region, and the second command must return a live, non-empty region table.
+
+### Checkpoint 3: Boto3 output table — 1 mark
+
+Open and run your Lab 1 Python script. It must retrieve the region data through boto3 and print a readable table with exactly these columns:
+
+- `Endpoint`
+- `RegionName`
+
+Be ready to compare one row with the AWS CLI output from Checkpoint 2. Hard-coded table rows do not meet this checkpoint.
+
+### Cleanup
+
+Lab 1 creates no chargeable AWS resources. Keep your IAM access key because later labs require it. If you created temporary chargeable resources while troubleshooting, remove them through the relevant AWS Console service page after the facilitator completes the checkpoints.

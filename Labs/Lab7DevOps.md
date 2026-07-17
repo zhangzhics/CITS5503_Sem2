@@ -68,3 +68,44 @@ From your local OS environment, access the URL: `http://<ip address of your EC2 
 **NOTE**: This Python script basically needs you to convert instructions (in Set up an EC2 instance and Set up Django inside the created EC2 instance) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+
+## Live Assessment Checkpoints
+
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the Fabric deployment before joining the marking queue. Keep the EC2 instance running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the EC2 Console cleanup page before joining the queue. Screenshots and saved output do not replace live results.
+
+Before joining the queue, open your Fabric deployment script and a terminal on your laptop. Open `http://<public-ip>/polls/` in a browser.
+
+### Checkpoint 1: Fabric code and connection — 1 mark
+
+Show that your Fabric script automates these tasks on your EC2 instance:
+
+- Connect to your student EC2 instance.
+- Create a Python virtual environment.
+- Install or configure nginx.
+- Deploy the Django application.
+- Start the Django server in the background.
+
+Your directory names may differ from other students' implementations. Run the script's connection function from your laptop and use Fabric to execute:
+
+```text
+uname -s
+hostname
+```
+
+The output must include `Linux` and the hostname of your EC2 instance. The commands must run remotely through Fabric, not directly in your local terminal. You do not need to rerun the complete deployment during marking.
+
+### Checkpoint 2: Deployed result — 1 mark
+
+Refresh:
+
+```text
+http://<public-ip>/polls/
+```
+
+The Django page must load through nginx on the EC2 instance configured by your Fabric script. The public IP must belong to your student EC2 instance.
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Clean up only after the facilitator completes both checkpoints. Open AWS Console → EC2 → Instances, select the Lab 7 instance, and choose **Instance state → Terminate instance**. You may keep the Lab 7 key pair and security group.
+
+Cleanup is complete when the instance is `shutting-down`, `terminated`, or absent from the active instance list. Lab 7 does not require a separate EBS volume or Elastic IP, so these do not need separate checks.

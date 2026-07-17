@@ -130,3 +130,53 @@ Update the Python script above by using boto3 and AWS Rekognition to test label 
 ## Important Notes
 
 **Delete all AWS resources you have created**
+
+## Live Assessment Checkpoints
+
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete all Comprehend and Rekognition scripts before joining the marking queue. Keep the Lab 9 S3 bucket until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the S3 Console cleanup page before joining the queue. Screenshots and saved output do not replace live results.
+
+Before joining the queue, open the scripts and terminal, and keep the four supplied text inputs and four required images ready.
+
+### Checkpoint 1: Language and sentiment — 1 mark
+
+Run your program on the supplied English, Spanish, French, and Italian texts. For each text, show live Comprehend results containing:
+
+- The language name in English, not only its language code.
+- A confidence percentage.
+- A sentiment label and sentiment scores.
+
+The program must make live Comprehend calls. Hard-coded results do not meet this checkpoint.
+
+### Checkpoint 2: Other Comprehend operations — 1 mark
+
+For one of the supplied texts, run:
+
+- Entity detection.
+- Key-phrase detection.
+- Syntax detection.
+
+Your script must pass the detected language code to each API. Show the returned text, entity type or part of speech, and confidence value where the API provides one.
+
+### Checkpoint 3: Rekognition — 1 mark
+
+Open your Lab 9 bucket in the S3 Console and refresh it. Show these four objects:
+
+- `urban.jpg`
+- `beach.jpg`
+- `faces.jpg`
+- `text.jpg`
+
+Then run one script that demonstrates:
+
+- Label recognition on `urban.jpg`.
+- Image moderation on `beach.jpg`.
+- Facial analysis on `faces.jpg`.
+- Text extraction on `text.jpg`.
+
+Show plausible live results, including confidence values, detected faces, and extracted text. The bucket and objects must belong to you.
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Comprehend and Rekognition calls do not leave active compute resources. After the facilitator completes all three checkpoints, open AWS Console → S3 → Buckets, select your Lab 9 bucket, choose **Empty**, and then choose **Delete**.
+
+Cleanup is complete when the bucket and all four objects are absent.

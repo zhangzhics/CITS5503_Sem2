@@ -68,3 +68,47 @@ Fourth, edit the `<title>` and `</title>` tags inside the `/var/www/html/index.h
 Last, use a browser from your host OS to access each instance by its respective IP address and see if you can get an Apache web page that shows your instance name. Output what you've got. If you are using the University network, you likely cannot access the installed `Apache2`. To address this issue, you may switch to a non-university network.
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+
+## Live Assessment Checkpoints
+
+Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete both EC2 instances, the Application Load Balancer, and Apache setup before joining the marking queue. Keep the resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the relevant EC2 Console cleanup pages before joining the queue. Screenshots and saved output do not replace live results.
+
+Before joining the queue, open the EC2 and Load Balancer Console pages and the direct and load-balanced web pages.
+
+### Checkpoint 1: EC2 and ALB infrastructure — 1 mark
+
+In the AWS Console or through live AWS output, show:
+
+- `<student-number>-vm1` and `<student-number>-vm2` in different availability zones.
+- One security group allowing HTTP and SSH.
+- An internet-facing Application Load Balancer in at least two subnets.
+- A target group in the same VPC as the instances.
+- An HTTP listener on port 80 that forwards to the target group.
+
+Open each instance's direct public IP in the browser. The page or title for each address must identify its backend as `vm1` or `vm2`.
+
+### Checkpoint 2: Working load balancing — 1 mark
+
+Open the target group in the AWS Console and refresh its target list. Both registered targets must be `healthy`.
+
+Then send repeated requests to the ALB DNS name. You may refresh the ALB page in the browser or use:
+
+```bash
+ALB_DNS=<load-balancer-dns-name>
+for i in {1..10}; do
+  curl -s "http://$ALB_DNS" | grep -oE '<title>[^<]+'
+done | sort -u
+```
+
+The live result must contain both instance names. Direct instance IPs alone do not demonstrate load balancing.
+
+### Cleanup — 0.5-mark deduction if incomplete
+
+Clean up only after the facilitator completes both checkpoints. Open AWS Console → EC2 and complete these actions in order:
+
+1. Open **Load Balancers**, select the Lab 5 Application Load Balancer, and choose **Actions → Delete load balancer**.
+2. Open **Instances**, select both Lab 5 instances, and choose **Instance state → Terminate instance**.
+3. If you created a separate EBS volume, open **Volumes** and delete the unattached volume.
+4. If you created an Elastic IP for this lab, open **Elastic IP addresses** and release it.
+
+You may keep the target group, key pair, and security group. Cleanup is complete when the ALB is deleting or absent and both instances are `shutting-down`, `terminated`, or absent from the active instance list.
