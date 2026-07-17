@@ -10,12 +10,19 @@ An overarching goal of the unit is to provide students with an opportunity to un
 
 The course is based on the cloud services of Amazon Web Services and a range of open source and other products. It is not possible in a course such as this to cover all of the products that these cloud services provide. The theme has been to concentrate on the most common use cases of \[a] using AWS to deploy web applications utilising data sources such as databases and \[b] data analytics and machine learning.
 
-* When starting to use AWS in Lab 1, students should use their student numbers to look up their corresponding AWS regions in the provided region table in Lab 1, and allocate their AWS resources based on their correct region names.
-* When a lab is done, its AWS resources must be **deleted/terminated manually from the AWS console by students**.
-* Every EC2 instance should be stopped **at 10pm every night by students** and deleted/terminated at **the same time every Friday night by us**. Students can start their instance(s) **after 7am every morning**. If any student is detected **3 times** by creating/starting their instances between **10pm-7am**, they will be locked out of the AWS service by us and then they have to create their own AWS accounts using their own credit cards. We will send reminders for the first two times.
-* The maximum number of EC2 instances required for a lab is 2. Therefore, do not have more than 2 instances simultaneously. Otherwise, instances of a student ID from the oldest to the newest will be deleted/terminated **every night at 10:00pm** until the instance number is reduced to 2.
-* Lab 5 requires application load balancers (ALBs). Every ALB and its related resources such as listeners will be deleted at **10pm every night by us**. Students can create their ALB **after 7am every morning**. If any student is detected 3 times by creating their ALB **between 10pm-7am**, they will be locked out of the AWS service by us and then they have to create their own AWS account using their own credit cards. We will also send reminders for the first two times.
+### AWS Resource Usage Rules
 
+To ensure fair access to the shared AWS resources and to avoid unnecessary costs, all students must follow the resource management rules below:
+
+* When starting Lab 1, students must use their student number to identify their assigned AWS region in the provided region table (also in Lab 1). All AWS resources must be created in the assigned region.
+
+* After a lab is completed, its AWS resources must be **deleted/terminated manually from the AWS management console by students**.
+
+* Every EC2 instance should be stopped **by 10pm every night by students** and deleted/terminated at **the same time every Friday night by us**. Students can start their instance(s) **after 7am every morning**. If a student is detected creating/starting EC2 instances **between 10pm and 7am on three occasions**, their access to AWS will be revoked, and then they will need to create their own AWS accounts using their own credit cards. We will send reminders for the first two occasions.
+
+* The maximum number of EC2 instances required for a lab is 2. Therefore, do not have more than 2 instances simultaneously. Otherwise, instances of the same student will be deleted or terminated from the oldest to the newest **at 10pm each night by us** until only two instances remain.
+
+* Lab 5 requires application load balancers (ALBs). All ALBs and their associated resources, such as listeners, will be deleted **at 10pm every night by us**. Students may recreate their ALBs **after 7am every morning**. If a student is detected creating an ALB **between 10pm and 7am on three occasions**, their access to AWS will be revoked, and then they will need to create their own AWS accounts using their own credit cards. We will send reminders for the first two occasions.
 
 ## Learning Outcomes
 
