@@ -208,12 +208,12 @@ From your AWS Management Console, show:
 - Your EC2 instance. 
 - Your instance's public IP address.
 
-**NOTE**: If you create one EC2 instance, your instance type must be t3.micro and follow the naming format of <student number>-vm1 (e.g., 24242424-vm1).
+**NOTE**: If you create one EC2 instance, your instance type must be t3.micro and follow the naming format of `<student number>-vm1` (e.g., 24242424-vm1).
 
 
 ### Checkpoint 2: Boto3-based EC2 (1 mark)
 
-First, open your Boto3 script and show where you create an instance, and add a name tag. Still, your instance type must be t3.micro and follow the naming format of <student number>-vm2 (e.g., 24242424-vm2). 
+First, open your Boto3 script and show where you create an instance, and add a name tag. Still, your instance type must be t3.micro and follow the naming format of `<student number>-vm2` (e.g., 24242424-vm2). 
 
 Second, navigate to the AWS Management Console and show the Boto3-created instance. The instance name must be differ from the one shown in Checkpoint 1. Note that you do NOT have to rerun the script for this Checkpoint.
 
