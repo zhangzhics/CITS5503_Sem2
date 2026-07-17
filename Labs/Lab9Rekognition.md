@@ -129,7 +129,7 @@ Update the Python script above by using boto3 and AWS Rekognition to test label 
 
 ## Important Notes
 
-**After marking, complete the chargeable-resource cleanup described below.**
+**Delete all AWS resources you have created**
 
 ## Live Assessment Checkpoints
 

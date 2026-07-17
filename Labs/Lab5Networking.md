@@ -67,7 +67,7 @@ Fourth, edit the `<title>` and `</title>` tags inside the `/var/www/html/index.h
 
 Last, use a browser from your host OS to access each instance by its respective IP address and see if you can get an Apache web page that shows your instance name. Output what you've got. If you are using the University network, you likely cannot access the installed `Apache2`. To address this issue, you may switch to a non-university network.
 
-**NOTE**: After marking, complete the chargeable-resource cleanup described below.
+**NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
 
 ## Live Assessment Checkpoints
 

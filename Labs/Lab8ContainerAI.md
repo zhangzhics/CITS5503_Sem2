@@ -35,11 +35,11 @@ FROM python:3.10
 RUN pip install jupyter boto3 sagemaker awscli
 RUN mkdir /notebook
 
+# Use a sample access token
 ENV JUPYTER_ENABLE_LAB=yes
+ENV JUPYTER_TOKEN="CITS5503"
 
-# Set JUPYTER_TOKEN to a unique value at runtime. Do not store it in the image.
-
-# Listen on all container interfaces. Restrict network access with the security group.
+# Allow access from ALL IPs
 RUN jupyter notebook --generate-config
 RUN echo "c.NotebookApp.ip = '0.0.0.0'" >> /root/.jupyter/jupyter_notebook_config.py
 
@@ -49,7 +49,7 @@ RUN wget -P /notebook https://raw.githubusercontent.com/zhangzhics/CITS5503_Sem2
 WORKDIR /notebook
 EXPOSE 8888
 
-CMD ["sh", "-c", "test -n \"$JUPYTER_TOKEN\" && exec jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=\"$JUPYTER_TOKEN\""]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
 
 ```
 
@@ -62,13 +62,10 @@ docker build -t YOUR_STUDENT_NUMBER-lab8 .
 After the above script finishes without errors, test your image locally by running:
 
 ```bash
-export JUPYTER_TOKEN="$(openssl rand -hex 24)"
-docker run -p 8888:8888 \
-  -e JUPYTER_TOKEN="$JUPYTER_TOKEN" \
-  YOUR_STUDENT_NUMBER-lab8
+docker run -p 8888:8888 YOUR_STUDENT_NUMBER-lab8
 ```
 
-You can go to 127.0.0.1:8888 and use the value of `JUPYTER_TOKEN` to check if the notebook was downloaded successfully. Keep the token private and do not commit it to your Dockerfile or scripts.
+You can go to 127.0.0.1:8888 to check if a notebook file has been downloaded successfully.
 
 ## Prepare ECR via Boto3 scripts on your local machine
 
@@ -99,17 +96,24 @@ print("ECR URI:", repository_uri)
 
 This gives you an **ECR URI**, and you need use this uri to push your Dockerfile into the ECR repository.
 
-Log Docker in to ECR without printing the temporary ECR password or placing it in shell history:
+The following code uses AWS Boto3 to obtain an authorisation token from AWS ECR, decodes it to retrieve the username and password, and then generates a Docker login command. This allows the user to log into ECR using the produced command, enabling them to push and pull Docker images.
 
-```bash
-aws ecr get-login-password --region <assigned-region> | \
-  docker login \
-    --username AWS \
-    --password-stdin \
-    <account-id>.dkr.ecr.<assigned-region>.amazonaws.com
+To get the Docker token:
+
+```python
+import boto3
+import base64
+def get_docker_login_cmd():
+    ecr_client = boto3.client('ecr')
+    token = ecr_client.get_authorization_token()
+    username, password = base64.b64decode(token['authorizationData'][0]['authorizationToken']).decode().split(':')
+    registry = token['authorizationData'][0]['proxyEndpoint']
+    return f"docker login -u {username} -p {password} {registry}"
+
+print(get_docker_login_cmd())
 ```
 
-The command should return `Login Succeeded`. Do not display the ECR password during marking.
+You will get the command to grant Docker access to the ECR repo. You have to run the output command from the script above in your terminal, and you will get "Login Succeeded" from the terminal if it goes well.
 
 **NOTE**: If you're using WSL2, DNS often breaks and returns an error message such as "no such host". If so, try this:
 
@@ -145,20 +149,19 @@ ECS is a fully managed container orchestration service from AWS that allows deve
 
 ### Create a task definition for an ECS task:
 
-Create a unique Jupyter token in AWS Secrets Manager. Keep its ARN ready and allow `ecsTaskExecutionRole` to call `secretsmanager:GetSecretValue` only for that secret. Inject the token through the ECS task definition's `secrets` field; do not store it in the image or script.
+To inject environment variables into your ECS task, add an environment field in your container definition as follows:
 
 ```python
 import boto3
 
 def create_ecs_task_definition(
     client, image_uri, account_id, task_role_name, execution_role_name, student_id,
-    environment_dict=None, secret_arns=None, port=8888, cpu='256', memory='512'
+    environment_dict=None,port=8888, cpu='256', memory='512'
 ):
     task_role_arn = f'arn:aws:iam::{account_id}:role/{task_role_name}'
     execution_role_arn = f'arn:aws:iam::{account_id}:role/{execution_role_name}'
 
     env_list = [{'name': k, 'value': v} for k, v in (environment_dict or {}).items()]
-    secret_list = [{'name': k, 'valueFrom': v} for k, v in (secret_arns or {}).items()]
     
     response = client.register_task_definition(
         family=f'{student_id}-task-family',
@@ -173,8 +176,6 @@ def create_ecs_task_definition(
                 'name': f'{student_id}-container',
                 'image': image_uri,
                 'essential': True,
-                'environment': env_list,
-                'secrets': secret_list,
                 'portMappings': [
                     {
                         'containerPort': port,
@@ -192,7 +193,6 @@ student_id = "YOUR_STUDENT_NUMBER"
 task_role_name = 'SageMakerRole'
 execution_role_name = 'ecsTaskExecutionRole'
 image_uri = 'YOUR_ECR_URI'
-jupyter_token_secret_arn = 'YOUR_JUPYTER_TOKEN_SECRET_ARN'
 
 
 ecs_client = boto3.client('ecs')
@@ -204,7 +204,6 @@ task_definition = create_ecs_task_definition(
     task_role_name,
     execution_role_name,
     student_id,
-    secret_arns={'JUPYTER_TOKEN': jupyter_token_secret_arn},
     port=8888                      
 )
 print("Task Definition ARN:", task_definition['taskDefinition']['taskDefinitionArn'])
@@ -266,7 +265,7 @@ def create_ecs_service(client, cluster_name, service_name, task_definition, subn
     return response
 ```
 
-To invoke the functions above, configure a security group in the AWS Console that allows **outbound HTTPS (port 443)** and **inbound TCP (port 8888) only from your current public IP address using a `/32` source rule**. Do not expose port 8888 to `0.0.0.0/0`. You then need the following code:
+To invoke the functions above, you first need to configure a security group from the AWS console that allows **outbound HTTPS (port 443)** and **inbound TCP (port 8888)**. You then need the following code:
 
 _NOTE_: Remember to update the values in the relevant variables below. For variables of **subnet\_id\_1**, **subnet\_id\_2**, and **subnet\_id\_3**, retrieve their values from the AWS console based on your region.
 
@@ -330,7 +329,7 @@ Open a browser and navigate to the following address to run it within your ECS. 
 <YOUR PUBLIC IP>:8888
 ```
 
-**NOTE**: After marking, complete the chargeable-resource cleanup described below.
+**NOTE**: Delete relevant ECR, ECS and S3 resources from the AWS console after the lab is done.
 
 ## Live Assessment Checkpoints
 
@@ -431,8 +430,6 @@ Clean up only after the facilitator completes all three checkpoints. Use the alr
 1. Open AWS Console → ECS → Clusters → your cluster → Services, update the service, and set **Desired tasks** to `0`. Confirm that AWS accepts the update. The Fargate task may stop asynchronously.
 2. Open AWS Console → ECR → Repositories → your repository, select every image you created, and choose **Delete**.
 3. Open AWS Console → S3, then delete the Lab 8 training input and output prefixes. If you created the whole bucket for Lab 8, empty and delete it.
-4. Open AWS Console → Secrets Manager, select your student-created Jupyter token secret, and schedule it for deletion. If you added a student-specific permission for this secret to the shared execution role, remove that permission through the IAM Console but keep the shared role.
-
 Completed SageMaker tuning and training job records remain visible and do not count as active resources. Keep shared unit IAM roles such as `SageMakerRole` and `ecsTaskExecutionRole`. You may also keep the inactive ECS service, cluster, task definitions, empty ECR repository, and security group.
 
-The ECS scale-down may finish asynchronously. If AWS accepts `desired count = 0` and the task is stopping, the facilitator can record cleanup as pending; you do not need to wait at the marking station. Cleanup is complete when the scale-down is accepted, the ECR repository contains none of your images, your Lab 8 S3 data is absent, and the student-created secret is pending deletion.
+The ECS scale-down may finish asynchronously. If AWS accepts `desired count = 0` and the task is stopping, the facilitator can record cleanup as pending; you do not need to wait at the marking station. Cleanup is complete when the scale-down is accepted, the ECR repository contains none of your images, and your Lab 8 S3 data is absent.

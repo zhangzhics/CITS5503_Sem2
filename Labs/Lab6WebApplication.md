@@ -177,7 +177,7 @@ Access the URL: `http://<load balancer dns name>/polls/`, and output what you've
 
 ## Web interface for CloudStorage application
 
-You need to create an AWS DynamoDB table containing the CloudStorage file data used in Lab 3. If you did not retain that data, repeat the relevant Lab 3 preparation steps to recreate it. Configure boto3 through your AWS CLI profile or an approved IAM role; do not copy credentials into the source code. You can run your Django application locally.
+You need to create an AWS DynamoDB table by copying it from the local DynamoDB used in Lab 3, as well as provide a copy of your AWS credentials. If you did not save the data from Lab 3, you will need to repeat some steps to retrieve the files from the S3 bucket and use them as attributes to be stored in the AWS DynamoDB table. You can run your Django application locally.
 
 In `views.py`, add `boto3` code to scan the AWS DynamoDB table. Display the results in the calling page.
 
@@ -227,7 +227,9 @@ from botocore.exceptions import ClientError
 def index(request):
     template = loader.get_template('files.html')
 
-    dynamodb = boto3.resource('dynamodb', region_name='<Your assigned region>')
+    dynamodb = boto3.resource('dynamodb', region_name='<Your assigned region>',
+                              aws_access_key_id='Your Access Key',
+                              aws_secret_access_key='Your Secret')
 
     table = dynamodb.Table("UserFiles")
 
@@ -245,13 +247,13 @@ def index(request):
 
 You can add variables to the template and more formatting functionality to display the information correctly.
 
-**NOTE**: After marking, complete the chargeable-resource cleanup described below.
+**NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
 
 ## Live Assessment Checkpoints
 
 Attend your scheduled lab and ask a lab facilitator to check your checkpoints in person. Complete the EC2, Django, nginx, ALB, and DynamoDB work before joining the marking queue. Keep the AWS resources running until the facilitator completes the checkpoints. The checkpoints and cleanup take no more than four minutes. Open the EC2 and DynamoDB Console cleanup pages before joining the queue. Screenshots and saved output do not replace live results.
 
-Open the EC2, Load Balancer, and DynamoDB Console pages and the direct and load-balanced `/polls/` pages before joining the queue. Do not display or hard-code AWS credentials.
+Open the EC2, Load Balancer, and DynamoDB Console pages and the direct and load-balanced `/polls/` pages before joining the queue.
 
 ### Checkpoint 1: Student-owned EC2, Django, and nginx — 0.5 marks
 
