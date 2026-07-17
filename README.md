@@ -15,13 +15,9 @@ The course is based on the cloud services of Amazon Web Services and a range of 
 To ensure fair access to the shared AWS resources and to avoid unnecessary costs, all students must follow the resource management rules below:
 
 * When starting Lab 1, students must use their student number to identify their assigned AWS region in the provided region table (also in Lab 1). All AWS resources must be created in the assigned region.
-
 * After a lab is completed, its AWS resources must be **deleted/terminated manually from the AWS management console by students**.
-
 * Every EC2 instance should be stopped **by 10pm every night by students** and deleted/terminated at **the same time every Friday night by us**. Students can start their instance(s) **after 7am every morning**. If a student is detected creating/starting EC2 instances **between 10pm and 7am on three occasions**, their access to AWS will be revoked, and then they will need to create their own AWS accounts using their own credit cards. We will send reminders for the first two occasions.
-
 * The maximum number of EC2 instances required for a lab is 2. Therefore, do not have more than 2 instances simultaneously. Otherwise, instances of the same student will be deleted or terminated from the oldest to the newest **at 10pm each night by us** until only two instances remain.
-
 * Lab 5 requires application load balancers (ALBs). All ALBs and their associated resources, such as listeners, will be deleted **at 10pm every night by us**. Students may recreate their ALBs **after 7am every morning**. If a student is detected creating an ALB **between 10pm and 7am on three occasions**, their access to AWS will be revoked, and then they will need to create their own AWS accounts using their own credit cards. We will send reminders for the first two occasions.
 
 ## Learning Outcomes
@@ -40,9 +36,9 @@ Students are able to
 
 The course consists of 12 weeks of lectures and 9 weeks of practical labs. Assessments are listed below.
 
-* 20% Labs
-* 30% Mid-sem Test
-* 50% Final Exam
+* Labs: 20% of the unit grade. The 9 labs are worth 20 marks in total. Labs 1–7 are worth 2 marks each. Labs 8–9 are worth 3 marks each.
+* Mid-semester Test: 30% of the unit grade. The test is worth 60 marks in total.
+* Final Exam: 50% of the unit grade. The final is worth 100 marks in total. 
 
 ## Live Lectures
 

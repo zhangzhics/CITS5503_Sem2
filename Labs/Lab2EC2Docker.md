@@ -54,7 +54,7 @@ Based on the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws), find
  aws ec2 create-tags --resources <Instance Id from above> --tags Key=Name,Value=<Instance Name>
 ```
 
-**NOTE**: If you create a single instance, you must name it using the format of `<student number>-vm` (e.g., 24242424-vm). If you need to create multiple ones, follow the naming format of `<student number>-vm1` and `<student number>-vm2` (e.g., 24242424-vm1, 24242424-vm2).
+**NOTE**: For this instance, you must name it using the format of `<student number>-vm1` (e.g., 24242424-vm1). 
 
 ### \[6] Get the public IP address
 
@@ -73,6 +73,8 @@ ssh -i <student number>-key.pem ubuntu@<IP Address from above>
 ## Create an EC2 instance with Python Boto3
 
 Use a Python script to implement the steps above (steps 1-6 are required, repeat step 8 using the AWS console again; Step 7 is optional). Refer to [page](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html) for details. **NOTE**: Remember that your security group name, key pair name, and instance name should be different from those used in **Create an EC2 instance using awscli**.
+
+**NOTE**: For this instance, you must name it using the format of `<student number>-vm2` (e.g., 24242424-vm2).
 
 ## Install Docker
 
@@ -193,31 +195,28 @@ docker rm my-app
 **NOTE**: Delete the created EC2 instance(s) from AWS console after the lab is done.
 
 
-## Live Lab Assessment
+## Live Lab Assessment (2 marks)
 
-Make sure you have completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. Note that screenshots, copied output, and prerecorded demonstrations do not count.
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
 
 ### Checkpoint 1: AWS CLI-based EC2 and SSH (0.5 marks)
 
-Make sure you complete the following two steps successfully:
-
-`First`, in the AWS Management Console, show:
+From your AWS Management Console, show:
 
 - Your EC2 instance. 
 - Your instance's public IP address.
 
-**NOTE**: If you create one EC2 instance, your instance type must be t3.micro and follow the naming format of <student number>-vm (e.g., 24242424-vm). If you create multiple ones, follow the naming format of <student number>-vm1 and <student number>-vm2 (e.g., 24242424-vm1, 24242424-vm2).
+**NOTE**: If you create one EC2 instance, your instance type must be t3.micro and follow the naming format of <student number>-vm1 (e.g., 24242424-vm1).
 
-`Second`, in your local terminal, run the following command:
-
-```bash
-ssh -i <key-file.pem> ubuntu@<public-ip> "hostname && uname -s"
-```
 
 ### Checkpoint 2: Boto3-based EC2 (1 mark)
 
-Open your Boto3 script and show where you create an instance, and add a name tag. Still, your instance type must be t3.micro and follow the naming format above. You do NOT have to run the script during marking. Instead, navigate to the AWS Management Console and show the Boto3-created instance. Note that the instance name must be differ from one in Checkpoint 1.
+First, open your Boto3 script and show where you create an instance, and add a name tag. Still, your instance type must be t3.micro and follow the naming format of <student number>-vm2 (e.g., 24242424-vm2). 
+
+Second, navigate to the AWS Management Console and show the Boto3-created instance. The instance name must be differ from the one shown in Checkpoint 1. Note that you do NOT have to rerun the script for this Checkpoint.
 
 ### Checkpoint 3: Cleanup (0.5 mark)
 
-After the first two checkpoints are completed, you must show that you delete/terminate the EC2 instances you created via AWS Management Console only, meaning that your instances are `shutting-down` or `terminated`.
+After the first two checkpoints are completed, you must show that you delete/terminate the EC2 instances you created via AWS Management Console only. In other words, your instances are showing `shutting-down` or `terminated`.

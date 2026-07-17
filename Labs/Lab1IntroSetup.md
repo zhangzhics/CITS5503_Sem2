@@ -221,9 +221,11 @@ This will create an un-tabulated response.
 
 Tabulate the un-tabulated response above to have **2 columns** with **Endpoint** and **RegionName**.
 
-## Live Lab Assessment
+## Live Lab Assessment (2 marks)
 
-Make sure you have completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. Note that screenshots, copied output, and prerecorded demonstrations do not count.
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
 
 ### Checkpoint 1: Environment and AWS identity (0.5 marks)
 
