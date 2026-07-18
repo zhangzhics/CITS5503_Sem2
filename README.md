@@ -42,18 +42,59 @@ To receive the corresponding marks, students must successfully demonstrate each 
 
 Students may attend any lab session below that suits their availability. 
 
-| Day | Time | Location |
-|---|---|---|
-| Tuesday | 2:00 pm–4:00 pm | CSSE Computer Lab 241.203 |
-| Tuesday | 4:00 pm–6:00 pm | CSSE Computer Lab 241.203 |
-| Wednesday | 10:00 am–12:00 pm | CSSE Computer Lab 241.205 |
-| Wednesday | 12:00 pm–2:00 pm | CSSE Computer Lab 241.205 |
-| Wednesday | 4:00 pm–6:00 pm | CSSE Computer Lab 241.205 |
-| Thursday | 10:00 am–12:00 pm | CSSE Computer Lab 241.205 |
-| Thursday | 2:00 pm–4:00 pm | CSSE Computer Lab 241.203 |
-| Thursday | 4:00 pm–6:00 pm | CSSE Computer Lab 241.205 |
+<table data-search="false">
+<thead>
+<tr>
+<th>Day</th>
+<th>Time</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tuesday</td>
+<td>2:00 pm–4:00 pm</td>
+<td>CSSE Computer Lab 241.203</td>
+</tr>
+<tr>
+<td>Tuesday</td>
+<td>4:00 pm–6:00 pm</td>
+<td>CSSE Computer Lab 241.203</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>10:00 am–12:00 pm</td>
+<td>CSSE Computer Lab 241.205</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>12:00 pm–2:00 pm</td>
+<td>CSSE Computer Lab 241.205</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>4:00 pm–6:00 pm</td>
+<td>CSSE Computer Lab 241.205</td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>10:00 am–12:00 pm</td>
+<td>CSSE Computer Lab 241.205</td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>2:00 pm–4:00 pm</td>
+<td>CSSE Computer Lab 241.203</td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>4:00 pm–6:00 pm</td>
+<td>CSSE Computer Lab 241.205</td>
+</tr>
+</tbody>
+</table>
 
-## Note on the use of AWS
+## Use of AWS
 
 The unit is based on the cloud services of Amazon Web Service (AWS) and a range of open source software. It is not possible in a course such as this to cover all of the products that these cloud services provide. The theme has been to concentrate on the most common use cases of \[a] using AWS to deploy web applications utilising data sources such as databases and \[b] data analytics and machine learning.
 
