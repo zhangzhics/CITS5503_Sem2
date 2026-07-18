@@ -36,7 +36,7 @@ Live lecture slides will be made available early on Monday in each lecture week 
 
 Lab facilitators will assess students' understanding of each lab in person during a scheduled lab session. Each lab contains several checkpoints listed at the bottom of each lab page. Each checkpoint has an assigned mark and is assessed on a binary basis: students will receive either its full value or zero (no partial marks awarded).
 
-To receive the corresponding marks, students must successfully demonstrate each checkpoint live to a lab facilitator. Screenshots, prerecorded demonstrations, or other indirect evidence will not be accepted. Students' marks will be recorded and made available immediately after the assessment. More details about how this operates in a lab session will be added during Week 2'live lecture.
+To receive the corresponding marks, students must successfully demonstrate each checkpoint live to a lab facilitator. Screenshots, prerecorded demonstrations, and other indirect evidence will not be accepted. Marks will be recorded and made available immediately after the assessment. Further details on how the process operates during lab sessions will be provided in the **Week 2** live lecture.
 
 #### Lab Session Timetable
 
@@ -59,7 +59,7 @@ The unit is based on the cloud services of Amazon Web Service (AWS) and a range 
 
 ### AWS Resource Usage Rules for Labs
 
-To ensure fair access to shared AWS resources and avoid unnecessary costs, all students must follow the resource management rules below when walking through their labs:
+Students will be provided with AWS login credentials upon the end of **Week 1**. To ensure fair access to shared AWS resources and avoid unnecessary costs, all students must follow the resource management rules below when walking through their labs:
 
 * When starting Lab 1, students must use their student number to identify their assigned AWS region in the provided region table (also in Lab 1). All AWS resources must be created in the assigned region.
 * After a lab is completed, its AWS resources must be **deleted/terminated manually from the AWS management console by students**.
