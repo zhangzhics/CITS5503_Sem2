@@ -192,15 +192,15 @@ Replace the placeholder values above with your own AWS Access Key, AWS Secret Ac
 
 <table data-search="false">
 <thead>
-<tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>ami id</th></tr>
+<tr><th>Student Number</th><th>Region</th><th>Region Name</th><th>AMI ID</th></tr>
 </thead>
 <tbody>
-<tr><td>21000000 - 23980000</td><td>us-east-1</td><td>US East (N. Virginia)</td><td>ami-0b6d9d3d33ba97d99</td></tr>
-<tr><td>23980001 - 24413000</td><td>us-west-2</td><td>US West (Oregon)</td><td>ami-02167eae61967e403</td></tr>
-<tr><td>24413001 - 24702700</td><td>eu-west-1</td><td>Europe (Ireland)</td><td>ami-06468be052a4195a6</td></tr>
-<tr><td>24702701 - 24891000</td><td>ap-southeast-2</td><td>Asia Pacific (Sydney)</td><td>ami-06259b63260eddc13</td></tr>
-<tr><td>24891001 - 25127000</td><td>ap-northeast-1</td><td>Asia Pacific (Tokyo)</td><td>ami-0126975fb247bf2e7</td></tr>
-<tr><td>25127001 - 29000000</td><td>ap-northeast-2</td><td>Asia Pacific (Seoul)</td><td>ami-0bc151a94289adb52</td></tr>
+<tr><td>21000000&nbsp;-&nbsp;23980000</td><td>us-east-1</td><td>US East (N. Virginia)</td><td>ami-0b6d9d3d33ba97d99</td></tr>
+<tr><td>23980001&nbsp;-&nbsp;24413000</td><td>us-west-2</td><td>US West (Oregon)</td><td>ami-02167eae61967e403</td></tr>
+<tr><td>24413001&nbsp;-&nbsp;24702700</td><td>eu-west-1</td><td>Europe (Ireland)</td><td>ami-06468be052a4195a6</td></tr>
+<tr><td>24702701&nbsp;-&nbsp;24891000</td><td>ap-southeast-2</td><td>Asia Pacific (Sydney)</td><td>ami-06259b63260eddc13</td></tr>
+<tr><td>24891001&nbsp;-&nbsp;25127000</td><td>ap-northeast-1</td><td>Asia Pacific (Tokyo)</td><td>ami-0126975fb247bf2e7</td></tr>
+<tr><td>25127001&nbsp;-&nbsp;29000000</td><td>ap-northeast-2</td><td>Asia Pacific (Seoul)</td><td>ami-0bc151a94289adb52</td></tr>
 </tbody>
 </table>
 
