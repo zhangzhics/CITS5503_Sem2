@@ -264,7 +264,7 @@ aws configure get region
 
 ### Checkpoint 3: Boto3 output table (1 mark)
 
-Make sure you finish your python script in [Test the installed environment](Lab1IntroSetup.md#id-3-write-a-python-script)and run it succesfully, which must retrieve the region data through boto3 and print a table with exactly two columns:
+Make sure you finish your python script in [Test the installed environment](Lab1IntroSetup.md#id-3-write-a-python-script) and run it successfully, which must retrieve the region data through boto3 and print a table with exactly two columns:
 
 - `Endpoint`
 - `RegionName`
