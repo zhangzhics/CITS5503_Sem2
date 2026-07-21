@@ -179,7 +179,7 @@ aws dynamodb scan \
   --output table
 ```
 
-This is a live scan, which must return two records, corresponding to two files in your bucket, i.e., `rootfile.txt` and `subfile.txt`. Each record must contain at least four items, i.e., `userId`, `fileName`, `path`, and `lastUpdated`.
+This is a live scan, which must return two records, corresponding to two files in your bucket, i.e., `rootfile.txt` and `subfile.txt`. Each record must contain information of at least four items, i.e., `userId`, `fileName`, `path`, and `lastUpdated`.
 
 ### Checkpoint 3: Cleanup (0.5 mark)
 
