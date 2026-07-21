@@ -148,3 +148,39 @@ Use the AWS CLI command to scan the created DynamoDB table, and output what you'
 Use the AWS CLI command to delete the table.
 
 **NOTE**: Delete the created S3 bucket(s) from the AWS console after the lab is done.
+
+## Live Lab Assessment (2 marks)
+
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
+
+### Checkpoint 1: S3 upload and traverse (0.5 mark)
+
+First, open your updated cloudstorage.py script and show the part that traverses all subdirectories starting from `rootdir`.
+
+Second, navigate to the AWS Management Console → S3 and show the Boto-3 created bucket. The bucket name must follow the naming format of `<student ID>-cloudstorage`. Inside your bucket, show your created objects and their tree structure as below:
+
+`rootdir/`
+├── `rootfile.txt`
+└── `subdir/`
+    └── `subfile.txt`
+
+### Checkpoint 2: DynamoDB Local table (1 mark)
+
+From your terminal, run the command below while your DynamoDB Local is running:
+
+```bash
+aws dynamodb scan \
+  --table-name CloudFiles \
+  --endpoint-url http://localhost:8000 \
+  --output table
+```
+
+This is a live scan, which must return two records, corresponding to two files in your bucket, i.e., `rootfile.txt` and `subfile.txt`. Each record must contain at least `userId`, `fileName`, `path`, and `lastUpdated`.
+
+### Checkpoint 3: Cleanup (0.5 mark)
+
+After the first two checkpoints are completed, you must open AWS Management Console → S3 → Buckets, select the ones you created for deletion.
+
+**NOTE**: the bucket must be empty before deletion starts. DynamoDB Local runs on your laptop and is outside the cleanup check.
