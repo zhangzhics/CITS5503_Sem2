@@ -161,10 +161,12 @@ First, open your updated cloudstorage.py script and show the part that traverses
 
 Second, navigate to the AWS Management Console → S3 and show the Boto-3 created bucket. The bucket name must follow the naming format of `<student ID>-cloudstorage`. Inside your bucket, show your created objects and their tree structure as below:
 
-`rootdir/`
-├── `rootfile.txt`
-└── `subdir/`
-    └── `subfile.txt`
+```text
+rootdir/
+├── rootfile.txt
+└── subdir/
+    └── subfile.txt
+```
 
 ### Checkpoint 2: DynamoDB Local table (1 mark)
 
