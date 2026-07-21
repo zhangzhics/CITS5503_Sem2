@@ -31,7 +31,7 @@ Apply the following policy to an S3 bucket to allow only your username to access
 
 **NOTE**:
 
-1. In the policy below, **you should replace `<your_s3_bucket>` with the S3 bucket you created and `<studentnumber>` with your own student number**. You can use the AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
+1. In the policy below, **you should replace `<your_s3_bucket>` with the S3 bucket you created as `<student ID>-cloudstorage` and `<studentnumber>` with your own student number**. You can use the AWS console to create the S3 bucket in this lab that has the same contents as the bucket in the last lab.
 2. Check if your `Resource` section includes permissions for both the bucket itself AND the objects inside it.
 
 ```
@@ -169,3 +169,45 @@ Upload all encrypted and decrypted files to your S3 bucket.
 
 **NOTE**: Delete the created S3 bucket(s) and KMS key(s) from the AWS console after the lab is done.
 
+## Live Lab Assessment (2 marks)
+
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
+
+### Checkpoint 1: Bucket policy (0.5 mark)
+
+First, run the following command successfully where `<your_s3_bucket>` is an S3 bucket you created:
+
+```bash
+aws s3api get-bucket-policy \
+  --bucket <your_s3_bucket> \
+  --query Policy \
+  --output text
+```
+
+**NOTE**: Make sure the returned policy shows that only you can access the bucket and that all other users are denied access.
+
+Second, from the AWS S3 console, use your AWS account to successfully access a folder called `rootdir` inside the S3 bucket.
+
+Last, from the AWS S3 console, a facilitator tries to access `rootdir` using their AWS account and sees `AccessDenied`.
+
+### Checkpoint 2: KMS configuration (0.5 mark)
+
+First, open AWS Management Console → KMS → Customer managed keys and select the key whose alias name is your student number. 
+
+Second, also from the console, open the key policy attached the selected key. The key policy lists your IAM ARN as both a key administrator and key user.
+
+### Checkpoint 3: pycryptodome (0.5 mark)
+
+First, open your updated `fileencrypt.py`, and show the part that encrypts and decrypts each file in your S3 bucket.
+
+Second, run the script live until it completes.
+
+Last, navigate to your AWS Management Console → S3 → Buckets and show the original, encrypted, and decrypted objects produced by the script.
+
+### Checkpoint 4: Cleanup (0.5 mark)
+
+After the first two checkpoints are completed, you must open AWS Management Console → S3 → Buckets, select the ones you created for deletion.
+
+**NOTE**: the bucket must be empty before deletion starts. DynamoDB Local runs on your laptop and is outside the cleanup check.
