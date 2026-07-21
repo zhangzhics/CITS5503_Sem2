@@ -48,6 +48,9 @@ Based on the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws), find
 
 ```
 
+**NOTE**: For the instance type, it must be always t3.micro.
+
+
 ### \[5] Add a tag to your Instance
 
 ```
