@@ -34,9 +34,42 @@ Live lecture slides will be made available early on Monday in each lecture week 
 
 ### Live Lab Assessment
 
-Lab facilitators will assess students' understanding of each lab in person during a scheduled lab session. Each lab contains several checkpoints listed at the bottom of each lab page. Each checkpoint has an assigned mark and is assessed on a binary basis: students will receive either its full value or zero (no partial marks awarded).
+Lab facilitators will assess each student's understanding of the labs in person during lab sessions. Each lab contains a few checkpoints listed at the bottom of its lab page. Every checkpoint has an assigned mark and is assessed on a binary basis: students will receive either its full value or zero, with no partial marks awarded.
 
-To receive the corresponding marks, students must successfully demonstrate each checkpoint live to a lab facilitator. Screenshots, prerecorded demonstrations, and other indirect evidence will not be accepted. Marks will be recorded and made available immediately after the assessment. Further details on how the process operates during lab sessions will be provided in the **Week 2** live lecture.
+Students have **one attempt only** to demonstrate each checkpoint successfully to a lab facilitator. If they fail a checkpoint during that attempt, no marks will be awarded for that checkpoint.
+
+All checkpoints must be demonstrated live. Screenshots, prerecorded demonstrations, and other indirect evidence will not be accepted. Marks will be recorded and made available immediately after the assessment.
+
+#### Queues During Lab Sessions
+
+Two separate queues are available throughout each lab session:
+
+* **Marking queue:** for students who have completed the required checkpoints and are prepared for a live assessment.
+* **Q&A queue:** for students who need assistance or clarification about a lab, including its checkpoint requirements.
+
+Both queues operate on a **first-come, first-served basis**. Lab facilitators will alternate between the two queues while preserving the order of students within each queue. If one queue is empty, facilitators will continue serving the other.
+
+The two queues serve different purposes and must remain separate:
+
+* The **marking queue is for live assessments only**: students will not ask questions or request assistance or clarification.
+* The **Q&A queue is for questions and assistance only**. Live demonstrations will not be assessed in this queue.
+* After receiving assistance through the Q&A queue, students who wish to complete an assessment must join the end of the marking queue.
+
+#### Marking Queue Rules
+
+* Before joining the marking queue, students must complete all required checkpoints and be ready to demonstrate them without assistance.
+* Each turn covers **one student and the checkpoints for one lab only** and should take a few minutes.
+* To demonstrate checkpoints for another lab, students must rejoin the end of the marking queue.
+* If a student is not assessed before the lab session ends, they may attend another scheduled lab session and join its marking queue.
+
+#### Lab Due Dates
+
+* **Labs 1–5:** Due by the end of the last scheduled lab session in **Week 7 (7–11 September)**.
+* **Labs 6–9:** Due by the end of the last scheduled lab session in **Week 11 (5–9 October)**.
+
+**Note:** The lab session timetable is provided below. During Week 7, an additional **Labs 1–5 Marking Queue** will operate exclusively for assessing Labs 1–5. Facilitators may prioritise this queue depending on demand. However, students are expected to complete their live demonstrations progressively each week and must not postpone all assessments until the final week before the relevant deadline.
+
+Students with special consideration approved by the student office may receive **one extension for each lab deadline listed above, for a maximum of 7 calendar days**.
 
 #### Lab Session Timetable
 
