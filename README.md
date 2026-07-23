@@ -67,7 +67,9 @@ The two queues serve different purposes and must remain separate:
 * **Labs 1–5:** Due by the end of the last scheduled lab session in **Week 7 (7–11 September)**.
 * **Labs 6–9:** Due by the end of the last scheduled lab session in **Week 11 (5–9 October)**.
 
-**Note:** The lab session timetable is provided below. During Week 7, an additional **Labs 1–5 Marking Queue** will operate exclusively for assessing Labs 1–5. Facilitators may prioritise this queue depending on demand. However, students are expected to complete their live demonstrations progressively each week and must not postpone all assessments until the final week before the relevant deadline.
+**Note:** The lab session timetable is provided below. During Week 7, an additional **Labs 1–5 Marking Queue** will operate exclusively for assessing Labs 1–5. Facilitators may prioritise this queue depending on demand. 
+
+Students must complete their live assessments progressively and must not wait until the final week before the relevant deadline to demonstrate multiple labs. Upon the end of each lab session, facilitators will complete only the assessment already in progress and will not begin assessing additional students, even if the marking queue has not been cleared. So staying in the marking queue does not guarantee that a student will be assessed before the session ends.
 
 Students with special consideration approved by the student office may receive **one extension for each lab deadline listed above, for a maximum of 7 calendar days**.
 
