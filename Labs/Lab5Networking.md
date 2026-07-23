@@ -87,13 +87,14 @@ From your AWS Management Console, show:
 
 ### Checkpoint 2: Workload balancing (0.5 mark)
 
-From your browser, access each EC2 instance via their public IP and show that the page title displays each instance name.
+From your browser, access each EC2 instance via their public IP and show that the web page title displays each instance name.
 
 ### Checkpoint 3: Cleanup (0.5 mark)
 
 After the first two checkpoints are completed, open AWS Management Console and complete the following actions in order:
 
-1. Delete load balancers you created.
+1. Delete application load balancers you created.
 2. Delete/Terminate instances you created.
+3. Release any Elastic IP addresses that are allocated.
 
 
