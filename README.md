@@ -73,7 +73,7 @@ Students must complete their live assessments progressively and must not wait un
 
 Students with special consideration approved by the student office may receive **one extension for each lab deadline listed above, for a maximum of 7 calendar days**.
 
-#### Lab Session Timetable
+### Lab Session Timetable
 
 Students may attend any lab session below that suits their availability. 
 
