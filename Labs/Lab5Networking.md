@@ -68,3 +68,32 @@ Fourth, edit the `<title>` and `</title>` tags inside the `/var/www/html/index.h
 Last, use a browser from your host OS to access each instance by its respective IP address and see if you can get an Apache web page that shows your instance name. Output what you've got. If you are using the University network, you likely cannot access the installed `Apache2`. To address this issue, you may switch to a non-university network.
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+
+
+## Live Lab Assessment (2 marks)
+
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
+
+### Checkpoint 1: EC2 and ALB (1 mark)
+
+From your AWS Management Console, show:
+
+- Two running EC2 instances follow the naming format of `<student-number>-vm1` and `<student-number>-vm2` and are in two different availability zones.
+- The EC2 instances are both t3.micro.
+- A running internet-facing Application Load Balancer operates in two subnets.
+
+
+### Checkpoint 2: Workload balancing (0.5 mark)
+
+From your browser, access each EC2 instance via their public IP and show that the page title displays each instance name.
+
+### Checkpoint 3: Cleanup (0.5 mark)
+
+After the first two checkpoints are completed, open AWS Management Console and complete the following actions in order:
+
+1. Delete load balancers you created.
+2. Delete/Terminate instances you created.
+
+
