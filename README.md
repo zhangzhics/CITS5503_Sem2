@@ -126,6 +126,11 @@ Students may attend any lab session below that suits their availability.
 <td>4:00 pm–6:00 pm</td>
 <td>CSSE Computer Lab 241.205</td>
 </tr>
+<tr>
+<td>Friday</td>
+<td>2:00 pm–4:00 pm</td>
+<td>CSSE Computer Lab 241.205</td>
+</tr>
 </tbody>
 </table>
 
