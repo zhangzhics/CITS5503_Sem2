@@ -283,7 +283,7 @@ Second, from your terminal, run the command below while your DynamoDB Local is r
 
 ```bash
 aws dynamodb scan \
-  --table-name CloudFiles \
+  --table-name <your_local_DynamoDB_table> \
   --endpoint-url http://localhost:8000 \
   --output table
 ```
