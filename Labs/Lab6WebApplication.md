@@ -8,7 +8,6 @@
 
 ## Technologies Covered
 
-* Ubuntu
 * AWS
 * AWS ELB
 * RDS
@@ -24,7 +23,7 @@ The aim of this lab is to write a program that will:
 
 ## Set up an EC2 instance
 
-### \[1] Create an EC2 micro instance with Ubuntu and SSH into it
+### \[1] Create an EC2 instance and SSH into it
 
 **NOTE**: Regarding your region, find it in the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws).
 
@@ -152,7 +151,7 @@ python3 manage.py runserver 8000
 
 ### \[3] Access the EC2 instance
 
-Access the URL: `http://<ip address of your EC2 instance>/polls/`, and output what you've got.
+Access the URL: `http://<ip address of your EC2 instance>/polls/`, and see what you've got.
 
 **NOTE**: remember to put the `/polls/` on the end, and you may need to restart `nginx` if it does not work.
 
@@ -173,15 +172,15 @@ Confirm the health check fetch the `/polls/` page every 30 seconds.
 
 ### \[3] Access
 
-Access the URL: `http://<load balancer dns name>/polls/`, and output what you've got.
+Access the URL: `http://<load balancer dns name>/polls/`, and see what you've got.
 
 ## Web interface for CloudStorage application
 
-You need to create an AWS DynamoDB table by copying it from the local DynamoDB used in Lab 3, as well as provide a copy of your AWS credentials. If you did not save the data from Lab 3, you will need to repeat some steps to retrieve the files from the S3 bucket and use them as attributes to be stored in the AWS DynamoDB table. You can run your Django application locally.
+You need to create an AWS DynamoDB table by copying it from the local DynamoDB used in Lab 3, as well as provide a copy of your AWS credentials. If you did not save the data from Lab 3, you will need to repeat some steps to retrieve the files from the S3 bucket and use them as attributes to be stored in the AWS DynamoDB table. 
 
 In `views.py`, add `boto3` code to scan the AWS DynamoDB table. Display the results in the calling page.
 
-In Django, you can use a template to properly format a web page using supplied variables – you can do that to make the table look nice. To use a template, you need to create a folder called templates under polls and add it to the TEMPLATES section of `lab/settings.py` .
+In your Django application, you can use a template to properly format a web page using supplied variables – you can do that to make the table look nice. To use a template, you need to create a folder called templates under polls and add it to the TEMPLATES section of `lab/settings.py` .
 
 ```
 TEMPLATES = [
@@ -247,4 +246,55 @@ def index(request):
 
 You can add variables to the template and more formatting functionality to display the information correctly.
 
-**NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+**NOTE**: Delete all the created AWS resources from the AWS Management console after the lab is done.
+
+## Live Lab Assessment (2 marks)
+
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
+
+### Checkpoint 1: EC2, Django, and nginx (0.5 mark)
+
+First, from your AWS Management Console, show:
+
+- A running EC2 instance follows the naming format of `<student-number>-vm1`.
+- The instance is t3.micro.
+- The instance resides in the assigned region, according to the [region table in Lab 1](Lab1IntroSetup.md#id-3-configure-aws).
+- The instance has a public IP address.
+
+Second, from your local browser tab, enter `http://<your-instance-public-ip>/polls/`. The web access must be successful. 
+
+### Checkpoint 2: Application Load Balancer (0.5 mark)
+
+First, open your script used to set up an ALB, and show the part that creates an ALB.
+
+Second, open your AWS Management Console, and show:
+
+- The instance is registered as a target.
+- The Health check path is set to `/polls/` with Interval set to `30` seconds.
+- The registered target status is `Healthy`.
+
+### Checkpoint 3: AWS DynamoDB (0.5 mark)
+
+First, open your script about web interface for CloudStorage application, and show the part that creates an AWS DynamoDB table.
+
+Second, from your terminal, run the command below while your DynamoDB Local is running:
+
+```bash
+aws dynamodb scan \
+  --table-name CloudFiles \
+  --endpoint-url http://localhost:8000 \
+  --output table
+```
+
+Last, from your local browser tab, enter `http://<your-load-balancer-dns-name>/polls/` and show the list of file names. These names are contained in the scan output from your second step.
+
+### Checkpoint 4: Cleanup (0.5 mark)
+
+After the first three checkpoints are completed, open AWS Management Console and complete the following actions in order:
+
+1. Delete application load balancers you created.
+2. Delete/Terminate instances you created.
+3. Delete AWS DynamoDB Tables you created.
+4. Release any Elastic IP addresses that are allocated.
