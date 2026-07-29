@@ -239,7 +239,7 @@ Make sure you have practiced and completed all the required checkpoints before j
 
 You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
 
-### Checkpoint 1: Environment and AWS identity (0.5 marks)
+### Checkpoint 1: Environment and AWS identity (0.5 mark)
 
 Make sure you run the following commands successfully:
 
@@ -252,7 +252,7 @@ aws sts get-caller-identity --output table
 
 **NOTE**: The commands above must run without errors. The AWS ARN must contain your student ID. 
 
-### Checkpoint 2: AWS region table (0.5 marks)
+### Checkpoint 2: AWS region table (0.5 mark)
 
 Make sure you run the following commands successfully:
 
