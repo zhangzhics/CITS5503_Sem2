@@ -208,6 +208,9 @@ Last, navigate to your AWS Management Console → S3 → Buckets and show the or
 
 ### Checkpoint 4: Cleanup (0.5 mark)
 
-After the first two checkpoints are completed, you must open AWS Management Console → S3 → Buckets, select the ones you created for deletion.
+After the first three checkpoints are completed, open AWS Management Console and complete the following actions in order:
 
-**NOTE**: the bucket must be empty before deletion starts. DynamoDB Local runs on your laptop and is outside the cleanup check.
+1. Delete S3 buckets you created. Note that the bucket must be empty before deletion starts. 
+2. Schedule the KMS keys you created for deletion. Note that AWS KMS keys cannot be deleted immediately So you should schedule it for deletion after 7 days.
+
+DynamoDB Local runs on your laptop and is thus outside the cleanup check.
