@@ -68,3 +68,28 @@ From your local OS environment, access the URL: `http://<ip address of your EC2 
 **NOTE**: This Python script basically needs you to convert instructions (in Set up an EC2 instance and Set up Django inside the created EC2 instance) in Lab 6 to Fabric commands. The documentation for Fabric is [here](http://docs.fabfile.org/en/2.0/).
 
 **NOTE**: Delete all the created AWS resources from the AWS console after the lab is done.
+
+## Live Lab Assessment (2 marks)
+
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
+
+### Checkpoint 1: Fabric script check (1 mark)
+
+Open your Fabric script and show where you implement:
+
+- Connecting to your EC2 instance.
+- Launching the Django development server on port 8000 in the background.
+- Configuring ngix to proxy requests to the Django development server.
+
+### Checkpoint 2: Fabric automation (0.5 mark)
+
+First, execute your Fabric script.
+
+Once the execution completes, open your browser, and access your EC2 instance via `http://<ip address of your EC2 instance>/polls/`. The web page displays the message of `Hello, world.`
+
+### Checkpoint 3: Cleanup (0.5 mark)
+
+After the first two checkpoints are completed, open AWS Management Console, delete/Terminate instances you created and release any Elastic IP addresses that are allocated.
+
