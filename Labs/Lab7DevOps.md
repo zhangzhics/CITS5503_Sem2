@@ -87,7 +87,7 @@ Open your Fabric script and show where you implement:
 
 First, execute your Fabric script.
 
-Once the execution completes, open your browser, and access your EC2 instance via `http://<ip address of your EC2 instance>/polls/`. The web page displays the message of `Hello, world.`
+Once the execution completes, open your local browser, and access your EC2 instance via `http://<ip address of your EC2 instance>/polls/`. The web page displays the message of `Hello, world.`
 
 ### Checkpoint 3: Cleanup (0.5 mark)
 
