@@ -139,7 +139,7 @@ Then, you need to get the attributes above for each file of the S3 bucket and th
 
 If `displayname` is not supported in your assigned region, use `ID` for the `owner` attribute instead (the same as the value for the `userId` attribute).
 
-Update (Semester 2, 2026): As of 21 November 2025, AWS has deprecated `DisplayName` and no longer returns it from `get_object_acl`. We verified this ourselves across every affected region a student may be assigned (N. Virginia, Oregon, Tokyo, Sydney) — in all cases only `ID` is returned. Your code should therefore always fall back to using `ID` for the `owner` attribute, exactly as the instructions already describe. This is expected behaviour, not an error.
+**Update (Semester 2, 2026)**: As of 21 November 2025, AWS has deprecated `DisplayName` and no longer returns it from `get_object_acl`. We verified this ourselves across every affected region a student may be assigned (N. Virginia, Oregon, Tokyo, Sydney) — in all cases only `ID` is returned. Your code should therefore always fall back to using `ID` for the `owner` attribute, exactly as the instructions already describe. This is expected behaviour, not an error.
 
 ### \[5] Scan the table
 
