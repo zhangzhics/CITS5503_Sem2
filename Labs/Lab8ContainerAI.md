@@ -364,19 +364,20 @@ Last, from your local browser tab, enter `http://<task-public-ip>:8888`, log in 
 
 First, from your AWS Management Console → Amazon SageMaker AI → Hyperparameter tuning jobs, show:
 
-- your job follows the naming format of `<student number>-xgboost-tuningjob-01`.
-- your job status is `Completed`.
+- Your job follows the naming format of `<student number>-xgboost-tuningjob-01`.
+- Your job status is `Completed`.
 
 Second, inside your job, open the `Training jobs` tab, show:
 
-- the name of two training jobs start with your student number.
-- the status of two training jobs is `Completed`.
+- Two training jobs.
+- The name of two training jobs start with your student number.
+- The status of two training jobs is `Completed`.
 
 Last, from your AWS Management Console → Amazon S3 → Buckets, select your bucket. Under the path `sagemaker/<student number>-hpo-xgboost-dm/output`, show:
 
-- the name of two separate folders start with your student number.
-
-- inside each folder, a model artifact named `model.tar.gz`.
+- Two two separate folders.
+- The name of two separate folders start with your student number.
+- Inside each folder, a model artifact named `model.tar.gz`.
 
 ### Checkpoint 4: Cleanup (0.5 mark)
 
