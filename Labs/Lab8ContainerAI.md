@@ -330,3 +330,58 @@ Open a browser and navigate to the following address to run it within your ECS. 
 ```
 
 **NOTE**: Delete relevant ECR, ECS and S3 resources from the AWS console after the lab is done.
+
+## Live Lab Assessment (2 marks)
+
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
+
+### Checkpoint 1: Docker image (0.5 mark)
+
+First, open your terminal in your local computer, run `docker image ls` to show your docker image following the naming format of `<student number>-lab8`. 
+
+Second, from your local browser tab, enter `http://127.0.0.1:8888`, log in using the Jupyter token, and demonstrate that the Jupyter file directory contains `LabAI.ipynb`.
+
+### Checkpoint 2: ECR and ECS (1 mark)
+
+First, from your AWS Management Console → Elastic Container Registry → Repositories, and show your repository follow the naming format of `<student number>_ecr_repo`.
+
+Second, from your AWS Management Console → Elastic Container Service → Clusters → your cluster → Services, show:
+
+- The service name follows the naming format of `<student number>-service`
+- The service status is active.
+
+Third, from your AWS Management Console → Elastic Container Service → Clusters → your cluster → Tasks, show:
+
+- The running task uses AWS Fargate.
+- The Image URI matches the image stored in your ECR repository shown in step 1, including the repository name and image tag.
+- The task has been assigned a public IP address.
+
+Last, from your local browser tab, enter `http://<task-public-ip>:8888`, log in using the Jupyter token, and demonstrate that the Jupyter file directory contains `LabAI.ipynb`.
+
+### Checkpoint 3: SageMaker hyperparameter tuning (1 mark)
+
+First, from your AWS Management Console → Amazon SageMaker AI → Hyperparameter tuning jobs, show:
+
+- your job follows the naming format of `<student number>-xgboost-tuningjob-01`.
+- your job status is `Completed`.
+
+Second, inside your job, open the `Training jobs` tab, show:
+
+- the name of two training jobs start with your student number.
+- the status of two training jobs is `Completed`.
+
+Last, from your AWS Management Console → Amazon S3 → Buckets, select your bucket. Under the path `sagemaker/<student number>-hpo-xgboost-dm/output`, show:
+
+- the name of two separate folders start with your student number.
+
+- inside each folder, a model artifact named `model.tar.gz`.
+
+### Checkpoint 4: Cleanup (0.5 mark)
+
+After the first three checkpoints are completed, open AWS Management Console and complete the following actions in order:
+
+1. Delete ECR resources you created.
+2. Delete ECS resources you created.
+3. Empty and Delete S3 resourced you created.
