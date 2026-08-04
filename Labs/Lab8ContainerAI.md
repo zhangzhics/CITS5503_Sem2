@@ -350,7 +350,7 @@ First, from your AWS Management Console → Elastic Container Registry → Repos
 Second, from your AWS Management Console → Elastic Container Service → Clusters → your cluster → Services, show:
 
 - The service name follows the naming format of `<student number>-service`
-- The service status is active.
+- The service status is `Active`.
 
 Third, from your AWS Management Console → Elastic Container Service → Clusters → your cluster → Tasks, show:
 
