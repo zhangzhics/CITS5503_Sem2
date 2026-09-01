@@ -331,7 +331,7 @@ Open a browser and navigate to the following address to run it within your ECS. 
 
 **NOTE**: Delete relevant ECR, ECS and S3 resources from the AWS console after the lab is done.
 
-## Live Lab Assessment (2 marks)
+## Live Lab Assessment (3 marks)
 
 Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
 
