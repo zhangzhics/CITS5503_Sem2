@@ -103,7 +103,7 @@ Currently, given an image, AWS Rekognition allows:
 
 ### Add images
 
-Create a Python script: create an S3 bucket named as <studentid>-lab9 in the region you are mapped to. Add the following 4 images into the bucket:
+Create a Python script: create an S3 bucket named as `<studentid>`-lab9 in the region you are mapped to. Add the following 4 images into the bucket:
 
 1. Add the image of an urban setting (named as urban.jpg).
 
@@ -123,10 +123,72 @@ Create a Python script: create an S3 bucket named as <studentid>-lab9 in the reg
 
 ### Test AWS rekognition
 
-Update the Python script above by using boto3 and AWS Rekognition to test label recognition, image moderation, facial analysis and text extraction from images.
+Update the Python script above using boto3 and AWS Rekognition. For each image, perform only its corresponding analysis: label recognition on `urban.jpg`, image moderation on `beach.jpg`, facial analysis on `faces.jpg`, and text extraction on `text.jpg`.
 
 **NOTE**: The relevant APIs are available [here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html).
 
 ## Important Notes
 
 **Delete all AWS resources you have created**
+
+## Live Lab Assessment (3 marks)
+
+Make sure you have practiced and completed all the required checkpoints before joining the marking queue. When you are next in line, have your commands/scripts/cleanup ready so that you can demonstrate each checkpoint live to a lab facilitator for verification. 
+
+You have only ONE attempt to demonstrate each checkpoint in front of the lab facilitator. If you fail any checkpoint, the corresponding marks will not be awarded. Screenshots, copied output, and prerecorded demonstrations are not accepted.
+
+### Checkpoint 1: Language detection (0.5 mark)
+
+Four sample texts are provided above, each written in a different language.
+
+First, run your Python script live. The script should display a prompt asking you to enter a text. Second, a lab facilitator randomly selects one of the four provided texts. Last, copy and paste the selected text to the prompt.
+
+After the text is entered, your script must output the following and exit normally:
+
+- The name of the detected language in English, rather than in the language itself.
+- A confidence percentage.
+
+### Checkpoint 2: Sentiment detection (0.5 mark)
+
+Similarly, first, run your Python script live. The script should display a prompt asking you to enter a text. Second, a lab facilitator randomly selects one of the four provided texts. Last, copy and paste the selected text to the prompt.
+
+After the text is entered, your script must output the following and exit normally:
+
+- The detected sentiment category.
+- A sentiment score.
+
+**NOTE**: There are four sentiment categories: `POSITIVE`, `NEGATIVE`, `NEUTRAL`, and `MIXED`. The sentiment score should be a dictionary containing a confidence score for each of the four categories.
+
+### Checkpoint 3: Entities detection (0.5 mark)
+
+Similarly, first, run your Python script live. The script should display a prompt asking you to enter a text. Second, a lab facilitator randomly selects one of the four provided texts. Last, copy and paste the selected text to the prompt.
+
+After the text is entered, your script must output the following and exit normally:
+
+- The detected text, its detected type and the corresponding confidence score.
+
+### Checkpoint 4: Keyphrases detection (0.5 mark)
+
+Similarly, first, run your Python script live. The script should display a prompt asking you to enter a text. Second, a lab facilitator randomly selects one of the four provided texts. Last, copy and paste the selected text to the prompt.
+
+After the text is entered, your script must output the following and exit normally:
+
+- The detected phrase, and the corresponding confidence score.
+
+### Checkpoint 5: Image detection (1 mark)
+
+First, navigate to the AWS Management Console → S3 and show the created bucket. The bucket name follows the naming format of `<student ID>-lab9`. Inside your bucket, show the four images named as:
+
+- `urban.jpg`
+- `beach.jpg`
+- `faces.jpg`
+- `text.jpg`
+
+Second, run your Python script live:
+
+- For `urban.jpg`, output the detected label and the corresponding confidence score.
+- For `beach.jpg`, output the detected moderation and the corresponding confidence score.
+- For `faces.jpg`, output the detected face and the corresponding confidence score.
+- For `text.jpg`, output the detected text and the corresponding confidence score.
+
+Last, open your AWS Management Console, empty and delete S3 resourced you created.
