@@ -125,11 +125,7 @@ Create a Python script: create an S3 bucket named as `<studentid>`-lab9 in the r
 
 Update the Python script above using boto3 and AWS Rekognition. For each image, perform only its corresponding analysis: label recognition on `urban.jpg`, image moderation on `beach.jpg`, facial analysis on `faces.jpg`, and text extraction on `text.jpg`.
 
-**NOTE**: The relevant APIs are available [here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html).
-
-## Important Notes
-
-**Delete all AWS resources you have created**
+**NOTE**: The relevant APIs are available [here](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/rekognition.html). Remember to delete relevant AWS resources from the AWS console after the lab is done.
 
 ## Live Lab Assessment (3 marks)
 
