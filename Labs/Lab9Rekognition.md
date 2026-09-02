@@ -184,7 +184,7 @@ First, navigate to the AWS Management Console → S3 and show the created bucket
 - `faces.jpg`
 - `text.jpg`
 
-Second, run your Python script live:
+Second, run your Python script (make sure the script exits normally after returning the outputs below):
 
 - For `urban.jpg`, output the detected label and the corresponding confidence score.
 - For `beach.jpg`, output the detected moderation and the corresponding confidence score.
