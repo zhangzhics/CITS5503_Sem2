@@ -176,7 +176,7 @@ Access the URL: `http://<load balancer dns name>/polls/`, and see what you've go
 
 ## Web interface for CloudStorage application
 
-You need to create an AWS DynamoDB table by copying it from the local DynamoDB used in Lab 3, as well as provide a copy of your AWS credentials. If you did not save the data from Lab 3, you will need to repeat some steps to retrieve the files from the S3 bucket and use them as attributes to be stored in the AWS DynamoDB table. 
+You need to create an AWS DynamoDB table (e.g., the table name can be `<student number>-CloudFiles`) by copying it from the local DynamoDB used in Lab 3, as well as provide a copy of your AWS credentials. If you did not save the data from Lab 3, you will need to repeat some steps to retrieve the files from the S3 bucket and use them as attributes to be stored in the AWS DynamoDB table. 
 
 In `views.py`, add `boto3` code to scan the AWS DynamoDB table. Display the results in the calling page.
 
